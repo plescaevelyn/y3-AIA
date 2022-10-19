@@ -5,4 +5,3 @@ The following subjects will be included:
 - Systems Identification
 - System Theory
 - Control Engineering
-- Discrete-Event Systems
