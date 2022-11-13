@@ -3,14 +3,11 @@ clc; clear variables;
 
 s1 = load("lab3_order1_3.mat");
 
-u = cell2struct(s1.data.InputData,"input_fields",1)
-y = cell2struct(s1.data.OutputData,"output_fields",1);
+plot(s1.t,s1.data.InputData); title(s1.data.InputName);
+plot(s1.t,s1.data.OutputData); title(s1.data.OutputName);
 
-plot(s1.t,u.input_fields); title(s1.data.InputName);
-plot(s1.t,y.output_fields); title(s1.data.OutputName);
-
-id = struct("u",u.input_fields(1:100),"y",y.output_fields(1:100),"t",s1.t(1:100));
-val = struct("u",u.input_fields(201:500),"y",y.output_fields(201:500),"t",s1.t(201:500));
+id = struct("u",s1.data.InputData(1:100),"y",s1.data.OutputData(1:100),"t",s1.t(1:100));
+val = struct("u",s1.data.InputData(201:500),"y",s1.data.OutputData(201:500),"t",s1.t(201:500));
 
 y_ss = 1/11*sum(id.y(90:100,:))
 u_ss = 1/11*sum(id.u(90:100,:))
@@ -37,14 +34,11 @@ clear variables;
 
 s2 = load("lab3_order2_3.mat");
 
-u = cell2struct(s2.data.InputData,"input_fields",1);
-y = cell2struct(s2.data.OutputData,"output_fields",1);
+plot(s2.t,s2.data.InputData); title(s2.data.InputName);
+plot(s2.t,s2.data.OutputData); title(s2.data.OutputName);
 
-plot(s2.t,u.input_fields); title(s2.data.InputName);
-plot(s2.t,y.output_fields); title(s2.data.OutputName);
-
-id = struct("u",u.input_fields(1:100),"y",y.output_fields(1:100),"t",s2.t(1:100));
-val = struct("u",u.input_fields(201:500),"y",y.output_fields(201:500),"t",s2.t(201:500));
+id = struct("u",s2.data.InputData(1:100),"y",s2.data.OutputData(1:100),"t",s2.t(1:100));
+val = struct("u",s2.data.InputData(201:500),"y",s2.data.OutputData(201:500),"t",s2.t(201:500));
 
 y_ss = 1/11*sum(id.y(90:100,:));
 u_ss = 1/11*sum(id.u(90:100,:));
