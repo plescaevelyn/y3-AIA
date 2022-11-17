@@ -70,8 +70,8 @@ k0 = t0/Ts;
 k1 = t1/Ts;
 k2 = t2/Ts;
 
-ymax = max(yid);
-y0 = 1/10*sum(yid(1:10,:))
+ymax = max(id.y);
+y0 = 1/10*sum(id.y(1:10,:))
 t = 0.368*(ymax-y0)+y0;
 
 k = y_ss/u_ss % gain
