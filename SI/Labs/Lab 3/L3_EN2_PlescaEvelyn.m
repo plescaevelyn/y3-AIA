@@ -3,8 +3,9 @@ clc; clear variables;
 
 s1 = load("lab3_order1_3.mat");
 
-plot(s1.t,s1.data.InputData); title(s1.data.InputName);
-plot(s1.t,s1.data.OutputData); title(s1.data.OutputName);
+figure,
+subplot(2,1,1); plot(s1.t,s1.data.InputData); title(s1.data.InputName);
+subplot(2,1,2); plot(s1.t,s1.data.OutputData); title(s1.data.OutputName);
 
 id = struct("u",s1.data.InputData(1:100),"y",s1.data.OutputData(1:100),"t",s1.t(1:100));
 val = struct("u",s1.data.InputData(201:500),"y",s1.data.OutputData(201:500),"t",s1.t(201:500));
@@ -34,8 +35,9 @@ clear variables;
 
 s2 = load("lab3_order2_3.mat");
 
-plot(s2.t,s2.data.InputData); title(s2.data.InputName);
-plot(s2.t,s2.data.OutputData); title(s2.data.OutputName);
+figure,
+subplot(2,1,1); plot(s2.t,s2.data.InputData); title(s2.data.InputName);
+subplot(2,1,2); plot(s2.t,s2.data.OutputData); title(s2.data.OutputName);
 
 id = struct("u",s2.data.InputData(1:100),"y",s2.data.OutputData(1:100),"t",s2.t(1:100));
 val = struct("u",s2.data.InputData(201:500),"y",s2.data.OutputData(201:500),"t",s2.t(201:500));
@@ -54,7 +56,7 @@ t1 = 3.5
 t3 = 10.15
 
 k = (y_ss-y0)/(u_ss-u0) % gain
-M = (y1-y_ss)/(y_ss-y0)
+M = (y1-y_ss)/(y_ss-y0) % overshoot in nonzero initial conditions
 M1 = (y_ss-y2)/(y1-y_ss)
 zeta = log(1/M1)/(sqrt(pi^2+log(M1)^2)) % damping factor
 wn = abs((2*pi)/((t3-t1)*sqrt(1-zeta^2)))% natural frequency
