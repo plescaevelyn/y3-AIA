@@ -14,7 +14,8 @@ MdB = 2; % modulul in decibeli
 figure,
 cm(MdB); 
 %% 
-H = 9e4*tf(1,[1 135 0]);
+k = 1.5
+H = k*9e4*tf(1,[1 135 0]);
 
 figure,
 nyquist(H); % open-loop Nyquist diagram
@@ -27,4 +28,7 @@ figure,
 nyquist(H); % open-loop Nyquist diagram
 hold on;
 cm(MdB); grid; shg; 
-axis([-3 0 -2 3])
+axis([-3 0 -2 3]);
+
+figure,
+step(feedback(H,1)); grid; shg;
