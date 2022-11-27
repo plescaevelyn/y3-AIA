@@ -51,6 +51,8 @@ figure,
 plot(val.t,val.y,val.t,y_val_cap); title('Output for validation data and model, Validation MSE = ',num2str(mean(mse_val)));
 xlabel('Time'); ylabel('Output');
 
+
+%% Prediction
 pred = [];
 for i = 1:length(val.t)
     for j = 1:na+nb
