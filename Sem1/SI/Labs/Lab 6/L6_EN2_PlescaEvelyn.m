@@ -9,17 +9,24 @@ figure,
 subplot(1,2,1);plot(id.t,id.u); title('Identification data');
 subplot(1,2,2);plot(val.t,val.u); title('Validation data'); 
 %% Identification data
-na = 1;
-nb = 1;
-nk = 0;
+na = 20;
+nb = 5;
 
-phi_id = [];
+phi_id = zeros(length(id.u),na+nb);
 for i = 1:length(id.t)
     for j = 1:na
-        phi_id(i,j) = -id.y(i-na+1);
+        if (i-j<=0)
+            phi_id(i,j) = 0;
+        else
+            phi_id(i,j) = -1*id.y(i-j);
+        end
     end
     for j = na+1:na+nb
-        phi_id(i,j) = id.u(i-nb+1);
+        if (i-j<=0)
+            phi_id(i,j) = 0;
+        else
+            phi_id(i,j) = id.u(i-j);
+        end
     end
 end
 
@@ -33,13 +40,17 @@ figure,
 plot(id.t,id.y,id.t,y_cap); title('Output for identification data and model, Identification MSE = ',num2str(mean(mse_id)));
 xlabel('Time'); ylabel('Output');
 %% Validation data
-phi_val = [];
+phi_val = zeros(length(val.t),na+nb);
 for i = 1:length(val.t)
     for j = 1:na
-        phi_val(i,j) = -val.y(i-na+1);
+        if (i-j>0)
+            phi_val(i,j) = -1*val.y(i-j+1);
+        end
     end
     for j = na+1:na+nb
-        phi_val(i,j) = val.u(i-nb+1);
+        if (i-j>0)
+            phi_val(i,j) = val.u(i-j+na);
+        end
     end
 end
 
@@ -50,20 +61,31 @@ mse_val = 1/length(val.y)*sum((y_val_cap-val.y).^2);
 figure, 
 plot(val.t,val.y,val.t,y_val_cap); title('Output for validation data and model, Validation MSE = ',num2str(mean(mse_val)));
 xlabel('Time'); ylabel('Output');
+%% Simulation
+len = length(val.u);
+phi = zeros(len,na+nb);
+ysim = zeros(len,1);
 
-pred = [];
-for i = 1:length(val.t)
-    for j = 1:na+nb
-        if (i-j<=0)
-            pred(i,j) = 0;
-        else 
-            pred(i,j) = val.y(i-j);
+for i = 2:len
+    for j = 1:na
+        if (i-j>0)
+            phi(i,j) = -1*ysim(i-j);
         end
     end
+    for k = na+1:na+nb
+        if (na+i-k>0)
+            phi(i,k) = val.u(na+i-k);
+        end
+    end
+    ysim(i) = phi(i,:)*theta;
 end
 
-mse_pred = 1/length(val.y)*sum((pred*theta-val.y).^2);
+
+theta = phi\val.y;
+yhatsim = phi*theta;
+
+mse_pred = 1/length(val.y)*sum((val.y-ysim).^2);
 
 figure, 
-plot(val.t,val.y,val.t,-pred*theta); title('Output for prediction data and model, Validation MSE = ',num2str(mean(mse_pred)));
+plot(val.t,val.y,val.t,yhatsim); title('Output for prediction data and model, Validation MSE = ',num2str(mean(mse_pred)));
 xlabel('Time'); ylabel('Output');
