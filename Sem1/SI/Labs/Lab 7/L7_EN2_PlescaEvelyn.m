@@ -31,6 +31,7 @@ function x = prbs(N,m,a,b)
     
     for i = m+1:N
         x(i) = mod(x(i-m:i-1)*coefficients(m)',2);
+        %x(i) = mod(x(i-m:i-1)*idinput(m,'prbs',[0.5,1]),2);
     end
 
     for i = 1:N
