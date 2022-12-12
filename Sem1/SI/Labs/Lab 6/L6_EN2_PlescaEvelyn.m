@@ -10,7 +10,7 @@ subplot(1,2,1);plot(id.t,id.u); title('Identification data');
 subplot(1,2,2);plot(val.t,val.u); title('Validation data'); 
 %% Identification data
 na = 20;
-nb = 5;
+nb = 20;
 
 phi_id = zeros(length(id.u),na+nb);
 for i = 1:length(id.t)
