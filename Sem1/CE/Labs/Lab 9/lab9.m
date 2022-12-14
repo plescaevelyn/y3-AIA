@@ -6,9 +6,9 @@ bode(hf)
 %% PI controller
 sigma_k = 50;
 -180+15+sigma_k
-wc = db2mag(0.564)
+wc = 0.142;
 Ti = 4/wc
-kp = 1/wc
+kp = 1/db2mag(0.564);
 hc = tf([kp*Ti kp],[Ti 0]);
 
 figure,
