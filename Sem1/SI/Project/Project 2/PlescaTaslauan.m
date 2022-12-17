@@ -25,14 +25,14 @@ for i = 1:length(s.id.InputData)
             if (i-j<=0)
                 phi_id(i,j) = 0;
             else
-                phi_id(i,j) = -1*s.id.OutputData(i-j);
+                phi_id(i,j) = -1*s.id.OutputData(i-j)^mm;
             end
         end
         for j = na+1:na+nb
             if (i-j<=0)
                 phi_id(i,j) = 0;
             else
-                phi_id(i,j) = s.id.OutputData(i-j);
+                phi_id(i,j) = s.id.OutputData(i-j)^mm;
             end
         end
     end 
