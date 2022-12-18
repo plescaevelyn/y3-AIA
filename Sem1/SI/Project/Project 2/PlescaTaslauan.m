@@ -6,7 +6,7 @@ m = 1; % maximum order of the dynamics, the polynomial degree
 
 na = 3; % configurable 
 nb = 3; % configurable 
-nk = 1;
+nk = 0;
 
 idlen = length(s.id);
 vallen = length(s.val);
@@ -69,7 +69,7 @@ y_val_cap = phi_val*theta;
 mse_val = 1/length(s.val.OutputData)*sum((y_val_cap-s.val.OutputData).^2);
 
 figure, 
-plot(length(s.val.OutputData),s.val.OutputData,length(s.val.OutputData),y_val_cap); title('Output for validation data and model, Validation MSE = ',num2str(mean(mse_val)));
+plot(length(s.val.OutputData),s.val.OutputData,length(s.val.OutputData),y_val_cap,'*'); title('Output for validation data and model, Validation MSE = ',num2str(mean(mse_val)));
 xlabel('Time'); ylabel('Output');
 %% Simulation
 len = length(s.val.InputData);
@@ -98,5 +98,5 @@ yhatsim = phi*theta;
 mse_pred = 1/length(s.val.OutputData)*sum((s.val.OutputData-ysim).^2);
 
 figure, 
-plot(length(s.val.OutputData),s.val.OutputData,length(s.val.OutputData),yhatsim); title('Output for prediction data and model, Validation MSE = ',num2str(mean(mse_pred)));
+plot(length(s.val.OutputData),s.val.OutputData,length(s.val.OutputData),yhatsim,'*'); title('Output for prediction data and model, Validation MSE = ',num2str(mean(mse_pred)));
 xlabel('Time'); ylabel('Output');
