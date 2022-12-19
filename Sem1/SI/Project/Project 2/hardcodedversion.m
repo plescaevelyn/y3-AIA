@@ -39,7 +39,7 @@ function phi = phi_func(s,m)
             % phi_fun = @(k)([s.OutputData(k),s.id.InputData(k),s.id.OutputData(k)^2,s.id.InputData(k)^2,s.id.InputData(k)*s.id.InputData(k)]);
             phi_fun = @(k)([1,s.OutputData(k),s.InputData(k),s.OutputData(k)^2,s.InputData(k)^2]);
         case 3
-            phi_fun = @(k)([1,s.OutputData(k),s.InputData(k),s.OutputData(k)^2,s.InputData(k)^2,s.OutputData(k)^3,s.InputData(k)^3]);
+            phi_fun = @(k)([1,s.OutputData(k),s.InputData(k),s.OutputData(k)^2,s.InputData(k)^2,s.OutputData*s.InputData^2,s.OutputData^2*s.InputData,s.OutputData(k)^3,s.InputData(k)^3]);
     end 
 
     phi = [];
