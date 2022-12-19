@@ -22,7 +22,7 @@ dedb = zeros(length(s.id.OutputData));
 dedt = cell(1,length(s.id.OutputData));
 % thetarecurs = cell(1,length(s.id.OutputData));
 %% Computing recursion formulas
-while l <= lmax | threshold_reached == 0
+while l <= lmax || threshold_reached == 0
     % initializing theta
     if (l > 0)
         theta_recurs = theta{1,length(theta)};
