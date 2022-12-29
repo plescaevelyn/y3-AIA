@@ -1,20 +1,16 @@
 clear variables; clc;
 
 %   WORKING FOR M=1
-%   WORKING FOR M=2 FOR ANY NA=NB=2
 
 % unproper combinations for m=3
 
 s = load('iddata-09.mat'); % loading the data
 
-m = 2; % maximum order of the dynamics, the polynomial degree
+m = 1; % maximum order of the dynamics, the polynomial degree
 
-na = 2; % configurable, na=nb
-nb = 2; % configurable 
+na = 5; % configurable, na=nb
+nb = 5; % configurable 
 nk = 1;
-
-idlen = length(s.id);
-vallen = length(s.val);
 
 figure,
 subplot(2,1,1); plot(s.id);
@@ -52,10 +48,8 @@ if m == 1
             end
         end 
     end
-end
-
-if m > 1
-    phi_id = [ones(length(s.id.InputData),1),zeros(length(s.id.InputData),na+2^(na+1))];  % aici am initializat vectorul sa aiba prima valoare 1  
+else
+    phi_id = [ones(length(s.id.InputData),1),zeros(length(s.id.InputData),6*na)];  % aici am initializat vectorul sa aiba prima valoare 1  
 
     for k = 1:length(s.id.InputData) 
         for mm = 1:m-1
@@ -96,11 +90,11 @@ if m > 1
             end
         end 
 
-        for i = 3*na+1:4*na
+        for i = 4*na+1:5*na
             phi_id(k,i+1) = s.id.OutputData(i)^m; % y(k-i)^m (valoarea maxima)
         end
 
-        for i = 4*na+1:5*na
+        for i = 5*na+1:6*na
             phi_id(k,i+1) = s.id.InputData(i)^m; % u(k-i)^m
         end 
     end
@@ -132,10 +126,8 @@ if m == 1
             end
         end 
     end
-end
-
-if m > 1
-    phi_val = [ones(length(s.val.InputData),1),zeros(length(s.val.InputData),na+2^(na+1))];  % aici am initializat vectorul sa aiba prima valoare 1  
+else
+    phi_val = [ones(length(s.val.InputData),1),zeros(length(s.val.InputData),6*na)];  % aici am initializat vectorul sa aiba prima valoare 1  
 
     for k = 1:length(s.val.InputData) 
         for mm = 1:m-1
@@ -194,7 +186,6 @@ figure,
 plot(1:length(s.val.OutputData),s.val.OutputData,1:length(s.val.OutputData),y_val_cap); title('Output for validation data and model, Validation MSE = ',num2str(mean(mse_val)));
 xlabel('Time'); ylabel('Output');
 %% Simulation
-phi = zeros(length(s.val.InputData),1+na+2^(na+1));
 ysim = zeros(length(s.val.InputData),1);
 
 % in loc de forurile alea nu e ok (in interiorul lor), trebuie sa
@@ -202,7 +193,25 @@ ysim = zeros(length(s.val.InputData),1);
 % punem y simulat
 
 % nu merge, se populeaza doar cu 0 tot (inclusiv phi)
-for mm = 1:m
+
+if m == 1
+    phi = zeros(length(s.val.InputData),na+nb);
+    for i = 2:length(s.val.InputData)
+        for j = 1:na
+            if (i-j>0)
+                phi(i,j) = -1*ysim(i-j);
+            end
+        end
+        for k = na+1:na+nb
+            if (na+i-k>0)
+                phi(i,k) = s.val.InputData(na+i-k);
+            end
+        end
+        ysim(i) = phi(i,:)*theta;
+    end
+else
+    phi = [ones(length(s.val.InputData),1),zeros(length(s.val.InputData),6*na)];
+
     for k = 2:length(s.val.InputData) 
         for mm = 1:m-1
             for i = 1:na
@@ -210,7 +219,7 @@ for mm = 1:m
                     phi_val(k,i+1) = -1*ysim(k-i)^mm; % y(k-i)^mm
                 end
             end 
-
+    
             for i = na+1:2*na
                 if (k-i > 0)
                     phi_val(k,i+1) = s.val.InputData(k-i)^mm; % u(k-i)^mm
@@ -249,10 +258,11 @@ for mm = 1:m
             phi_val(k,i+1) = s.val.InputData(i)^m; % u(k-i)^m
         end
     end
-        ysim(i) = phi(i,:)*theta;
+
+    ysim(i) = phi(i,:)*theta;
 end
 
-theta = phi\ysim;
+theta = phi\s.val.OutputData;
 yhatsim = phi*theta;
 
 mse_pred = 1/length(s.val.InputData)*sum((s.val.InputData-ysim).^2);
@@ -260,3 +270,27 @@ mse_pred = 1/length(s.val.InputData)*sum((s.val.InputData-ysim).^2);
 figure, 
 plot(1:length(s.val.InputData),s.val.InputData,1:length(s.val.InputData),yhatsim); title('Output for prediction data and model, Validation MSE = ',num2str(mean(mse_pred)));
 xlabel('Time'); ylabel('Output');
+
+function [result, final_result] = find_combinations(na,nb)
+    elements = {1:na 1:nb};  % elements = {1:10' 1:10'};
+    combinations = cell(1, numel(elements)); 
+    [combinations{:}] = ndgrid(elements{:});
+    combinations = cellfun(@(x) x(:), combinations,'uniformoutput',false);
+    intermediate_result = [combinations{:}]; 
+    intermediate_result = [intermediate_result(:,2),intermediate_result(:,1)];
+
+    result = [];
+    final_result = [];
+
+    for i = 1:length(intermediate_result)
+        if intermediate_result(i,2) >= intermediate_result(i,1)
+            result = [result;intermediate_result(i,1),intermediate_result(i,2)];
+        end
+    end
+
+    for i = 1:length(intermediate_result)
+        if intermediate_result(i,2) > intermediate_result(i,1)
+            final_result = [final_result;intermediate_result(i,1),intermediate_result(i,2)];
+        end
+    end
+end
