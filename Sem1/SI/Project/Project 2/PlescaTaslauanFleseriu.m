@@ -1,18 +1,15 @@
 clear variables; clc;
 
-%   WORKING FOR M=1
-
-% unproper combinations for m=3
-
 s = load('iddata-09.mat'); % loading the data
 
-m = 2; % maximum order of the dynamics, the polynomial degree
+m = 1; % maximum order of the dynamics, the polynomial degree
 
-na = 5; % configurable, na=nb
-nb = 5; % configurable 
+na = 1; % configurable, na=nb
+nb = 1; % configurable 
 nk = 1;
 
-[allcombinations,partial_combinations,combinations] = find2combinations(na); % finding all the combinations of na and nb
+[allcombinations2,partial_combinations2,combinations2] = find2combinations(na); % finding all the combinations of na and nb
+[allcombinations3,partial_combinations3,combinations3] = find3combinations(na);
 
 figure,
 subplot(2,1,1); plot(s.id);
@@ -52,7 +49,7 @@ switch m
     end
 
     case 2
-    phi_id = [ones(length(s.id.InputData),1),zeros(length(s.id.InputData),4*na+length(allcombinations(:,1))+2*length(combinations(:,1)))];  % aici am initializat vectorul sa aiba prima valoare 1  
+    phi_id = [ones(length(s.id.InputData),1),zeros(length(s.id.InputData),4*na+length(allcombinations2)/2+2*length(combinations2)/2)];  % aici am initializat vectorul sa aiba prima valoare 1  
 
     for k = 1:length(s.id.InputData) 
         for i = 1:na
@@ -67,27 +64,68 @@ switch m
             end
         end 
 
-        for i = 1:length(combinations(:,1))
-            if (k>i && k > combinations(i,1) && k > combinations(i,2))
+        for i = 1:length(combinations2)/2
+            if (k>i && k > combinations2(i,1) && k > combinations2(i,2))
                 % combinatiile de tip y(k-i)y(k-j)
-                phi_id(k,i+2*na+1) = s.id.OutputData(k-combinations(i,1))*s.id.OutputData(k-combinations(i,2));
+                phi_id(k,i+2*na+1) = s.id.OutputData(k-combinations2(i,1))*s.id.OutputData(k-combinations2(i,2));
                 % combinatiile de tip u(k-i)u(k-j)
-                phi_id(k,i+1+2*na+length(combinations(:,1))+length(allcombinations(:,1))) = s.id.InputData(k-combinations(i,1))*s.id.InputData(k-combinations(i,2));
+                phi_id(k,i+1+2*na+length(combinations2)/2+length(allcombinations2)/2) = s.id.InputData(k-combinations2(i,1))*s.id.InputData(k-combinations2(i,2));
             end
         end
 
-        for i = 1:length(allcombinations(:,1))
-            if (k>i && k > allcombinations(i,1) && k > allcombinations(i,2))
+        for i = 1:length(allcombinations2)/2
+            if (k>i && k > allcombinations2(i,1) && k > allcombinations2(i,2))
                 % combinatiile de tip y(k-i)u(k-j)
-                phi_id(k,i+1+2*na+length(combinations(:,1))) = s.id.OutputData(k-allcombinations(i,1))*s.id.InputData(k-allcombinations(i,2));
+                phi_id(k,i+1+2*na+length(combinations2)/2) = s.id.OutputData(k-allcombinations2(i,1))*s.id.InputData(k-allcombinations2(i,2));
             end
         end
 
-        for i = 1*na+2*length(combinations)+length(allcombinations)+1:2*na+2*length(combinations)+length(allcombinations)
+        for i = 1*na+2*length(combinations2)+length(allcombinations2)+1:2*na+2*length(combinations2)+length(allcombinations2)
             phi_id(k,i+1) = s.id.OutputData(i)^m; % y(k-i)^m (valoarea maxima)
         end
 
-        for i = 2*na+2*length(combinations)+length(allcombinations)+1:3*na+2*length(combinations)+length(allcombinations)
+        for i = 2*na+2*length(combinations2)+length(allcombinations2)+1:3*na+2*length(combinations2)+length(allcombinations2)
+            phi_id(k,i+1) = s.id.InputData(i)^m; % u(k-i)^m
+        end 
+    end
+
+    case 3
+    phi_id = [ones(length(s.id.InputData),1),zeros(length(s.id.InputData),4*na+length(allcombinations2)/2+2*length(combinations2)/2+length(allcombinations3(:,1))+2*length(combinations3(:,1)))];  % aici am initializat vectorul sa aiba prima valoare 1  
+
+    for k = 1:length(s.id.InputData) 
+        for i = 1:na
+            if (k-i > 0)
+                phi_id(k,i+1) = -1*s.id.OutputData(k-i); % y(k-i)^mm
+            end
+        end 
+
+        for i = na+1:2*na
+            if (k-i > 0)
+                phi_id(k,i+1) = s.id.InputData(k-i); % u(k-i)^mm
+            end
+        end 
+
+        for i = 1:length(combinations2)/2
+            if (k>i && k > combinations2(i,1) && k > combinations2(i,2))
+                % combinatiile de tip y(k-i)y(k-j)
+                phi_id(k,i+2*na+1) = s.id.OutputData(k-combinations2(i,1))*s.id.OutputData(k-combinations2(i,2));
+                % combinatiile de tip u(k-i)u(k-j)
+                phi_id(k,i+1+2*na+length(combinations2)/2+length(allcombinations2)/2) = s.id.InputData(k-combinations2(i,1))*s.id.InputData(k-combinations2(i,2));
+            end
+        end
+
+        for i = 1:length(allcombinations2)/2
+            if (k>i && k > allcombinations2(i,1) && k > allcombinations2(i,2))
+                % combinatiile de tip y(k-i)u(k-j)
+                phi_id(k,i+1+2*na+length(combinations2)/2) = s.id.OutputData(k-allcombinations2(i,1))*s.id.InputData(k-allcombinations2(i,2));
+            end
+        end
+
+        for i = 1*na+2*length(combinations2)+length(allcombinations2)+1:2*na+2*length(combinations2)+length(allcombinations2)
+            phi_id(k,i+1) = s.id.OutputData(i)^m; % y(k-i)^m (valoarea maxima)
+        end
+
+        for i = 2*na+2*length(combinations2)+length(allcombinations2)+1:3*na+2*length(combinations2)+length(allcombinations2)
             phi_id(k,i+1) = s.id.InputData(i)^m; % u(k-i)^m
         end 
     end
@@ -101,7 +139,6 @@ mse_id = 1/length(s.id.OutputData)*sum((y_cap-s.id.OutputData).^2);
 figure, 
 plot(1:length(s.id.OutputData),s.id.OutputData,1:length(s.id.OutputData),y_cap); title('Output for identification data and model, Identification MSE = ',num2str(mean(mse_id)));
 xlabel('Time'); ylabel('Output');
-
 %% Prediction for validation data 
 switch m
     case 1
@@ -122,7 +159,7 @@ switch m
     end
 
     case 2
-    phi_val = [ones(length(s.val.InputData),1),zeros(length(s.val.InputData),4*na+length(allcombinations(:,1))+2*length(combinations(:,1)))];  % aici am initializat vectorul sa aiba prima valoare 1  
+    phi_val = [ones(length(s.val.InputData),1),zeros(length(s.val.InputData),4*na+length(allcombinations2)/2+2*length(combinations2)/2)];  % aici am initializat vectorul sa aiba prima valoare 1  
 
     for k = 1:length(s.val.InputData) 
         for i = 1:na
@@ -137,27 +174,27 @@ switch m
             end
         end 
 
-        for i = 1:length(combinations(:,1))
-            if (k>i && k > combinations(i,1) && k > combinations(i,2))
+        for i = 1:length(combinations2)/2
+            if (k>i && k > combinations2(i,1) && k > combinations2(i,2))
                 % combinatiile de tip y(k-i)y(k-j)
-                phi_val(k,i+2*na+1) = s.val.OutputData(k-combinations(i,1))*s.val.OutputData(k-combinations(i,2));
+                phi_val(k,i+2*na+1) = s.val.OutputData(k-combinations2(i,1))*s.val.OutputData(k-combinations2(i,2));
                 % combinatiile de tip u(k-i)u(k-j)
-                phi_val(k,i+1+2*na+length(combinations(:,1))+length(allcombinations(:,1))) = s.val.InputData(k-combinations(i,1))*s.val.InputData(k-combinations(i,2));
+                phi_val(k,i+1+2*na+length(combinations2)/2+length(allcombinations2)/2) = s.val.InputData(k-combinations2(i,1))*s.val.InputData(k-combinations2(i,2));
             end
         end
 
-        for i = 1:length(allcombinations(:,1))
-            if (k>i && k > allcombinations(i,1) && k > allcombinations(i,2))
+        for i = 1:length(allcombinations2)/2
+            if (k>i && k > allcombinations2(i,1) && k > allcombinations2(i,2))
                 % combinatiile de tip y(k-i)u(k-j)
-                phi_val(k,i+1+2*na+length(combinations(:,1))) = s.val.OutputData(k-allcombinations(i,1))*s.val.InputData(k-allcombinations(i,2));
+                phi_val(k,i+1+2*na+length(combinations2)/2) = s.val.OutputData(k-allcombinations2(i,1))*s.val.InputData(k-allcombinations2(i,2));
             end
         end
 
-        for i = 1*na+2*length(combinations)+length(allcombinations)+1:2*na+2*length(combinations)+length(allcombinations)
+        for i = 1*na+2*length(combinations2)+length(allcombinations2)+1:2*na+2*length(combinations2)+length(allcombinations2)
             phi_val(k,i+1) = s.val.OutputData(i)^m; % y(k-i)^m (valoarea maxima)
         end
 
-        for i = 2*na+2*length(combinations)+length(allcombinations)+1:3*na+2*length(combinations)+length(allcombinations)
+        for i = 2*na+2*length(combinations2)+length(allcombinations2)+1:3*na+2*length(combinations2)+length(allcombinations2)
             phi_val(k,i+1) = s.val.InputData(i)^m; % u(k-i)^m
         end 
     end
@@ -172,12 +209,6 @@ plot(1:length(s.val.OutputData),s.val.OutputData,1:length(s.val.OutputData),y_va
 xlabel('Time'); ylabel('Output');
 %% Simulation
 ysim = zeros(length(s.val.InputData),1);
-
-% in loc de forurile alea nu e ok (in interiorul lor), trebuie sa
-% gasim combinatiile, e ok ca folosim output data si in loc de y
-% punem y simulat
-
-% nu merge, se populeaza doar cu 0 tot (inclusiv phi)
 
 switch m
     case 1
@@ -198,7 +229,7 @@ switch m
     end
 
     case 2
-    phi = [ones(length(s.val.InputData),1),zeros(length(s.val.InputData),4*na+length(allcombinations(:,1))+2*length(combinations(:,1)))]; 
+    phi = [ones(length(s.val.InputData),1),zeros(length(s.val.InputData),4*na+length(allcombinations2)/2+2*length(combinations2)/2)];
 
     for k = 2:length(s.val.InputData) 
         for i = 1:na
@@ -213,28 +244,28 @@ switch m
             end
         end 
 
-        for i = 1:length(combinations(:,1))
-            if (k>i && k > combinations(i,1) && k > combinations(i,2))
+        for i = 1:length(combinations2)/2
+            if (k>i && k > combinations2(i,1) && k > combinations2(i,2))
                 % combinatiile de tip y(k-i)y(k-j)
-                phi(k,i+2*na+1) = ysim(k-combinations(i,1))*ysim(k-combinations(i,2));
+                phi(k,i+2*na+1) = ysim(k-combinations2(i,1))*ysim(k-combinations2(i,2));
                 % combinatiile de tip u(k-i)u(k-j)
-                phi(k,i+1+2*na+length(combinations(:,1))+length(allcombinations(:,1))) = s.val.InputData(k-combinations(i,1))*s.val.InputData(k-combinations(i,2));
+                phi(k,i+1+2*na+length(combinations2)/2+length(allcombinations2)/2) = s.val.InputData(k-combinations2(i,1))*s.val.InputData(k-combinations2(i,2));
             end
         end
 
-        for i = 1:length(allcombinations(:,1))
-            if (k>i && k > allcombinations(i,1) && k > allcombinations(i,2))
+        for i = 1:length(allcombinations2)/2
+            if (k>i && k > allcombinations2(i,1) && k > allcombinations2(i,2))
                 % combinatiile de tip y(k-i)u(k-j)
-                phi(k,i+1+2*na+length(combinations(:,1))) = ysim(k-allcombinations(i,1))*s.val.InputData(k-allcombinations(i,2));
+                phi(k,i+1+2*na+length(combinations2)/2) = ysim(k-allcombinations2(i,1))*s.val.InputData(k-allcombinations2(i,2));
             end
         end
     end 
 
-    for i = na+2*length(combinations)+length(allcombinations)+1:2*na+2*length(combinations)+length(allcombinations)
+    for i = na+2*length(combinations2)+length(allcombinations2)+1:2*na+2*length(combinations2)+length(allcombinations2)
         phi(k,i+1) = ysim(i)^m; % y(k-i)^m (valoarea maxima)
     end
 
-    for i = 2*na+2*length(combinations)+length(allcombinations)+1:3*na+2*length(combinations)+length(allcombinations)
+    for i = 2*na+2*length(combinations2)+length(allcombinations2)+1:3*na+2*length(combinations2)+length(allcombinations2)
         phi(k,i+1) = s.val.InputData(i)^m; % u(k-i)^m
     end
 
@@ -244,15 +275,21 @@ end
 theta = phi\s.val.OutputData;
 yhatsim = phi*theta;
 
-mse_pred = 1/length(s.val.InputData)*sum((s.val.InputData-ysim).^2);
+mse_pred = 1/length(s.val.OutputData)*sum((s.val.OutputData-ysim).^2);
 
 figure, 
-plot(1:length(s.val.InputData),s.val.InputData,1:length(s.val.InputData),yhatsim); title('Output for prediction data and model, Validation MSE = ',num2str(mean(mse_pred)));
+plot(1:length(s.val.OutputData),s.val.InputData,1:length(s.val.OutputData),yhatsim); title('Output for prediction data and model, Validation MSE = ',num2str(mean(mse_pred)));
 xlabel('Time'); ylabel('Output');
 
 % find2combinations retrieves all the possible combinations of na and nb
 % used in the case of m=2
 function [intermediate_result,result, final_result] = find2combinations(na)
+    if na == 1
+        intermediate_result = [1,1];
+        result = [1,1];
+        final_result = [];
+        return;
+    else
     elements = {1:na 1:na};
     combinations = cell(1, numel(elements)); 
     [combinations{:}] = ndgrid(elements{:});
@@ -274,6 +311,7 @@ function [intermediate_result,result, final_result] = find2combinations(na)
             final_result = [final_result;intermediate_result(i,1),intermediate_result(i,2)];
         end
     end
+    end
 end
 
 % find3combinations retrieves all the possible combinations of na and nb
@@ -282,6 +320,12 @@ end
 % WARNING: in this form, final_result retrieves only the 3 elements that
 % are all distinct between each other, result might be more suitable for our problem in this form 
 function [intermediate_result,result,final_result] = find3combinations(na)
+    if na == 1
+        intermediate_result = [1,1,1];
+        result = [1,1,1];
+        final_result = [];
+        return;
+    else
     elements = {1:na 1:na 1:na};
     combinations = cell(1, numel(elements)); 
     [combinations{:}] = ndgrid(elements{:});
@@ -304,5 +348,6 @@ function [intermediate_result,result,final_result] = find3combinations(na)
         if intermediate_result(i,2) > intermediate_result(i,1) && intermediate_result(i,3) > intermediate_result(i,2)
             final_result = [final_result;intermediate_result(i,1),intermediate_result(i,2),intermediate_result(i,3)];
         end
+    end
     end
 end
