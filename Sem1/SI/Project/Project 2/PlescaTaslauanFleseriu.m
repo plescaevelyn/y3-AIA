@@ -8,8 +8,8 @@ s = load('iddata-09.mat'); % loading the data
 
 m = 2; % maximum order of the dynamics, the polynomial degree
 
-na = 20; % configurable, na=nb
-nb = 20; % configurable 
+na = 5; % configurable, na=nb
+nb = 5; % configurable 
 nk = 1;
 
 [allcombinations,partial_combinations,combinations] = find2combinations(na); % finding all the combinations of na and nb
@@ -32,8 +32,7 @@ val_z = iddata(s.val.OutputData,s.val.InputData,s.val.Ts);
 ycap = nlarx(val_z,[na nb nk]); % estimating the nonlinear arx model
 subplot(2,1,2); compare(ycap,val_z);
 title('Nonlinear ARX model on validation data calculated using nlarx');
-%% Prediction
-% Identification data
+%% Prediction for identification data
 switch m
     case 1
     phi_id = zeros(length(s.id.InputData),na+nb);
@@ -103,9 +102,9 @@ figure,
 plot(1:length(s.id.OutputData),s.id.OutputData,1:length(s.id.OutputData),y_cap); title('Output for identification data and model, Identification MSE = ',num2str(mean(mse_id)));
 xlabel('Time'); ylabel('Output');
 
-% Validation data 
+%% Prediction for validation data 
 switch m
-    case 1 
+    case 1
     phi_val = zeros(length(s.val.InputData),na+nb);
 
     for k = 1:length(s.val.InputData) % de verificat daca nu trebuie cumva altfel pus asta ca sa fie ok k
@@ -121,7 +120,7 @@ switch m
             end
         end 
     end
-    
+
     case 2
     phi_val = [ones(length(s.val.InputData),1),zeros(length(s.val.InputData),4*na+length(allcombinations(:,1))+2*length(combinations(:,1)))];  % aici am initializat vectorul sa aiba prima valoare 1  
 
@@ -154,7 +153,7 @@ switch m
             end
         end
 
-        for i = na+2*length(combinations)+length(allcombinations)+1:2*na+2*length(combinations)+length(allcombinations)
+        for i = 1*na+2*length(combinations)+length(allcombinations)+1:2*na+2*length(combinations)+length(allcombinations)
             phi_val(k,i+1) = s.val.OutputData(i)^m; % y(k-i)^m (valoarea maxima)
         end
 
