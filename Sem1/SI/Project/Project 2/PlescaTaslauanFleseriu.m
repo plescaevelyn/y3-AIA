@@ -2,10 +2,10 @@ clear variables; clc;
 
 s = load('iddata-09.mat'); % loading the data
 
-m = 1; % maximum order of the dynamics, the polynomial degree
+m = 2; % maximum order of the dynamics, the polynomial degree
 
-na = 1; % configurable, na=nb
-nb = 1; % configurable 
+na = 5; % configurable, na=nb
+nb = 5; % configurable 
 nk = 1;
 
 [allcombinations2,partial_combinations2,combinations2] = find2combinations(na); % finding all the combinations of na and nb
@@ -49,7 +49,7 @@ switch m
     end
 
     case 2
-    phi_id = [ones(length(s.id.InputData),1),zeros(length(s.id.InputData),4*na+length(allcombinations2)/2+2*length(combinations2)/2)];  % aici am initializat vectorul sa aiba prima valoare 1  
+    phi_id = [ones(length(s.id.InputData),1),zeros(length(s.id.InputData),4*na+length(allcombinations2)+2*length(combinations2))];  % aici am initializat vectorul sa aiba prima valoare 1  
 
     for k = 1:length(s.id.InputData) 
         for i = 1:na
@@ -69,7 +69,7 @@ switch m
                 % combinatiile de tip y(k-i)y(k-j)
                 phi_id(k,i+2*na+1) = s.id.OutputData(k-combinations2(i,1))*s.id.OutputData(k-combinations2(i,2));
                 % combinatiile de tip u(k-i)u(k-j)
-                phi_id(k,i+1+2*na+length(combinations2)/2+length(allcombinations2)/2) = s.id.InputData(k-combinations2(i,1))*s.id.InputData(k-combinations2(i,2));
+                phi_id(k,i+1+2*na+length(combinations2)+length(allcombinations2)) = s.id.InputData(k-combinations2(i,1))*s.id.InputData(k-combinations2(i,2));
             end
         end
 
@@ -159,7 +159,7 @@ switch m
     end
 
     case 2
-    phi_val = [ones(length(s.val.InputData),1),zeros(length(s.val.InputData),4*na+length(allcombinations2)/2+2*length(combinations2)/2)];  % aici am initializat vectorul sa aiba prima valoare 1  
+    phi_val = [ones(length(s.val.InputData),1),zeros(length(s.val.InputData),4*na+length(allcombinations2)+2*length(combinations2))];  % aici am initializat vectorul sa aiba prima valoare 1  
 
     for k = 1:length(s.val.InputData) 
         for i = 1:na
@@ -179,14 +179,14 @@ switch m
                 % combinatiile de tip y(k-i)y(k-j)
                 phi_val(k,i+2*na+1) = s.val.OutputData(k-combinations2(i,1))*s.val.OutputData(k-combinations2(i,2));
                 % combinatiile de tip u(k-i)u(k-j)
-                phi_val(k,i+1+2*na+length(combinations2)/2+length(allcombinations2)/2) = s.val.InputData(k-combinations2(i,1))*s.val.InputData(k-combinations2(i,2));
+                phi_val(k,i+1+2*na+length(combinations2)+length(allcombinations2)) = s.val.InputData(k-combinations2(i,1))*s.val.InputData(k-combinations2(i,2));
             end
         end
 
         for i = 1:length(allcombinations2)/2
             if (k>i && k > allcombinations2(i,1) && k > allcombinations2(i,2))
                 % combinatiile de tip y(k-i)u(k-j)
-                phi_val(k,i+1+2*na+length(combinations2)/2) = s.val.OutputData(k-allcombinations2(i,1))*s.val.InputData(k-allcombinations2(i,2));
+                phi_val(k,i+1+2*na+length(combinations2)) = s.val.OutputData(k-allcombinations2(i,1))*s.val.InputData(k-allcombinations2(i,2));
             end
         end
 
@@ -229,7 +229,7 @@ switch m
     end
 
     case 2
-    phi = [ones(length(s.val.InputData),1),zeros(length(s.val.InputData),4*na+length(allcombinations2)/2+2*length(combinations2)/2)];
+    phi = [ones(length(s.val.InputData),1),zeros(length(s.val.InputData),4*na+length(allcombinations2)+2*length(combinations2))];
 
     for k = 2:length(s.val.InputData) 
         for i = 1:na
@@ -249,14 +249,14 @@ switch m
                 % combinatiile de tip y(k-i)y(k-j)
                 phi(k,i+2*na+1) = ysim(k-combinations2(i,1))*ysim(k-combinations2(i,2));
                 % combinatiile de tip u(k-i)u(k-j)
-                phi(k,i+1+2*na+length(combinations2)/2+length(allcombinations2)/2) = s.val.InputData(k-combinations2(i,1))*s.val.InputData(k-combinations2(i,2));
+                phi(k,i+1+2*na+length(combinations2)+length(allcombinations2)) = s.val.InputData(k-combinations2(i,1))*s.val.InputData(k-combinations2(i,2));
             end
         end
 
         for i = 1:length(allcombinations2)/2
             if (k>i && k > allcombinations2(i,1) && k > allcombinations2(i,2))
                 % combinatiile de tip y(k-i)u(k-j)
-                phi(k,i+1+2*na+length(combinations2)/2) = ysim(k-allcombinations2(i,1))*s.val.InputData(k-allcombinations2(i,2));
+                phi(k,i+1+2*na+length(combinations2)) = ysim(k-allcombinations2(i,1))*s.val.InputData(k-allcombinations2(i,2));
             end
         end
     end 
