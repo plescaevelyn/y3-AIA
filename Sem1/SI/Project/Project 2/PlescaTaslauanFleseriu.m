@@ -2,22 +2,22 @@ clear variables; clc;
 
 s = load('iddata-09.mat'); % loading the data
 
-m = 3; % maximum order of the dynamics, the polynomial degree
+m = 1; % maximum order of the dynamics, the polynomial degree
 
-na = 5; % configurable, na=nb
-nb = 5; % configurable
+na = 1; % configurable, na=nb
+nb = 1; % configurable
 nk = 1;
 
 if na > 1 && nb > 1
     [allcombinations2,combinations2] = find2combinations(na); % finding all the combinations of na and nb
     allcombinations3 = find3combinations(na); % finding all the combinations of na and nb
 end
-
-figure,
-subplot(2,1,1); plot(s.id);
-title('Identification data');
-subplot(2,1,2); plot(s.val);
-title('Validation data');
+% 
+% figure,
+% subplot(2,1,1); plot(s.id);
+% title('Identification data');
+% subplot(2,1,2); plot(s.val);
+% title('Validation data');
 %% Solving the problem using nlarx function
 % Identification data
 figure,
@@ -72,11 +72,11 @@ switch m
                 end
 
                 for i = 2*na+2:3*na+1
-                    phi_id(k,i+1) = s.id.OutputData(i)^3; % y(k-i)^2
+                    phi_id(k,i+1) = s.id.OutputData(i)^2; % y(k-i)^2
                 end
 
                 for i = 3*na+2:4*na+1
-                    phi_id(k,i+1) = s.id.InputData(i)^3; % u(k-i)^2
+                    phi_id(k,i+1) = s.id.InputData(i)^2; % u(k-i)^2
                 end
             end
         else
@@ -141,13 +141,13 @@ switch m
 
                 for i = 2*na+2:3*na+1
                     if (k > i)
-                        phi_id(k,i+1) = s.id.OutputData(i)^3; % y(k-i)^2
+                        phi_id(k,i+1) = s.id.OutputData(i)^2; % y(k-i)^2
                     end
                 end
 
                 for i = 3*na+2:4*na+1
                     if (k > i)
-                        phi_id(k,i+1) = s.id.InputData(i)^3; % u(k-i)^2
+                        phi_id(k,i+1) = s.id.InputData(i)^2; % u(k-i)^2
                     end
                 end
     
@@ -218,7 +218,7 @@ switch m
                 end
 
                 for i = 3*na+2*length(allcombinations2(:,1))+length(allcombinations2)+1:4*na+2*length(allcombinations3(:,1))
-                    phi_id(k,i+1) = s.id.OutputData(i)^3; % y(k-i)^3
+                    phi_id(k,i+1) = s.id.OutputData(i)^3; %y(k-i)^3
                 end
 
                 for i = 4*na+2*(length(allcombinations2(:,1)))+length(allcombinations2(:,1))+2*length(allcombinations3(:,1))+1:5*na+2*(length(allcombinations2(:,1)))+length(allcombinations2(:,1))+2*length(allcombinations3(:,1))
@@ -278,18 +278,19 @@ switch m
 
                 for i = 2*na+2:3*na+1
                     if (k > i)
-                        phi_val(k,i+1) = s.val.OutputData(i)^3; % y(k-i)^2
+                        phi_val(k,i+1) = s.val.OutputData(i)^2; % y(k-i)^2
                     end
                 end
 
                 for i = 3*na+2:4*na+1
                     if (k > i)
-                        phi_val(k,i+1) = s.val.InputData(i)^3; % u(k-i)^2
+                        phi_val(k,i+1) = s.val.InputData(i)^2; % u(k-i)^2
                     end
                 end 
             end
         else
-            phi_val = [ones(length(s.val.InputData),1),zeros(length(s.val.InputData),4*na+length(allcombinations2(:,1))+2*length(combinations2(:,1)))];  % aici am initializat vectorul sa aiba prima valoare 1
+            phi_val = [ones(length(s.val.InputData),1),zeros(length(s.val.InputData),4*na+length(allcombinations2(:,1))+2*length(combinations2(:,1)))];
+            % aici am initializat vectorul sa aiba prima valoare 1
             
             for k = 1:length(s.val.InputData)
                 for i = 1:na
@@ -353,13 +354,13 @@ switch m
 
                 for i = 2*na+2:3*na+1
                     if (k > i)
-                        phi_val(k,i+1) = s.val.OutputData(i)^3; % y(k-i)^2
+                        phi_val(k,i+1) = s.val.OutputData(i)^2; % y(k-i)^2
                     end
                 end
 
                 for i = 3*na+2:4*na+1
                     if (k > i)
-                        phi_val(k,i+1) = s.val.InputData(i)^3; % u(k-i)^2
+                        phi_val(k,i+1) = s.val.InputData(i)^2; % u(k-i)^2
                     end
                 end
         
@@ -531,11 +532,11 @@ switch m
                 end
 
                 for i = na+2*length(combinations2(:,1))+length(allcombinations2(:,1))+1:2*na+2*length(combinations2(:,1))+length(allcombinations2(:,1))
-                    phi(k,i+1) = ysim(i)^m; % y(k-i)^3
+                    phi(k,i+1) = ysim(i)^m; % y(k-i)^2
                 end
 
                 for i = 2*na+2*length(combinations2)+length(allcombinations2(:,1))+1:3*na+2*length(combinations2(:,1))+length(allcombinations2(:,1))
-                    phi(k,i+1) = s.val.InputData(i)^m; % u(k-i)^3
+                    phi(k,i+1) = s.val.InputData(i)^m; % u(k-i)^2
                 end
             end
 
@@ -565,13 +566,13 @@ switch m
 
                 for i = 2*na+2:3*na+1
                     if (k > i)
-                        phi(k,i+1) = ysim(i)^3; % y(k-i)^2
+                        phi(k,i+1) = ysim(i)^3; % y(k-i)^3
                     end
                 end
 
                 for i = 3*na+2:4*na+1
                     if (k > i)
-                        phi(k,i+1) = s.val.InputData(i)^3; % u(k-i)^2
+                        phi(k,i+1) = s.val.InputData(i)^3; % u(k-i)^3
                     end
                 end
     
@@ -668,6 +669,7 @@ xlabel('Time'); ylabel('Output');
 
 % find2combinations retrieves all the possible combinations of na and nb
 % used in the case of m=2
+
 function [result, final_result] = find2combinations(na)
     result = []; % includes all combinations that do not repeat themselves
     final_result = []; % includes all combinations that do not repeat themselves and do not contain equal numbers
@@ -696,6 +698,6 @@ result = []; % includes all combinations that do not repeat themselves
             for c = 1:na
                 result = [result;a,b,c];
             end
-        end
+       end
     end
 end
