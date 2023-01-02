@@ -4,20 +4,20 @@ s = load('iddata-09.mat'); % loading the data
 
 m = 1; % maximum order of the dynamics, the polynomial degree
 
-na = 1; % configurable, na=nb
-nb = 1; % configurable
+na = 9; % configurable, na=nb
+nb = 9; % configurable
 nk = 1;
 
 if na > 1 && nb > 1
     [allcombinations2,combinations2] = find2combinations(na); % finding all the combinations of na and nb
     allcombinations3 = find3combinations(na); % finding all the combinations of na and nb
 end
-% 
-% figure,
-% subplot(2,1,1); plot(s.id);
-% title('Identification data');
-% subplot(2,1,2); plot(s.val);
-% title('Validation data');
+ 
+figure,
+subplot(2,1,1); plot(s.id);
+title('Identification data');
+subplot(2,1,2); plot(s.val);
+title('Validation data');
 %% Solving the problem using nlarx function
 % Identification data
 figure,
