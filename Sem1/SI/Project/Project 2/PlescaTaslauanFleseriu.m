@@ -36,16 +36,16 @@ switch m
     case 1
         phi_id = zeros(length(s.id.InputData),na+nb);
 
-        for k = 1:length(s.id.InputData) % de verificat daca nu trebuie cumva altfel pus asta ca sa fie ok k
+        for k = 1:length(s.id.InputData) 
             for i = 1:na
                 if (k-i > 0)
-                    phi_id(k,i) = -1*s.id.OutputData(k-i); % y(k-i)^mm
+                    phi_id(k,i) = -1*s.id.OutputData(k-i); % y(k-i)
                 end
             end
 
             for i = na+1:na+nb
                 if (k-i > 0)
-                    phi_id(k,i) = s.id.InputData(k-i); % u(k-i)^mm
+                    phi_id(k,i) = s.id.InputData(k-i); % u(k-i)
                 end
             end
         end
@@ -57,13 +57,13 @@ switch m
             for k = 1:length(s.id.InputData)
                 for i = 1:na
                     if (k-i > 0)
-                        phi_id(k,i+1) = -1*s.id.OutputData(k-i); % y(k-i)^mm
+                        phi_id(k,i+1) = -1*s.id.OutputData(k-i); % y(k-i)
                     end
                 end
 
                 for i = na+1:2*na
                     if (k-i > 0)
-                        phi_id(k,i+1) = s.id.InputData(k-i); % u(k-i)^mm
+                        phi_id(k,i+1) = s.id.InputData(k-i); % u(k-i)
                     end
                 end
 
@@ -72,27 +72,24 @@ switch m
                 end
 
                 for i = 2*na+2:3*na+1
-                    phi_id(k,i+1) = s.id.OutputData(i)^3; % y(k-i)^m (valoarea maxima)
+                    phi_id(k,i+1) = s.id.OutputData(i)^3; % y(k-i)^2
                 end
 
                 for i = 3*na+2:4*na+1
-                    phi_id(k,i+1) = s.id.InputData(i)^3; % u(k-i)^m
+                    phi_id(k,i+1) = s.id.InputData(i)^3; % u(k-i)^2
                 end
             end
         else
-            [allcombinations2,combinations2] = find2combinations(na); % finding all the combinations of na and nb
-            phi_id = [ones(length(s.id.InputData),1),zeros(length(s.id.InputData),4*na+length(allcombinations2(:,1))+2*length(combinations2(:,1)))];  % aici am initializat vectorul sa aiba prima valoare 1  
-
             for k = 1:length(s.id.InputData) 
                 for i = 1:na
                     if (k-i > 0)
-                        phi_id(k,i+1) = -1*s.id.OutputData(k-i); % y(k-i)^mm
+                        phi_id(k,i+1) = -1*s.id.OutputData(k-i); % y(k-i)
                     end
                 end 
 
                 for i = na+1:2*na
                     if (k-i > 0)
-                        phi_id(k,i+1) = s.id.InputData(k-i); % u(k-i)^mm
+                        phi_id(k,i+1) = s.id.InputData(k-i); % u(k-i)
                     end
                 end 
 
@@ -113,11 +110,11 @@ switch m
                 end
 
                 for i = 1*na+2*length(combinations2)+length(allcombinations2)+1:2*na+2*length(combinations2)+length(allcombinations2)
-                    phi_id(k,i+1) = s.id.OutputData(i)^m; % y(k-i)^m (valoarea maxima)
+                    phi_id(k,i+1) = s.id.OutputData(i)^m; % y(k-i)^2
                 end
 
                 for i = 2*na+2*length(combinations2)+length(allcombinations2)+1:3*na+2*length(combinations2)+length(allcombinations2)
-                    phi_id(k,i+1) = s.id.InputData(i)^m; % u(k-i)^m
+                    phi_id(k,i+1) = s.id.InputData(i)^m; % u(k-i)^2
                 end 
             end
         end
@@ -172,21 +169,9 @@ switch m
                 end  
             end
         else
-            phi_id = [ones(length(s.id.InputData),1),zeros(length(s.id.InputData),4*na+length(allcombinations2(:,1))+2*length(combinations2(:,1)))];  % aici am initializat vectorul sa aiba prima valoare 1
+            phi_id = [ones(length(s.id.InputData),1),zeros(length(s.id.InputData),4*na+length(allcombinations2(:,1))+2*length(combinations2(:,1)))];  
 
             for k = 1:length(s.id.InputData)
-                for i = 1:na
-                    if (k-i > 0)
-                        phi_id(k,i+1) = -1*s.id.OutputData(k-i); % y(k-i)
-                    end
-                end
-
-                for i = na+1:2*na
-                    if (k-i > 0)
-                        phi_id(k,i+1) = s.id.InputData(k-i); % u(k-i)
-                    end
-                end
-
                 for i = 1:na
                     if (k-i > 0)
                         phi_id(k,i+1) = -1*s.id.OutputData(k-i); % y(k-i)
@@ -216,11 +201,11 @@ switch m
                 end
 
                 for i = 1*na+2*length(allcombinations2(:,1))+length(allcombinations2(:,1))+1:2*na+2*length(allcombinations2(:,1))+length(allcombinations2(:,1))
-                    phi_id(k,i+1) = s.id.OutputData(i)^2; % y(k-i)^m (valoarea maxima)
+                    phi_id(k,i+1) = s.id.OutputData(i)^2; % y(k-i)^2
                 end
 
                 for i = 2*na+2*(length(allcombinations2)/2)+length(allcombinations2(:,1))+1:3*na+2*length(allcombinations2(:,1))+length(allcombinations2(:,1))
-                    phi_id(k,i+1) = s.id.InputData(i)^2; % u(k-i)^m
+                    phi_id(k,i+1) = s.id.InputData(i)^2; % u(k-i)^2
                 end
 
                 for i = 1:length(allcombinations3(:,1))
@@ -233,11 +218,11 @@ switch m
                 end
 
                 for i = 3*na+2*length(allcombinations2(:,1))+length(allcombinations2)+1:4*na+2*length(allcombinations3(:,1))
-                    phi_id(k,i+1) = s.id.OutputData(i)^3; % y(k-i)^m (valoarea maxima)
+                    phi_id(k,i+1) = s.id.OutputData(i)^3; % y(k-i)^3
                 end
 
                 for i = 4*na+2*(length(allcombinations2(:,1)))+length(allcombinations2(:,1))+2*length(allcombinations3(:,1))+1:5*na+2*(length(allcombinations2(:,1)))+length(allcombinations2(:,1))+2*length(allcombinations3(:,1))
-                    phi_id(k,i+1) = s.id.InputData(i)^3; % u(k-i)^m
+                    phi_id(k,i+1) = s.id.InputData(i)^3; % u(k-i)^3
                 end
             end
         end
@@ -256,16 +241,16 @@ switch m
     case 1
         phi_val = zeros(length(s.val.InputData),na+nb);
 
-        for k = 1:length(s.val.InputData) % de verificat daca nu trebuie cumva altfel pus asta ca sa fie ok k
+        for k = 1:length(s.val.InputData) 
             for i = 1:na
                 if (k-i > 0)
-                    phi_val(k,i) = -1*s.val.OutputData(k-i); % y(k-i)^mm
+                    phi_val(k,i) = -1*s.val.OutputData(k-i); % y(k-i)
                 end
             end
 
             for i = na+1:na+nb
                 if (k-i > 0)
-                    phi_val(k,i) = s.val.InputData(k-i); % u(k-i)^mm
+                    phi_val(k,i) = s.val.InputData(k-i); % u(k-i)
                 end
             end
         end
@@ -277,13 +262,13 @@ switch m
             for k = 1:length(s.val.InputData)
                 for i = 1:na
                     if (k-i > 0)
-                        phi_val(k,i+1) = -1*s.val.OutputData(k-i); % y(k-i)^mm
+                        phi_val(k,i+1) = -1*s.val.OutputData(k-i); % y(k-i)
                     end
                 end
 
                 for i = na+1:2*na
                     if (k-i > 0)
-                        phi_val(k,i+1) = s.val.InputData(k-i); % u(k-i)^mm
+                        phi_val(k,i+1) = s.val.InputData(k-i); % u(k-i)
                     end
                 end
 
@@ -309,13 +294,13 @@ switch m
             for k = 1:length(s.val.InputData)
                 for i = 1:na
                     if (k-i > 0)
-                        phi_val(k,i+1) = -1*s.val.OutputData(k-i); % y(k-i)^mm
+                        phi_val(k,i+1) = -1*s.val.OutputData(k-i); % y(k-i)
                     end
                 end
 
                 for i = na+1:2*na
                     if (k-i > 0)
-                        phi_val(k,i+1) = s.val.InputData(k-i); % u(k-i)^mm
+                        phi_val(k,i+1) = s.val.InputData(k-i); % u(k-i)
                     end
                 end
 
@@ -336,11 +321,11 @@ switch m
                 end
 
                 for i = 1*na+2*length(combinations2(:,1))+length(allcombinations2(:,1))+1:2*na+2*length(combinations2(:,1))+length(allcombinations2(:,1))
-                    phi_val(k,i+1) = s.val.OutputData(i)^m; % y(k-i)^m (valoarea maxima)
+                    phi_val(k,i+1) = s.val.OutputData(i)^m; % y(k-i)^2
                 end
 
                 for i = 2*na+2*length(combinations2(:,1))+length(allcombinations2(:,1))+1:3*na+2*length(combinations2(:,1))+length(allcombinations2(:,1))
-                    phi_val(k,i+1) = s.val.InputData(i)^m; % u(k-i)^m
+                    phi_val(k,i+1) = s.val.InputData(i)^m; % u(k-i)^2
                 end
             end
         end
@@ -396,7 +381,7 @@ switch m
                 end  
             end
         else
-            phi_val = [ones(length(s.val.InputData),1),zeros(length(s.val.InputData),4*na+length(allcombinations2(:,1))+2*length(combinations2(:,1)))];  % aici am initializat vectorul sa aiba prima valoare 1
+            phi_val = [ones(length(s.val.InputData),1),zeros(length(s.val.InputData),4*na+length(allcombinations2(:,1))+2*length(combinations2(:,1)))];
 
             for k = 1:length(s.val.InputData)            
                 for i = 1:na
@@ -490,13 +475,13 @@ switch m
             for k = 2:length(s.val.InputData)
                 for i = 1:na
                     if (k-i > 0)
-                        phi(k,i+1) = -1*ysim(k-i); % y(k-i)^mm
+                        phi(k,i+1) = -1*ysim(k-i); % y(k-i)
                     end
                 end
 
                 for i = na+1:2*na
                     if (k-i > 0)
-                        phi(k,i+1) = s.val.InputData(k-i); % u(k-i)^mm
+                        phi(k,i+1) = s.val.InputData(k-i); % u(k-i)
                     end
                 end
 
@@ -506,11 +491,11 @@ switch m
                 end
 
                 for i = 2*na+3:3*na+2
-                    phi_val(k,i+1) = ysim(i)^3; % y(k-i)^m (valoarea maxima)
+                    phi_val(k,i+1) = ysim(i)^2; % y(k-i)^2
                 end
 
                 for i = 3*na+3:4*na+2
-                    phi_val(k,i+1) = s.val.InputData(i)^3; % u(k-i)^m
+                    phi_val(k,i+1) = s.val.InputData(i)^2; % u(k-i)^2
                 end
             end
         else
@@ -546,11 +531,11 @@ switch m
                 end
 
                 for i = na+2*length(combinations2(:,1))+length(allcombinations2(:,1))+1:2*na+2*length(combinations2(:,1))+length(allcombinations2(:,1))
-                    phi(k,i+1) = ysim(i)^m; % y(k-i)^m (valoarea maxima)
+                    phi(k,i+1) = ysim(i)^m; % y(k-i)^3
                 end
 
                 for i = 2*na+2*length(combinations2)+length(allcombinations2(:,1))+1:3*na+2*length(combinations2(:,1))+length(allcombinations2(:,1))
-                    phi(k,i+1) = s.val.InputData(i)^m; % u(k-i)^m
+                    phi(k,i+1) = s.val.InputData(i)^m; % u(k-i)^3
                 end
             end
 
@@ -564,13 +549,13 @@ switch m
             for k = 1:length(s.val.InputData)
                 for i = 1:na
                     if (k-i > 0)
-                        phi(k,i+1) = -1*ysim(k-i); % y(k-i)^mm
+                        phi(k,i+1) = -1*ysim(k-i); % y(k-i)
                     end
                 end
 
                 for i = na+1:2*na
                     if (k-i > 0)
-                        phi(k,i+1) = s.val.InputData(k-i); % u(k-i)^mm
+                        phi(k,i+1) = s.val.InputData(k-i); % u(k-i)
                     end
                 end
 
@@ -642,11 +627,11 @@ switch m
                 end
 
                 for i = 1*na+2*length(allcombinations2(:,1))+length(allcombinations2(:,1))+1:2*na+2*length(allcombinations2(:,1))+length(allcombinations2(:,1))
-                    phi(k,i+1) = ysim(i)^2; % y(k-i)^m (valoarea maxima)
+                    phi(k,i+1) = ysim(i)^2; % y(k-i)^2
                 end
 
                 for i = 2*na+2*(length(allcombinations2(:,1)))+length(allcombinations2(:,1))+1:3*na+2*length(allcombinations2(:,1))+length(allcombinations2(:,1))
-                    phi(k,i+1) = s.val.InputData(i)^2; % u(k-i)^m
+                    phi(k,i+1) = s.val.InputData(i)^2; % u(k-i)^2
                 end
 
                 for i = 1:length(allcombinations3(:,1))
@@ -659,11 +644,11 @@ switch m
                 end
 
                 for i = 3*na+2*length(allcombinations2(:,1))+length(allcombinations2(:,1))+1:4*na+2*length(allcombinations3(:,1))
-                    phi(k,i+1) = ysim(i)^3; % y(k-i)^2
+                    phi(k,i+1) = ysim(i)^3; % y(k-i)^3
                 end
 
                 for i = 4*na+2*(length(allcombinations2(:,1)))+length(allcombinations2(:,1))+2*length(allcombinations3(:,1))+1:5*na+2*(length(allcombinations2(:,1)))+length(allcombinations2(:,1))+2*length(allcombinations3(:,1))
-                    phi(k,i+1) = s.val.InputData(i)^3; % u(k-i)^2
+                    phi(k,i+1) = s.val.InputData(i)^3; % u(k-i)^3
                 end
 
                 ysim(i) = phi(i,:)*theta;
@@ -679,7 +664,7 @@ mse_pred = 1/length(s.val.InputData)*sum((s.val.InputData-ysim).^2);
 figure,
 plot(1:length(s.val.InputData),s.val.InputData,1:length(s.val.InputData),yhatsim); title('Output for prediction data and model, Validation MSE = ',num2str(mean(mse_pred)));
 xlabel('Time'); ylabel('Output');
-%% Defining the functions that retrieve the combinations
+%% Defining the functions used to retrieve the combinations
 
 % find2combinations retrieves all the possible combinations of na and nb
 % used in the case of m=2
@@ -701,9 +686,7 @@ function [result, final_result] = find2combinations(na)
 end
 
 % find3combinations retrieves all the possible combinations of na and nb
-% used in the case of m=3
-% find3combinations retrieves all the possible combinations of na and nb
-% used in the case of m=3
+% used in the case m=3
 function result = find3combinations(na)
 result = []; % includes all combinations that do not repeat themselves
     final_result = []; % includes all combinations that do not repeat themselves and do not contain equal numbers
