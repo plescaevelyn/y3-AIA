@@ -2,7 +2,7 @@ clear variables; clc;
 
 s = load('iddata-09.mat'); % loading the data
 
-m = 3; % maximum order of the dynamics, the polynomial degree
+m = 2; % maximum order of the dynamics, the polynomial degree
 
 na = 2; % configurable, na=nb
 nb = 2; % configurable
@@ -141,13 +141,13 @@ switch m
 
                 for i = 2*na+2:3*na+1
                     if (k > i)
-                        phi_id(k,i+1) = s.id.OutputData(i)^3; % y(k-i)^2
+                        phi_id(k,i+1) = s.id.OutputData(i)^2; % y(k-i)^2
                     end
                 end
 
                 for i = 3*na+2:4*na+1
                     if (k > i)
-                        phi_id(k,i+1) = s.id.InputData(i)^3; % u(k-i)^2
+                        phi_id(k,i+1) = s.id.InputData(i)^2; % u(k-i)^2
                     end
                 end
     
@@ -278,13 +278,13 @@ switch m
 
                 for i = 2*na+2:3*na+1
                     if (k > i)
-                        phi_val(k,i+1) = s.val.OutputData(i)^3; % y(k-i)^2
+                        phi_val(k,i+1) = s.val.OutputData(i)^m; % y(k-i)^2
                     end
                 end
 
                 for i = 3*na+2:4*na+1
                     if (k > i)
-                        phi_val(k,i+1) = s.val.InputData(i)^3; % u(k-i)^2
+                        phi_val(k,i+1) = s.val.InputData(i)^m; % u(k-i)^2
                     end
                 end 
             end
@@ -353,13 +353,13 @@ switch m
 
                 for i = 2*na+2:3*na+1
                     if (k > i)
-                        phi_val(k,i+1) = s.val.OutputData(i)^3; % y(k-i)^2
+                        phi_val(k,i+1) = s.val.OutputData(i)^2; % y(k-i)^2
                     end
                 end
 
                 for i = 3*na+2:4*na+1
                     if (k > i)
-                        phi_val(k,i+1) = s.val.InputData(i)^3; % u(k-i)^2
+                        phi_val(k,i+1) = s.val.InputData(i)^2; % u(k-i)^2
                     end
                 end
         
@@ -370,13 +370,13 @@ switch m
 
                 for i = 4*na+4:5*na+3
                     if (k > i)
-                        phi_val(k,i+1) = s.val.OutputData(i)^3; % y(k-i)^3
+                        phi_val(k,i+1) = s.val.OutputData(i)^m; % y(k-i)^3
                     end
                 end
 
                 for i = 5*na+4:6*na+3
                     if (k > i)
-                        phi_val(k,i+1) = s.val.InputData(i)^3; % u(k-i)^3
+                        phi_val(k,i+1) = s.val.InputData(i)^m; % u(k-i)^3
                     end
                 end  
             end
@@ -413,11 +413,11 @@ switch m
                 end
 
                 for i = 1*na+2*length(combinations2(:,1))+length(allcombinations2(:,1))+1:2*na+2*length(combinations2(:,1))+length(allcombinations2(:,1))
-                    phi_val(k,i+1) = s.val.OutputData(i)^m; % y(k-i)^2
+                    phi_val(k,i+1) = s.val.OutputData(i)^2; % y(k-i)^2
                 end
 
                 for i = 2*na+2*length(combinations2(:,1))+length(allcombinations2(:,1))+1:3*na+2*length(combinations2(:,1))+length(allcombinations2(:,1))
-                    phi_val(k,i+1) = s.val.InputData(i)^m; % u(k-i)^2
+                    phi_val(k,i+1) = s.val.InputData(i)^2; % u(k-i)^2
                 end
 
                 for i = 1:length(allcombinations3(:,1))
@@ -430,11 +430,11 @@ switch m
                 end
 
                 for i = 3*na+2*length(allcombinations2(:,1))+length(allcombinations2(:,1))+1:4*na+2*length(allcombinations3(:,1))
-                    phi_val(k,i+1) = s.val.OutputData(i)^3; % y(k-i)^3
+                    phi_val(k,i+1) = s.val.OutputData(i)^m; % y(k-i)^3
                 end
 
                 for i = 4*na+2*(length(allcombinations2(:,1)))+length(allcombinations2(:,1))+2*length(allcombinations3(:,1))+1:5*na+2*(length(allcombinations2(:,1)))+length(allcombinations2(:,1))+2*length(allcombinations3(:,1))
-                    phi_val(k,i+1) = s.val.InputData(i)^3; % u(k-i)^3
+                    phi_val(k,i+1) = s.val.InputData(i)^m; % u(k-i)^3
                 end
             end
         end
@@ -531,11 +531,11 @@ switch m
                 end
 
                 for i = na+2*length(combinations2(:,1))+length(allcombinations2(:,1))+1:2*na+2*length(combinations2(:,1))+length(allcombinations2(:,1))
-                    phi(k,i+1) = ysim(i)^m; % y(k-i)^3
+                    phi(k,i+1) = ysim(i)^m; % y(k-i)^2
                 end
 
                 for i = 2*na+2*length(combinations2)+length(allcombinations2(:,1))+1:3*na+2*length(combinations2(:,1))+length(allcombinations2(:,1))
-                    phi(k,i+1) = s.val.InputData(i)^m; % u(k-i)^3
+                    phi(k,i+1) = s.val.InputData(i)^m; % u(k-i)^2
                 end
             end
 
@@ -565,13 +565,13 @@ switch m
 
                 for i = 2*na+2:3*na+1
                     if (k > i)
-                        phi(k,i+1) = ysim(i)^3; % y(k-i)^2
+                        phi(k,i+1) = ysim(i)^2; % y(k-i)^2
                     end
                 end
 
                 for i = 3*na+2:4*na+1
                     if (k > i)
-                        phi(k,i+1) = s.val.InputData(i)^3; % u(k-i)^2
+                        phi(k,i+1) = s.val.InputData(i)^2; % u(k-i)^2
                     end
                 end
     
@@ -582,13 +582,13 @@ switch m
 
                 for i = 4*na+4:5*na+3
                     if (k > i)
-                        phi(k,i+1) = ysim(i)^3; % y(k-i)^3
+                        phi(k,i+1) = ysim(i)^m; % y(k-i)^3
                     end
                 end
 
                 for i = 5*na+4:6*na+3
                     if (k > i)
-                        phi(k,i+1) = s.val.InputData(i)^3; % u(k-i)^3
+                        phi(k,i+1) = s.val.InputData(i)^m; % u(k-i)^3
                     end
                 end  
 
@@ -644,11 +644,11 @@ switch m
                 end
 
                 for i = 3*na+2*length(allcombinations2(:,1))+length(allcombinations2(:,1))+1:4*na+2*length(allcombinations3(:,1))
-                    phi(k,i+1) = ysim(i)^3; % y(k-i)^3
+                    phi(k,i+1) = ysim(i)^m; % y(k-i)^3
                 end
 
                 for i = 4*na+2*(length(allcombinations2(:,1)))+length(allcombinations2(:,1))+2*length(allcombinations3(:,1))+1:5*na+2*(length(allcombinations2(:,1)))+length(allcombinations2(:,1))+2*length(allcombinations3(:,1))
-                    phi(k,i+1) = s.val.InputData(i)^3; % u(k-i)^3
+                    phi(k,i+1) = s.val.InputData(i)^m; % u(k-i)^3
                 end
 
                 ysim(i) = phi(i,:)*theta;
