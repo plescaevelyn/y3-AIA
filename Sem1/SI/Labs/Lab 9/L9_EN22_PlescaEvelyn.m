@@ -1,5 +1,3 @@
-% CITIT SI VERIFICAT DIN CURS
-
 clear variables; clc; close all;
 %% Loading and plotting the data
 s = load('lab9_3.mat');
@@ -11,6 +9,11 @@ subplot(212); plot(s.val); title("Validation data");
 na = s.n;
 nb = s.n;
 nk = 0;
+
+% Creating the ARX model using the pre-implemented function
+% figure,
+ARXmodel = arx(s.id,[na,nb,nk]);
+% compare(ARXmodel,s.val);
 
 % Identification data
 phi_id = zeros(length(s.id.InputData),na+nb);
@@ -80,7 +83,6 @@ for i = 2:length(s.val.InputData)
     ysim(i) = phi(i,:)*theta;
 end
 
-
 theta = phi\s.val.OutputData;
 yhatsim = phi*theta;
 
@@ -107,20 +109,30 @@ end
 theta = z\s.val.OutputData;
 yhatsim = phi*theta;
 
+mse1 = 1/length(s.val.OutputData)*sum((yhatsim-s.val.OutputData).^2);
+
 figure,
 plot(1:length(s.val.InputData),s.val.OutputData,1:length(s.val.OutputData),yhatsim);
-title('Output for the instrument vector Z')
+title('Output for the instrument vector Z, MSE = ',num2str(mean(mse1)));
 xlabel('Time'); ylabel('Output');
 
 N = length(ysim);
-phi_tilda = 1/N*sum(z(k).*phi(k))
+phi_tilda = 1/N.*z;
 Y_tilda = 1/N*z.*s.id.OutputData;
-Y = 1/N*z.*s.id.OutputData
+Y = 1/N*z.*s.id.OutputData;
 
-Ahat = thetahat(1:na);
-Bhat = thetahat(na+1:na+nb);
+theta = phi_id\Y_tilda;
 
-IVmodel = idpoly(Ahat,Bhat,[],[],[],0,s.id.Ts);
-compare(IVmodel,yhat);
+Ahat = theta(1:na);
+Bhat = theta(na+1:na+nb);
 
+IVmodel = idpoly([1 Ahat],[0 Bhat],[],[],[],0,s.id.Ts);
+
+figure,
+compare(IVmodel,s.val);
 %% Comparing the quality of the two models (ARX and IV)
+figure,
+subplot(211); compare(IVmodel,s.val);
+title('IV Model');
+subplot(212); compare(ARXmodel,s.val);
+title('ARX Model')
