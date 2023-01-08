@@ -40,7 +40,8 @@ y_cap = phi_id*theta;
 mse_id = 1/length(s.id.OutputData)*sum((y_cap-s.id.OutputData).^2);
 
 figure, 
-plot(1:length(s.id.InputData),s.id.OutputData,1:length(s.id.InputData),y_cap); title('Output for identification data and model, Identification MSE = ',num2str(mean(mse_id)));
+subplot(311);
+plot(1:length(s.id.InputData),s.id.OutputData,1:length(s.id.InputData),y_cap); title('Output for identification data and model of the ARX model, Identification MSE = ',num2str(mean(mse_id)));
 xlabel('Time'); ylabel('Output');
 
 % Validation data
@@ -62,8 +63,8 @@ y_val_cap = phi_val*theta;
 
 mse_val = 1/length(s.val.OutputData)*sum((y_val_cap-s.val.OutputData).^2);
 
-figure, 
-plot(1:length(s.val.InputData),s.val.OutputData,1:length(s.val.InputData),y_val_cap); title('Output for validation data and model, Validation MSE = ',num2str(mean(mse_val)));
+subplot(312)
+plot(1:length(s.val.InputData),s.val.OutputData,1:length(s.val.InputData),y_val_cap); title('Output for validation data and model of the ARX model, Validation MSE = ',num2str(mean(mse_val)));
 xlabel('Time'); ylabel('Output');
 % Simulation
 phi = zeros(length(s.val.InputData),na+nb);
@@ -88,8 +89,8 @@ yhatsim = phi*theta;
 
 mse_pred = 1/length(s.val.OutputData)*sum((s.val.OutputData-ysim).^2);
 
-figure, 
-plot(1:length(s.val.InputData),s.val.OutputData,1:length(s.val.OutputData),yhatsim); title('Output for prediction data and model, Validation MSE = ',num2str(mean(mse_pred)));
+subplot(313);
+plot(1:length(s.val.InputData),s.val.OutputData,1:length(s.val.OutputData),yhatsim); title('Output for prediction data and model of the ARX model, Validation MSE = ',num2str(mean(mse_pred)));
 xlabel('Time'); ylabel('Output');
 %% Creating the IV model
 z = zeros(length(ysim),na+nb);
@@ -117,16 +118,15 @@ title('Output for the instrument vector Z, MSE = ',num2str(mean(mse1)));
 xlabel('Time'); ylabel('Output');
 
 N = length(ysim);
-phi_tilda = 1/N.*z;
-Y_tilda = 1/N*z.*s.id.OutputData;
-Y = 1/N*z.*s.id.OutputData;
+% phi_tilda = 1/N*z*phi;
+Y_tilda = 1/N*z'*s.id.OutputData;
 
-theta = phi_id\Y_tilda;
+theta = phi_id'\Y_tilda;
 
 Ahat = theta(1:na);
 Bhat = theta(na+1:na+nb);
 
-IVmodel = idpoly([1 Ahat],[0 Bhat],[],[],[],0,s.id.Ts);
+IVmodel = idpoly([1 Ahat'],[0 Bhat'],[],[],[],0,s.id.Ts);
 
 figure,
 compare(IVmodel,s.val);
