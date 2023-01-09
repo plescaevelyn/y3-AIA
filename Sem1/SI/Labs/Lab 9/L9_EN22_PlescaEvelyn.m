@@ -11,9 +11,7 @@ nb = s.n;
 nk = 0;
 
 % Creating the ARX model using the pre-implemented function
-% figure,
 ARXmodel = arx(s.id,[na,nb,nk]);
-% compare(ARXmodel,s.val);
 
 % Identification data
 phi_id = zeros(length(s.id.InputData),na+nb);
@@ -96,13 +94,6 @@ for i = 1:length(ysim)
         if (i > j)
             z(j) = ysim(i-j);
             z(j+na) = s.id.InputData(i-j);
-        end
-    end
-
-    for j = 1:na
-        if (i-j > 0)
-            phi_id(i,j) = -1*s.id.OutputData(i-j);
-            phi_id(i,j+na) = s.id.InputData(i-j);
         end
     end
 
