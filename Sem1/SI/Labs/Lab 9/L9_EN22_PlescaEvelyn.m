@@ -97,31 +97,31 @@ z = zeros(length(ysim),na+nb);
 for i = 1:length(ysim)
     for j = 1:na
         if (i-j>0)
-            z(i,j) = -1*ysim(i-j+1);
+            z(i,j) = -1*ysim(i-j);
         end
     end
     for j = na+1:na+nb
         if (i-j>0)
-            z(i,j) = s.val.InputData(i-j+na);
+            z(i,j) = s.id.InputData(i-j+na);
         end
     end
 end
 
-theta = z\s.val.OutputData;
-yhatsim = phi*theta;
+theta = z\s.id.OutputData;
+yhatsim = phi_id*theta;
 
-mse1 = 1/length(s.val.OutputData)*sum((yhatsim-s.val.OutputData).^2);
+mse_z = 1/length(s.id.OutputData)*sum((yhatsim-s.id.OutputData).^2);
 
 figure,
-plot(1:length(s.val.InputData),s.val.OutputData,1:length(s.val.OutputData),yhatsim);
-title('Output for the instrument vector Z, MSE = ',num2str(mean(mse1)));
+plot(1:length(s.id.OutputData),s.id.OutputData,1:length(s.id.OutputData),yhatsim);
+title('Output for the instrument vector Z, MSE = ',num2str(mean(mse_z)));
 xlabel('Time'); ylabel('Output');
 
 N = length(ysim);
-% phi_tilda = 1/N*z*phi;
-Y_tilda = 1/N*z'*s.id.OutputData;
+phi_tilda = 1/N*yhatsim.*phi_id;
+Y_tilda = 1/N*yhatsim.*s.id.OutputData;
 
-theta = phi_id'\Y_tilda;
+theta = phi_tilda\Y_tilda;
 
 Ahat = theta(1:na);
 Bhat = theta(na+1:na+nb);
@@ -129,7 +129,7 @@ Bhat = theta(na+1:na+nb);
 IVmodel = idpoly([1 Ahat'],[0 Bhat'],[],[],[],0,s.id.Ts);
 
 figure,
-compare(IVmodel,s.val);
+compare(IVmodel,s.val);title('Comparison for the IV model');
 %% Comparing the quality of the two models (ARX and IV)
 figure,
 subplot(211); compare(IVmodel,s.val);
