@@ -19,22 +19,15 @@ ARXmodel = arx(s.id,[na,nb,nk]);
 phi_id = zeros(length(s.id.InputData),na+nb);
 for i = 1:length(s.id.InputData)
     for j = 1:na
-        if (i-j<=0)
-            phi_id(i,j) = 0;
-        else
+        if (i-j > 0)
             phi_id(i,j) = -1*s.id.OutputData(i-j);
-        end
-    end
-    for j = na+1:na+nb
-        if (i-j<=0)
-            phi_id(i,j) = 0;
-        else
-            phi_id(i,j) = s.id.InputData(i-j);
+            phi_id(i,j+na) = s.id.InputData(i-j);
         end
     end
 end
 
 theta = phi_id\s.id.OutputData;
+theta_id = theta;
 y_cap = phi_id*theta;
 
 mse_id = 1/length(s.id.OutputData)*sum((y_cap-s.id.OutputData).^2);
@@ -93,28 +86,34 @@ subplot(313);
 plot(1:length(s.val.InputData),s.val.OutputData,1:length(s.val.OutputData),yhatsim); title('Output for prediction data and model of the ARX model, Validation MSE = ',num2str(mean(mse_pred)));
 xlabel('Time'); ylabel('Output');
 %% Creating the IV model
-z = zeros(length(ysim),na+nb);
+phi = zeros(na+nb,na+nb);
+phi_tilda = zeros(na+nb, 1);
+z = zeros(na+nb, 1);
+y_tilda = zeros(na+nb, 1);
+
 for i = 1:length(ysim)
-    for j = 1:na
-        if (i-j>0)
-            z(i,j) = -1*ysim(i-j);
-            z(i,j+na) = s.id.InputData(i-j);
+    for j = 1 : na
+        if (i > j)
+            z(j) = ysim(i-j);
+            z(j+na) = s.id.InputData(i-j);
         end
     end
+
+    for j = 1:na
+        if (i-j > 0)
+            phi_id(i,j) = -1*s.id.OutputData(i-j);
+            phi_id(i,j+na) = s.id.InputData(i-j);
+        end
+    end
+
+    y_tilda = y_tilda + z*s.id.OutputData(i);
+    phi_tilda = phi_tilda + z*phi_id(i,:);
 end
 
-mse_z = 1/length(s.id.OutputData)*sum((z-s.id.OutputData).^2);
-
-figure,
-plot(1:length(s.id.OutputData),s.id.OutputData,1:length(s.id.OutputData),z);
-title('Output for the instrument vector Z, MSE = ',num2str(mean(mse_z)));
-xlabel('Time'); ylabel('Output');
-
 N = length(ysim);
-phi_tilda = 1/N*yhatsim.*phi_id;
-Y_tilda = 1/N*yhatsim.*s.id.OutputData;
-
-theta = phi_tilda\Y_tilda;
+y_tilda = 1/N*y_tilda;
+phi_tilda = 1/N*phi_tilda;
+theta = phi_tilda\y_tilda;
 
 Ahat = theta(1:na);
 Bhat = theta(na+1:na+nb);
@@ -122,7 +121,7 @@ Bhat = theta(na+1:na+nb);
 IVmodel = idpoly([1 Ahat'],[0 Bhat'],[],[],[],0,s.id.Ts);
 
 figure,
-compare(IVmodel,s.val);title('Comparison for the IV model');
+compare(IVmodel,s.id);title('Comparison for the IV model');
 %% Comparing the quality of the two models (ARX and IV)
 figure,
 subplot(211); compare(IVmodel,s.val);
