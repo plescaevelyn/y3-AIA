@@ -98,22 +98,15 @@ for i = 1:length(ysim)
     for j = 1:na
         if (i-j>0)
             z(i,j) = -1*ysim(i-j);
-        end
-    end
-    for j = na+1:na+nb
-        if (i-j>0)
-            z(i,j) = s.id.InputData(i-j+na);
+            z(i,j+na) = s.id.InputData(i-j);
         end
     end
 end
 
-theta = z\s.id.OutputData;
-yhatsim = phi_id*theta;
-
-mse_z = 1/length(s.id.OutputData)*sum((yhatsim-s.id.OutputData).^2);
+mse_z = 1/length(s.id.OutputData)*sum((z-s.id.OutputData).^2);
 
 figure,
-plot(1:length(s.id.OutputData),s.id.OutputData,1:length(s.id.OutputData),yhatsim);
+plot(1:length(s.id.OutputData),s.id.OutputData,1:length(s.id.OutputData),z);
 title('Output for the instrument vector Z, MSE = ',num2str(mean(mse_z)));
 xlabel('Time'); ylabel('Output');
 
