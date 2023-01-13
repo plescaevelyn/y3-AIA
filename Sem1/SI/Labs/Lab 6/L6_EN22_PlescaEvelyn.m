@@ -15,16 +15,12 @@ nb = 20;
 phi_id = zeros(length(id.u),na+nb);
 for i = 1:length(id.t)
     for j = 1:na
-        if (i-j<=0)
-            phi_id(i,j) = 0;
-        else
+        if (i > j)
             phi_id(i,j) = -1*id.y(i-j);
         end
     end
     for j = na+1:na+nb
-        if (i-j<=0)
-            phi_id(i,j) = 0;
-        else
+        if (i > j)
             phi_id(i,j) = id.u(i-j);
         end
     end
@@ -43,12 +39,12 @@ xlabel('Time'); ylabel('Output');
 phi_val = zeros(length(val.t),na+nb);
 for i = 1:length(val.t)
     for j = 1:na
-        if (i-j>0)
+        if (i > j)
             phi_val(i,j) = -1*val.y(i-j+1);
         end
     end
     for j = na+1:na+nb
-        if (i-j>0)
+        if (i > j)
             phi_val(i,j) = val.u(i-j+na);
         end
     end
@@ -68,12 +64,12 @@ ysim = zeros(len,1);
 
 for i = 2:len
     for j = 1:na
-        if (i-j>0)
+        if (i > j)
             phi(i,j) = -1*ysim(i-j);
         end
     end
     for k = na+1:na+nb
-        if (na+i-k>0)
+        if (na+i > k)
             phi(i,k) = val.u(na+i-k);
         end
     end
