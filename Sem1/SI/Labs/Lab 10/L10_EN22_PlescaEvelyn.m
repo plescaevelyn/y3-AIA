@@ -3,9 +3,9 @@ close all;
 %% Loading and plotting the data
 s = load('lab10_3.mat');
 
-na = 3*s.n;
-nb = 3*s.n;
-nk = 1;
+na = 3*s.n; % order of A
+nb = 3*s.n; % order of B
+nk = 1; % delay
 
 figure,
 subplot(211); plot(s.id); title("Identification data");
@@ -35,7 +35,7 @@ end
 % forming the RARX regressor vector 
 for k = 2:length(s.id.InputData)
     e(k) = s.id.OutputData(k) - phi(k,:)*theta; % computing the error (a scalar)
-    p_inv = p_inv - p_inv*phi(k,:)'*phi(k,:)*p_inv/(1+phi(k,:)*p_inv*phi(k,:)'); % updating the inverse using the Sherrison-Morrins formula
+    p_inv = p_inv - p_inv*phi(k,:)'*phi(k,:)*p_inv/(1+phi(k,:)*p_inv*phi(k,:)'); % updating the inverse using the Sherman-Morrison formula
     w = p_inv*phi(k,:)'; % computing the weights
     theta = theta + w*e(k); % updating parameters
 end
@@ -79,7 +79,7 @@ end
 % forming the RARX regressor vector 
 for k = 2:N
     e(k) = s.id.OutputData(k) - phi(k,:)*theta; % computing the error (a scalar)
-    p_inv = p_inv - p_inv*phi(k,:)'*phi(k,:)*p_inv/(1+phi(k,:)*p_inv*phi(k,:)'); % updating the inverse using the Sherrison-Morrins formula
+    p_inv = p_inv - p_inv*phi(k,:)'*phi(k,:)*p_inv/(1+phi(k,:)*p_inv*phi(k,:)'); % updating the inverse using the Sherman-Morrison formula
     w = p_inv*phi(k,:)'; % computing the weights
     theta = theta + w*e(k); % updating parameters
 end
@@ -107,14 +107,14 @@ compare(RARXmodel,s.val);title('Comparison for the RARX model with the validatio
 % I think this is happening because by processing a larger amount of data,
 % our model is more precise
 %% Creating the RARX model using the rarx function for the whole dataset
-theta2 = rarx(s.id,[na,nb,1],'ff',1,zeros(na+nb,1),100*eye(na+nb)); % creating our theta
-RARXmodel2 = idpoly([1 theta2(length(s.id),1:na)],[1 theta2(length(s.id),na+1:na+nb)],[],[],[],0,s.id.Ts);
+% theta2 = rarx(s.id,[na,nb,1],'ff',1,zeros(na+nb,1),100*eye(na+nb)); % creating our theta
+% RARXmodel2 = idpoly([1 theta2(length(s.id),1:na)],[0 theta2(length(s.id),na+1:na+nb)],[],[],[],0,s.id.Ts);
 
-figure,
-compare(RARXmodel2,s.id);title('Comparison for the second RARX model with the validation data for the whole dataset');
+% figure,
+% compare(RARXmodel2,s.val);title('Comparison for the second RARX model with the validation data for the whole dataset');
 %% Creating the RARX model using the rarx function for 10% of the dataset
-theta2 = rarx(s.id,[na,nb,1],'ff',1,zeros(na+nb,1),100*eye(na+nb)); % creating our theta
-RARXmodel2 = idpoly([1 theta2(length(s.id),1:na)],[1 theta2(length(s.id),na+1:na+nb)],[],[],[],0,s.id.Ts);
+% theta2 = rarx(s.id,[na,nb,1],'ff',1,zeros(na+nb,1),100*eye(na+nb)); % creating our theta
+% RARXmodel2 = idpoly([1 theta2(length(s.id),1:na)],[0 theta2(length(s.id),na+1:na+nb)],[],[],[],0,s.id.Ts);
 
-figure,
-compare(RARXmodel2,s.id(1:N));title('Comparison for the second RARX model with the validation data for 10% of the dataset');
+% figure,
+% compare(RARXmodel2,s.val(1:N));title('Comparison for the second RARX model with the validation data for 10% of the dataset');
