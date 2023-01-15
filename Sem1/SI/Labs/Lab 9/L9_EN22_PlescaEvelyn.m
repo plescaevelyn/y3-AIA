@@ -41,11 +41,7 @@ for i = 1:length(s.val.InputData)
     for j = 1:na
         if (i-j>0)
             phi_val(i,j) = -1*s.val.OutputData(i-j+1);
-        end
-    end
-    for j = na+1:na+nb
-        if (i-j>0)
-            phi_val(i,j) = s.val.InputData(i-j+na);
+            phi_val(i,j+na) = s.val.InputData(i-j);
         end
     end
 end
@@ -65,11 +61,7 @@ for i = 2:length(s.val.InputData)
     for j = 1:na
         if (i-j>0)
             phi(i,j) = -1*ysim(i-j);
-        end
-    end
-    for k = na+1:na+nb
-        if (na+i-k>0)
-            phi(i,k) = s.val.InputData(na+i-k);
+            phi(i,j+na) = s.val.InputData(i-j);
         end
     end
     ysim(i) = phi(i,:)*theta;
