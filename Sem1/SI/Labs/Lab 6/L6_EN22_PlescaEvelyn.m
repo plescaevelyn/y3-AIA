@@ -17,11 +17,7 @@ for i = 1:length(id.t)
     for j = 1:na
         if (i > j)
             phi_id(i,j) = -1*id.y(i-j);
-        end
-    end
-    for j = na+1:na+nb
-        if (i + na > j)
-            phi_id(i,j) = id.u(i-j+na);
+            phi_id(i,j+na) = id.u(i-j);
         end
     end
 end
@@ -41,11 +37,7 @@ for i = 1:length(val.t)
     for j = 1:na
         if (i > j)
             phi_val(i,j) = -1*val.y(i-j+1);
-        end
-    end
-    for j = na+1:na+nb
-        if (i + na > j)
-            phi_val(i,j) = val.u(i-j+na);
+            phi_val(i,j+na) = val.u(i-j);
         end
     end
 end
@@ -66,11 +58,7 @@ for i = 2:len
     for j = 1:na
         if (i > j)
             phi(i,j) = -1*ysim(i-j);
-        end
-    end
-    for k = na+1:na+nb
-        if (i + na > k)
-            phi(i,k) = val.u(i-k+na);
+            phi(i,j+na) = val.u(i-j);
         end
     end
     ysim(i) = phi(i,:)*theta;
