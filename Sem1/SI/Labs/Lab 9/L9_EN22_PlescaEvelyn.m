@@ -75,10 +75,9 @@ mse_pred = 1/length(s.val.OutputData)*sum((s.val.OutputData-ysim).^2);
 subplot(313);
 plot(1:length(s.val.InputData),s.val.OutputData,1:length(s.val.OutputData),yhatsim); title('Output for prediction data and model of the ARX model, Validation MSE = ',num2str(mean(mse_pred)));
 xlabel('Time'); ylabel('Output');
-%% Creating the IV model
-phi = zeros(na+nb,na+nb);
-phi_tilda = zeros(na+nb, 1);
+%% Creating the IV models
 z = zeros(na+nb, 1);
+phi_tilda = zeros(na+nb, 1);
 y_tilda = zeros(na+nb, 1);
 
 for i = 1:length(ysim)
