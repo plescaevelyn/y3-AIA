@@ -23,11 +23,7 @@ for i = 1:length(s.id.InputData)
     for j = 1:na
         if (i > j)
             phi(i,j) = -1*s.id.OutputData(i-j);
-        end
-    end
-    for j = na+1:na+nb
-        if (i+na > j)
-            phi(i,j) = s.id.InputData(i-j+na);
+            phi(i,j+na) = s.id.InputData(i-j);
         end
     end
 end
@@ -67,11 +63,7 @@ for i = 1:N
     for j = 1:na
         if (i > j)
             phi(i,j) = -1*s.id.OutputData(i-j);
-        end
-    end
-    for j = na+1:na+nb
-        if (i+na > j)
-            phi(i,j) = s.id.InputData(i-j+na);
+            phi(i,j+na) = s.id.InputData(i-j);
         end
     end
 end
