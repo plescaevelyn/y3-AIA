@@ -6,6 +6,8 @@ The following subjects will be included:
 - Systems Identification
 - System Theory
 - Control Engineering
+- Power Electronics
+- Discrete-Event systems
 
 ## Second semester
 - to be seen...
