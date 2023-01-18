@@ -7,7 +7,7 @@ The following subjects will be included:
 - System Theory
 - Control Engineering
 - Power Electronics
-- Discrete-Event systems
+- Discrete-Event Systems
 
 ## Second semester
 - to be seen...
