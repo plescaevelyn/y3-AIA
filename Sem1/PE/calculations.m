@@ -1,4 +1,6 @@
-% Project calculations
+clear variables;
+
+%% Project calculations
 u1 = 220; % primary supply voltage
 u21 = 14; % secondary nominal voltage
 u22 = 44;
@@ -101,7 +103,7 @@ w23 = w22
 p2 = u21*i21 + u22*i22 + u23*i23 % secondary windings total power
 p = 1/niu_tr*p2 % overall power
 
-Design of rectifier circuits
+%% Design of rectifier circuits
 omega = 1.5 % safety factor
 
 % voltage stress of the rectifiers
@@ -130,11 +132,15 @@ ip3 = ip2
 
 id = 5
 
-% initial charging time of capacitors
-% deltat1 = round((r21 + k1*rd) * cf1,2)
-% deltat2 = round((r22 + k2*rd) * cf2,2)
-% delta3 = delta2
+% smoothing capacitor filter
+cf1 = 2 
+cf2 = 3.75
+cf3 = cf2
 
+% initial charging time of capacitors
+deltat1 = round((r21 + k1*rd) * cf1,2)
+deltat2 = round((r22 + k2*rd) * cf2,2)
+deltat3 = deltat2
 %% Design of the smoothing filter
 p = 67 % ripple factor
 % q - filtering coefficient
@@ -154,21 +160,78 @@ rrt2 = round(r22 + 2*rd,2)
 rrt3 = rrt2
 
 % smoothing capacitor values
-cf1 = round(1600*q*(rrt1+rs1)/rrt1/rs1,2)
-cf2 = round(1600*q*(rrt2+rs22)/rrt2/rs22,2)
-cf3 = cf2
+% cf1 = round(1600*q*(rrt1+rs1)/rrt1/rs1,2)
+% cf2 = round(1600*q*(rrt2+rs22)/rrt2/rs22,2)
+% cf3 = cf2
+
+w = 314
 
 rr1 = rrt1
-r01 = rs1
-w = 314
+r01 = rs21
 e01 = 1.41*e21 - 1*ud
 
 rr2 = rrt2
 r02 = rs22
 e02 = 1.41*e22 - 2*ud
 
-ku1 = u0/e01
-ku2 = u0/e02
+u0 = u21; % taken from the graph
+ku1 = round(u0/e01,1)
+ku2 = round(u0/e02,1)
 
-kr1 = rr1/r01
-kr2 = rr2/r02
+kr1 = round(rr1/r01,1)
+kr2 = round(rr2/r02,1)
+
+% de verificat cum se ia u0 din grafic!!!
+% DE VERIFICAT AICI!
+co1 = cf1
+co2 = cf2
+co3 = cf3
+cf1bar = cf1
+cf2bar = cf2
+cf3bar = cf2
+%% Design of the DC-DC converter
+miu = 0.5
+rs1 = u21/i21 % nominal load resistor
+u1bar = ku1*sqrt(2)*u21 % supply voltage
+u1max = sqrt(2)*u21 % maximum supply voltage
+v0bar = 0.5*u1bar % nominal output voltage
+io1 = v0bar/rs1 % nominal load current
+delta_il = 0.3*io1 % the current variation limit through the filtering coil
+deltav0 = 3*v0bar/100
+fc = 20*10^3 % frequency in hertz
+il = 0.3*v0bar/rs1
+%iltilda = 0.25*v0bar/rs1
+L = (u1max-v0bar)*miu/fc/il
+L = 3.7e-4
+%deltav0tilda = delta_il_tilda*miu/fc/C
+C = 0.5*il/fc/deltav0/100 %125 microF
+C = 125e-6
+%% Control design and simulation of switching mode controlled DC power supplies
+A = 8
+hf = tf(sqrt(2)*ku1*u21/2/A,[L*C L/rs1 1]) % transfer function of the fixed part
+
+figure, bode(hf)
+
+% P controller
+kp = db2mag(-6.73)
+kr = 0.2
+
+ho = feedback(hf,kr)
+figure, step(ho)
+hp = feedback(hf*kp, kr)
+figure, 
+step(hp); title('P controller')
+
+% PI controller
+kpi = db2mag(-4.22)
+Ti = 4/5.44e3
+hpi = tf(kpi*[Ti 1],[Ti 0])
+figure, 
+step(feedback(hf*hpi,kr)); title('PI controller')
+
+% PD controller
+kpd = db2mag(-42.5)
+Td = 1/4.33e4/sqrt(0.13)
+hpd = tf(kpd*[Td 1],[Td*0.13 1])
+figure, 
+step(feedback(hf*hpd,kr)); title('PD controller')
