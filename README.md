@@ -10,4 +10,4 @@ The following subjects will be included:
 - Discrete-Event Systems
 
 ## Second semester
-- to be seen...
+- Real Time Systems
