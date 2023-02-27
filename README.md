@@ -11,3 +11,5 @@ The following subjects will be included:
 
 ## Second semester
 - Real Time Systems
+- Industrial Informatics
+- Control Engineering
