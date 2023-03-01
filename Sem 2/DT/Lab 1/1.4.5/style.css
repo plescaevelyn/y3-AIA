@@ -1,0 +1,41 @@
+body {
+  padding: 20px;
+  text-align: center;
+  background-color: #pink;
+}
+
+#widget {
+  width: 60px;
+  background-color: #555;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+#calculator {
+  height: 50px;
+  width: 50px;
+  margin: 0 auto;
+  background-color: #fff;
+  color: #555;
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+}
+
+#button, #button {
+  margin-top: 10px;
+  height: 50px;
+  width: 50px;
+  background-color: #purple;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  border: 0px;
+}
+
+#button:hover, #button:hover {
+  cursor: pointer;
+  background-color: #8cb8ff;
+  color: #fff;
+}
