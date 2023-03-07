@@ -1,0 +1,29 @@
+. message {
+  border : 1 px solid #777;
+  padding : 7 px ;
+  margin : 5 px ;
+}
+
+. output - empty {
+  padding : 7 px ;
+  margin : 5 px ;
+  color : rgb (255 , 104 , 34) ;
+}
+
+. output {
+  padding : 7 px ;
+  margin : 5 px ;
+  color : rgb (27 , 189 , 27) ;
+}
+
+. process - button {
+  border : 1 px solid #777;
+  background - color : #555;
+  color : white ;
+  padding :15 px ;
+}
+
+. process - button : hover {
+background - color : #999;
+cursor : pointer ;
+}
