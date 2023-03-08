@@ -13,16 +13,16 @@ h_zoh3 = c2d(h1,ts3,'zoh')
 h_tustin3 = c2d(h1,ts3,'tustin')
 
 figure,
-subplot(311); step(feedback(h1,1));
-subplot(312); step(feedback(h_zoh1,1));
-subplot(313); step(feedback(h_tustin1,1));
+subplot(311); step(feedback(h1,1)); title('Initial transfer function'); 
+subplot(312); step(feedback(h_zoh1,1)); title('Zero Order Hold method'); 
+subplot(313); step(feedback(h_tustin1,1)); title('Tustin method'); 
 
 figure,
-subplot(311); step(feedback(h1,1));
-subplot(312); step(feedback(h_zoh2,1));
-subplot(313); step(feedback(h_tustin2,1));
+subplot(311); step(feedback(h1,1)); title('Initial transfer function'); 
+subplot(312); step(feedback(h_zoh2,1)); title('Zero Order Hold method'); 
+subplot(313); step(feedback(h_tustin2,1)); title('Tustin method'); 
 
 figure,
-subplot(311); step(feedback(h1,1));
-subplot(312); step(feedback(h_zoh3,1));
-subplot(313); step(feedback(h_tustin3,1));
+subplot(311); step(feedback(h1,1)); title('Initial transfer function'); 
+subplot(312); step(feedback(h_zoh3,1)); title('Zero Order Hold method'); 
+subplot(313); step(feedback(h_tustin3,1)); title('Tustin method'); 
