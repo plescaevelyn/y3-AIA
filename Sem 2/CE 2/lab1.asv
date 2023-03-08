@@ -1,0 +1,6 @@
+h1 = tf(15,[1 5 0]);
+ts1 = 0.1;
+ts2 = 1;
+ts3 = 2;
+h_zoh1 = c2d(h1,ts1,'zoh')
+h_tustin1 = c2d(h1,ts1,'tustin')
