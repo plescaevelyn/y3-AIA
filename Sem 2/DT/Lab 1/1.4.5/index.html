@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      <link rel = "stylesheet" href = "style.css">
-  </head>
-  <body>
-      <div id = "calculator"></div>
+	<head>
+		<link rel="stylesheet" href="styles.css">
+		<script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-      <input id = "firstNumber">
+	</head>
+	<body>
+		<input type="text" id="firstNumber" value="0"/>
 
-      <button id = "add">+</button>
-      <button id = "subs">-</button>
-      <button id = "multiply">*</button>
-      <button id = "divide">/</button>
+		<button id="sum">+</button>
+		<button id="dif">-</button>
+		<button id="mul">*</button>
+		<button id="sub">/</button>
 
-      <input id = "secondNumber">
+		<input type="text" id="secondNumber" value="0"/>
 
-      <button id = "equal">=</button>
+    <button id="equal">=</button>
+		<br><br>
+		<div id="result" type="text" value=0></div>
 
-      <div id="divId"></div>
-
-      <script src = "app.js"></script>
-  </body>
+    <script src="app.js"></script>
+	</body>
 </html>

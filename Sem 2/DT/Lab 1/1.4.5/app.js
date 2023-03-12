@@ -1,50 +1,42 @@
-document.getElementById("firstNumber").addEventListener('input',inputNumbers);
-document.getElementById("secondNumber").addEventListener('input',inputNumbers);
+result=0;
 
-add = document.getElementById("add").addEventListener("click",add);
-subs = document.getElementById("subs").addEventListener("click",substract);
-multiply = document.getElementById("multiply").addEventListener("click",multiply);
-divide = document.getElementById("divide").addEventListener("click",divide);
-equal = document.getElementById("equal").addEventListener("click",equal);
-
-function inputNumbers() {
-  var firstNumber = parseInt(document.getElementById("firstNumber").value);
-  var secondNumber = parseInt(document.getElementById("secondNumber").value);
-
-  if (equal) {
-    return printValue;
-  }
+ function printValue(divId, value){
+ $("#"+divId).html(value)
 }
 
-function printValue(divId, value) {
-  document.getElementById(divId).innerHTML = value;
-}
-printValue("counter", 0);
+$("#sum").on('click', sum);
+function sum(){
+	var firstNumberText = +$('#firstNumber').val();
+	var secondNumberText = +$('#secondNumber').val();
+	result = firstNumberText + secondNumberText;
 
-function add(firstNumber,secondNumber) {
-  if (add) {
-    printValue(divId, firstNumber + secondNumber);
-    return firstNumber + secondNumber;
-  }
 }
 
-function substract(firstNumber,secondNumber) {
-  if (substract) {
-    printValue(divId, firstNumber - secondNumber);
-    return firstNumber - secondNumber;
-  }
+$("#dif").on('click', dif);
+function dif(){
+	var firstNumberText = +$('#firstNumber').val();
+	var secondNumberText = +$('#secondNumber').val();
+	result = firstNumberText - secondNumberText;
+	
 }
 
-function multiply(firstNumber,secondNumber) {
-  if (multiply) {
-    printValue(divId, firstNumber * secondNumber);
-    return firstNumber * secondNumber;
-  }
+$("#mul").on('click', mul);
+function mul(){
+	var firstNumberText = +$('#firstNumber').val();
+	var secondNumberText = +$('#secondNumber').val();
+	result = firstNumberText * secondNumberText;
+
 }
 
-function divide(firstNumber,secondNumber) {
-  if (divide) {
-    printValue(divId, firstNumber / secondNumber);
-    return firstNumber / secondNumber;
-  }
+$("#sub").on('click', sub);
+function sub(){
+	var firstNumberText = +$('#firstNumber').val();
+	var secondNumberText = +$('#secondNumber').val();
+	result = firstNumberText / secondNumberText;
+
+}
+
+$("#equal").on('click', equal);
+function equal(){
+	printValue('result', result);
 }
