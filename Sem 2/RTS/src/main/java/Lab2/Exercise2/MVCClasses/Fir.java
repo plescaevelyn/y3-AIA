@@ -1,26 +1,44 @@
 package Lab2.Exercise2.MVCClasses;
 
-public class Fir extends Thread {
+import Lab2.Exercise2.InitialClasses.Window;
+
+import java.util.Observable;
+
+public class Fir extends Observable implements Runnable {
+    int progress;
     int id;
     Window win;
     int processorLoad;
 
-    Fir(int id, int priority, Window win, int procLoad) {
-        this.id = id;
-        this.win = win;
-        this.processorLoad = procLoad;
-        this.setPriority(priority);
+    public Fir(int id, int processorLoad) {
+        this.id=id;
+        this.processorLoad = processorLoad;
     }
 
+    public void NotifyUpdate(int id, int progress) {
+        this.id = id;
+        this.progress = progress;
+    }
+
+    @Override
     public void run() {
-        int c = 0;
-        while (c < 1000) {
-            for (int j = 0; j < this.processorLoad; j++) {
+        int c=0;
+
+        while(c<1000){
+            for(int j = 0; j < this.processorLoad; j++) {
                 j++;
                 j--;
             }
-            c++;
-            this.win.setProgressValue(id, c);
         }
+        c++;
+
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        this.setChanged();
+        this.notifyObservers(new ThreadUpdateNotification(this.id, c));
     }
 }
