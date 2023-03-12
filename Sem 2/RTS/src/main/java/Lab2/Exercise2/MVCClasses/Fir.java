@@ -7,7 +7,6 @@ import java.util.Observable;
 public class Fir extends Observable implements Runnable {
     int progress;
     int id;
-    Window win;
     int processorLoad;
 
     public Fir(int id, int processorLoad) {
@@ -15,16 +14,16 @@ public class Fir extends Observable implements Runnable {
         this.processorLoad = processorLoad;
     }
 
-    public void NotifyUpdate(int id, int progress) {
+    public void updateNotification(int id, int progress) {
         this.id = id;
         this.progress = progress;
     }
 
     @Override
     public void run() {
-        int c=0;
+        int c = 0;
 
-        while(c<1000){
+        while(c < 1000){
             for(int j = 0; j < this.processorLoad; j++) {
                 j++;
                 j--;
