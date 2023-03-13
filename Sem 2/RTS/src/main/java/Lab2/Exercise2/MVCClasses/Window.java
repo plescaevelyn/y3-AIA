@@ -35,4 +35,8 @@ public class Window extends JFrame {
     public void setProgressValue(int id,int val){
         bars.get(id).setValue(val);
     }
+
+    public void setProgressValue(ThreadUpdateNotification arg) {
+        bars.get(arg.getId()).setValue(arg.getProgress());
+    }
 }

@@ -25,10 +25,6 @@ public class Controller implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
-        if (!(arg instanceof ThreadUpdateNotification notification)) {
-            return;
-        }
-
-        window.setProgressValue(notification.id, notification.progress);
+        window.setProgressValue((ThreadUpdateNotification)arg);
     }
 }
