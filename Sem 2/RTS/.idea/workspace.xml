@@ -5,67 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4299285-174a-4411-bda3-24d8e6984395" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Sem1/CE/Labs/Lab 1/ex3.slx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/CE/Labs/Lab 1/lab1.mlx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/CE/Labs/Lab 10/Control Engineering Lab 9.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/CE/Labs/Lab 10/lab10.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/CE/Labs/Lab 2/lab2.mlx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/CE/Labs/Lab 3/lab3.mlx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/CE/Labs/Lab 4/lab4.mlx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/CE/Labs/Lab 5/lab5.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/CE/Labs/Lab 5/lab5ex1.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/CE/Labs/Lab 5/lab5ex2.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/CE/Labs/Lab 6/lab6.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/CE/Labs/Lab 6/lab6ex1.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/CE/Labs/Lab 6/lab6ex2.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/CE/Labs/Lab 8/lab4_convs.mlx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/CE/Labs/Lab 8/lab8.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/CE/Labs/Lab 9/lab9.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/PE/calculations.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/PE/controller_outputs.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/PE/controllers.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/PE/controllers.slx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/PE/controllers.slxc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/PE/project_calculations.mlx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/SI/Labs/Lab 10/L10_EN22_PlescaEvelyn.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/SI/Labs/Lab 10/lab10_3.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/SI/Labs/Lab 2/L2_EN22_PlescaEvelyn.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/SI/Labs/Lab 2/lab2_11.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/SI/Labs/Lab 3/L3_EN22_PlescaEvelyn.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/SI/Labs/Lab 3/lab3_order1_3.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/SI/Labs/Lab 3/lab3_order2_3.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/SI/Labs/Lab 4/L4_EN22_PlescaEvelyn.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/SI/Labs/Lab 4/lab4_order1_3.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/SI/Labs/Lab 4/lab4_order2_3.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/SI/Labs/Lab 5/L5_EN22_EvelynPlesca.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/SI/Labs/Lab 5/lab5_3.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/SI/Labs/Lab 6/L6_EN22_PlescaEvelyn.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/SI/Labs/Lab 6/lab6_3.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/SI/Labs/Lab 7/L7_EN22_PlescaEvelyn.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/SI/Labs/Lab 7/system_simulator.p" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/SI/Labs/Lab 7/uval.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/SI/Labs/Lab 8/L8_EN22_PlescaEvelyn.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/SI/Labs/Lab 8/lab8_3.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/SI/Labs/Lab 9/L9_EN22_PlescaEvelyn.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/SI/Labs/Lab 9/lab9_3.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/SI/Project/Project 1/script/PlescaTaslauan.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/SI/Project/Project 1/script/product_5.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/SI/Project/Project 2/PlescaTaslauanFleseriu.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/SI/Project/Project 2/iddata-09.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/SI/Project/Project 2/run_results.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/ST2/Lab 11/PlescaEvelyn_Lab11.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/ST2/Lab 11/lab11.mlx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/ST2/Lab 12/Plesca_Evelyn_Lab12.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/ST2/Lab 12/lab12.mlx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/ST2/Lab 2/lab2.mlx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/ST2/Lab 2/lab2_script.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/ST2/Lab 3/lab3.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/ST2/Lab 4/lab4.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/ST2/Lab 5/lab5.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/ST2/Lab 6/lab6.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/ST2/Lab 7/lab7_Plesca_Evelyn.mlx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/ST2/Lab 8/cm.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Sem1/ST2/Lab 8/lab8.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +31,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />

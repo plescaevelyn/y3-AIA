@@ -12,7 +12,9 @@
 <body>
   <div id= "app">
   <input class= "message" v-model= "message" placeholder= "">
+  <div class= "output" v-if= "message == ''" >Mesajul este gol</div>
   <div class= "output" v-if= "message == '123'" >Mesajul este egal cu 123</div>
+  <div class= "output" v-if= "message != ''" >Mesajul este: {{ message }}</div>
   <button class= "process-button" v-on : click= "process ()">Process</button>
   </ div>
   <script src= "app.js"></ script>

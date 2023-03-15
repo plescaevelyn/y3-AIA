@@ -14,7 +14,7 @@ api.put('/users', function(request, response) {
   response.json('User was saved succesfully');
 });
 
-api.update('/users', function(request, response) {
+api.post('/users/:index', function(request, response) {
   users[request.params.index] = request.body;
   response.json('User was modified succesfully');
 });
