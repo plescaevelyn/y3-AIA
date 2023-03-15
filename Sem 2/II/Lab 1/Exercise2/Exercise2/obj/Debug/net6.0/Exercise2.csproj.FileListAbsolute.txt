@@ -3,3 +3,13 @@ E:\y3AIA\Sem 2\II\Lab 1\Exercise2\Exercise2\obj\Debug\net6.0\Exercise2.Generated
 E:\y3AIA\Sem 2\II\Lab 1\Exercise2\Exercise2\obj\Debug\net6.0\Exercise2.AssemblyInfoInputs.cache
 E:\y3AIA\Sem 2\II\Lab 1\Exercise2\Exercise2\obj\Debug\net6.0\Exercise2.AssemblyInfo.cs
 E:\y3AIA\Sem 2\II\Lab 1\Exercise2\Exercise2\obj\Debug\net6.0\Exercise2.csproj.CoreCompileInputs.cache
+E:\y3AIA\Sem 2\II\Lab 1\Exercise2\Exercise2\bin\Debug\net6.0\Exercise2.exe
+E:\y3AIA\Sem 2\II\Lab 1\Exercise2\Exercise2\bin\Debug\net6.0\Exercise2.deps.json
+E:\y3AIA\Sem 2\II\Lab 1\Exercise2\Exercise2\bin\Debug\net6.0\Exercise2.runtimeconfig.json
+E:\y3AIA\Sem 2\II\Lab 1\Exercise2\Exercise2\bin\Debug\net6.0\Exercise2.dll
+E:\y3AIA\Sem 2\II\Lab 1\Exercise2\Exercise2\bin\Debug\net6.0\Exercise2.pdb
+E:\y3AIA\Sem 2\II\Lab 1\Exercise2\Exercise2\obj\Debug\net6.0\Exercise2.dll
+E:\y3AIA\Sem 2\II\Lab 1\Exercise2\Exercise2\obj\Debug\net6.0\refint\Exercise2.dll
+E:\y3AIA\Sem 2\II\Lab 1\Exercise2\Exercise2\obj\Debug\net6.0\Exercise2.pdb
+E:\y3AIA\Sem 2\II\Lab 1\Exercise2\Exercise2\obj\Debug\net6.0\Exercise2.genruntimeconfig.cache
+E:\y3AIA\Sem 2\II\Lab 1\Exercise2\Exercise2\obj\Debug\net6.0\ref\Exercise2.dll

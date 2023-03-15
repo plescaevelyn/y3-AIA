@@ -65,11 +65,11 @@ namespace Exercise2
             int firstNumber = numbers.getFirstNumber();
             int secondNumber = numbers.getSecondNumber();
 
-            Console.WriteLine(firstNumber + "\t" + secondNumber);
-            Console.WriteLine("The result of adding the two numbers:\t{0}" +
-                              "The result of substracting the two numbers:\t{1}" +
-                              "The result of multiplying the two numbers:\t{2}" +
-                              "The result of dividing the two numbers:\t{3}",
+            Console.WriteLine("The given numbers are: {0} and {1}\n",firstNumber, secondNumber);
+            Console.WriteLine("The result of adding the two numbers:\t{0}\n" +
+                              "The result of substracting the two numbers:\t{1}\n" +
+                              "The result of multiplying the two numbers:\t{2}\n" +
+                              "The result of dividing the two numbers:\t{3}\n\n",
                               addNumbers(firstNumber, secondNumber), substractNumbers(firstNumber, secondNumber), multiplyNumbers(firstNumber, secondNumber), divideNumbers(firstNumber, secondNumber));
         }
     }

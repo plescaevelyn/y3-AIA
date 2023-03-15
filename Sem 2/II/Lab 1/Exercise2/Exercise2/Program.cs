@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Exercise2
 {
-    internal class Main
+    internal class Program
     {
-        public static void main(String[] args)
+        static void Main(String[] args)
         {
             Operations numbers0 = new Operations(3, 5);
             Operations numbers1 = new Operations(10, 4);
