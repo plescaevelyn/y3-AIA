@@ -39,14 +39,31 @@ namespace Exercise4
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
+            groupBox1.Controls.Add(radioButton1);
+            groupBox1.Controls.Add(radioButton2);
+            groupBox1.Controls.Add(radioButton3);
+            groupBox1.Controls.Add(radioButton4);
+        }
 
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+            groupBox2.Controls.Add(radioButton5);
+            groupBox2.Controls.Add(radioButton6);
+            groupBox2.Controls.Add(radioButton7);
+            groupBox2.Controls.Add(radioButton8);
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            if (groupBox1.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked) != null && groupBox2.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked) != null)
+                label2.Text = String.Format("{0} vs {1}", groupBox1.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text, groupBox2.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text);
         }
     }
 }

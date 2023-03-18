@@ -15,6 +15,12 @@ namespace Exercise1
         public Form2()
         {
             InitializeComponent();
+            label1.Text = String.Format("Hello, {0}", "username");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

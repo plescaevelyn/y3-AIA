@@ -67,12 +67,15 @@
             // 
             substract.Name = "substract";
             substract.Size = new Size(221, 6);
+            substract.Text = "-";
+            substract.Click += substract_Click;
             // 
             // multiply
             // 
             multiply.Name = "multiply";
             multiply.Size = new Size(224, 26);
             multiply.Text = "*";
+            multiply.Click += multiply_Click;
             // 
             // divide
             // 

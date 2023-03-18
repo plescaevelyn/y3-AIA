@@ -24,8 +24,7 @@ namespace Exercise2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int i = listBox2.SelectedIndex;
-            listBox2.Items.RemoveAt(i);
+            listBox2.Items.Remove(listBox2.SelectedIndex);
         }
 
         private void button3_Click(object sender, EventArgs e)

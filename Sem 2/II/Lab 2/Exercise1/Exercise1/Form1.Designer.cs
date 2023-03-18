@@ -48,6 +48,7 @@
             button1.TabIndex = 0;
             button1.Text = "Login";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -71,7 +72,6 @@
             label1.Size = new Size(138, 29);
             label1.TabIndex = 2;
             label1.Text = "Username:";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -84,7 +84,6 @@
             label2.Size = new Size(148, 29);
             label2.TabIndex = 3;
             label2.Text = "Password:";
-            label2.Click += label2_Click;
             // 
             // textBox1
             // 
