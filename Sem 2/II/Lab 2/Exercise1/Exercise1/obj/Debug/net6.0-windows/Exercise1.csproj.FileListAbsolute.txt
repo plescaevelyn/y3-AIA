@@ -15,3 +15,5 @@ E:\y3AIA\Sem 2\II\Lab 2\Exercise1\Exercise1\obj\Debug\net6.0-windows\refint\Exer
 E:\y3AIA\Sem 2\II\Lab 2\Exercise1\Exercise1\obj\Debug\net6.0-windows\Exercise1.pdb
 E:\y3AIA\Sem 2\II\Lab 2\Exercise1\Exercise1\obj\Debug\net6.0-windows\Exercise1.genruntimeconfig.cache
 E:\y3AIA\Sem 2\II\Lab 2\Exercise1\Exercise1\obj\Debug\net6.0-windows\ref\Exercise1.dll
+E:\y3AIA\Sem 2\II\Lab 2\Exercise1\Exercise1\obj\Debug\net6.0-windows\Exercise1.Form2.resources
+E:\y3AIA\Sem 2\II\Lab 2\Exercise1\Exercise1\obj\Debug\net6.0-windows\Exercise1.Properties.Resources.resources
