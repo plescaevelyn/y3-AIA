@@ -13,8 +13,8 @@ namespace Example
             InitializeComponent();
 
             myCon.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=E:\\y3AIA\\Sem 2\\II\\Lab 3\\Example\\Example\\Database1.mdf;Integrated Security=True";
-            myCon.Open(); 
-            
+            myCon.Open();
+
             dsUniv = new DataSet();
             dsFac = new DataSet();
             SqlDataAdapter daUniv = new SqlDataAdapter("SELECT * FROM Universitati", myCon);
@@ -56,6 +56,30 @@ namespace Example
                     String nameFac = dr.ItemArray.GetValue(2).ToString();
                     listBox_Fac.Items.Add(nameFac);
                 }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            listBox_Univ.Items.Add(textBox1.Text);
+            textBox1.Text = "";
+            textBox1.Focus();
+            //this.dsUniv.
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (listBox_Univ.SelectedIndex != -1)
+            {
+                String UnivSelected = listBox_Univ.SelectedItem.ToString();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (listBox_Univ.SelectedIndex != -1)
+            {
+                listBox_Univ.Items.RemoveAt(listBox_Univ.SelectedIndex);
             }
         }
     }
