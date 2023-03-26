@@ -1,7 +1,4 @@
-package Lab3.Example1;
-
-import Lab3.Example1.FileService;
-import Lab3.Example1.Main;
+package Lab3.App1;
 
 public class WThread extends Thread {
     FileService service;

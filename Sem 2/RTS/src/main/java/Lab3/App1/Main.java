@@ -1,4 +1,4 @@
-package Lab3.Example1;
+package Lab3.App1;
 
 public class Main {
     private static boolean stopThreads = false;
