@@ -5,6 +5,158 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4299285-174a-4411-bda3-24d8e6984395" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise1/.vs/Exercise1/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise1/.vs/Exercise1/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise1/.vs/Exercise1/FileContentIndex/a1038dca-0ee7-4df3-b3ac-476ca6dc8ea0.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise1/.vs/Exercise1/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise1/.vs/Exercise1/v17/.futdcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise1/.vs/Exercise1/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise1/.vs/Exercise1/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise1/.vs/ProjectEvaluation/exercise1.metadata.v6.1" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise1/.vs/ProjectEvaluation/exercise1.metadata.v6.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise1/.vs/ProjectEvaluation/exercise1.projects.v6.1" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise1/.vs/ProjectEvaluation/exercise1.projects.v6.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise1/Exercise1/bin/Debug/net6.0/Exercise1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise1/Exercise1/bin/Debug/net6.0/Exercise1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise1/Exercise1/bin/Debug/net6.0/Exercise1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise1/Exercise1/bin/Debug/net6.0/Exercise1.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise1/Exercise1/bin/Debug/net6.0/Exercise1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise1/Exercise1/bin/Debug/net6.0/Exercise1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise1/Exercise1/obj/Debug/net6.0/Exercise1.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise1/Exercise1/obj/Debug/net6.0/Exercise1.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise1/Exercise1/obj/Debug/net6.0/Exercise1.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise1/Exercise1/obj/Debug/net6.0/Exercise1.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise1/Exercise1/obj/Debug/net6.0/Exercise1.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise1/Exercise1/obj/Debug/net6.0/Exercise1.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise1/Exercise1/obj/Debug/net6.0/Exercise1.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise1/Exercise1/obj/Debug/net6.0/Exercise1.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise1/Exercise1/obj/Debug/net6.0/Exercise1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise1/Exercise1/obj/Debug/net6.0/Exercise1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise1/Exercise1/obj/Debug/net6.0/Exercise1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise1/Exercise1/obj/Debug/net6.0/Exercise1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise1/Exercise1/obj/Debug/net6.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise1/Exercise1/obj/Debug/net6.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise1/Exercise1/obj/Exercise1.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise1/Exercise1/obj/Exercise1.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise1/Exercise1/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise1/Exercise1/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise1/Exercise1/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise1/Exercise1/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise2/.vs/Exercise2/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise2/.vs/Exercise2/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise2/.vs/Exercise2/FileContentIndex/e0d07040-30b0-419e-9466-b3b1d0393a30.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise2/.vs/Exercise2/FileContentIndex/f1ba1221-e201-4568-bedb-77497bd8dc26.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise2/.vs/Exercise2/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise2/.vs/Exercise2/v17/.futdcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise2/.vs/Exercise2/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise2/.vs/Exercise2/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise2/.vs/ProjectEvaluation/exercise2.metadata.v6.1" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise2/.vs/ProjectEvaluation/exercise2.metadata.v6.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise2/.vs/ProjectEvaluation/exercise2.projects.v6.1" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise2/.vs/ProjectEvaluation/exercise2.projects.v6.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise2/Exercise2/bin/Debug/net6.0/Exercise2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise2/Exercise2/bin/Debug/net6.0/Exercise2.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise2/Exercise2/bin/Debug/net6.0/Exercise2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise2/Exercise2/bin/Debug/net6.0/Exercise2.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise2/Exercise2/bin/Debug/net6.0/Exercise2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise2/Exercise2/bin/Debug/net6.0/Exercise2.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise2/Exercise2/obj/Debug/net6.0/Exercise2.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise2/Exercise2/obj/Debug/net6.0/Exercise2.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise2/Exercise2/obj/Debug/net6.0/Exercise2.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise2/Exercise2/obj/Debug/net6.0/Exercise2.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise2/Exercise2/obj/Debug/net6.0/Exercise2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise2/Exercise2/obj/Debug/net6.0/Exercise2.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise2/Exercise2/obj/Debug/net6.0/Exercise2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise2/Exercise2/obj/Debug/net6.0/Exercise2.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise2/Exercise2/obj/Debug/net6.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise2/Exercise2/obj/Debug/net6.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise2/Exercise2/obj/Exercise2.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise2/Exercise2/obj/Exercise2.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise2/Exercise2/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise2/Exercise2/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise2/Exercise2/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise2/Exercise2/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise3/.vs/Exercise3/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise3/.vs/Exercise3/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise3/.vs/Exercise3/FileContentIndex/05b33cda-e2bc-4913-be78-28b23ceabc00.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise3/.vs/Exercise3/FileContentIndex/44e32eae-73da-4595-a1fb-0fe371a79189.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise3/.vs/Exercise3/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise3/.vs/Exercise3/v17/.futdcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise3/.vs/Exercise3/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise3/.vs/Exercise3/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise3/.vs/ProjectEvaluation/exercise3.metadata.v6.1" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise3/.vs/ProjectEvaluation/exercise3.metadata.v6.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise3/.vs/ProjectEvaluation/exercise3.projects.v6.1" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise3/.vs/ProjectEvaluation/exercise3.projects.v6.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise3/Exercise3/bin/Debug/net6.0/Exercise3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise3/Exercise3/bin/Debug/net6.0/Exercise3.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise3/Exercise3/bin/Debug/net6.0/Exercise3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise3/Exercise3/bin/Debug/net6.0/Exercise3.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise3/Exercise3/bin/Debug/net6.0/Exercise3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise3/Exercise3/bin/Debug/net6.0/Exercise3.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise3/Exercise3/obj/Debug/net6.0/Exercise3.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise3/Exercise3/obj/Debug/net6.0/Exercise3.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise3/Exercise3/obj/Debug/net6.0/Exercise3.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise3/Exercise3/obj/Debug/net6.0/Exercise3.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise3/Exercise3/obj/Debug/net6.0/Exercise3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise3/Exercise3/obj/Debug/net6.0/Exercise3.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise3/Exercise3/obj/Debug/net6.0/Exercise3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise3/Exercise3/obj/Debug/net6.0/Exercise3.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise3/Exercise3/obj/Debug/net6.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise3/Exercise3/obj/Debug/net6.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise3/Exercise3/obj/Exercise3.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise3/Exercise3/obj/Exercise3.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise3/Exercise3/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise3/Exercise3/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise3/Exercise3/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise3/Exercise3/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise4/.vs/Exercise 4/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise4/.vs/Exercise 4/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise4/.vs/Exercise 4/FileContentIndex/8b1a3971-6f50-4506-a20b-17fa58430808.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise4/.vs/Exercise 4/FileContentIndex/f173aa2a-0ba9-458e-a7da-f7bfc5e97578.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise4/.vs/Exercise 4/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise4/.vs/Exercise 4/v17/.futdcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise4/.vs/Exercise 4/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise4/.vs/Exercise 4/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise4/.vs/ProjectEvaluation/exercise 4.metadata.v6.1" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise4/.vs/ProjectEvaluation/exercise 4.metadata.v6.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise4/.vs/ProjectEvaluation/exercise 4.projects.v6.1" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise4/.vs/ProjectEvaluation/exercise 4.projects.v6.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/bin/Debug/net6.0/Exercise 4.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/bin/Debug/net6.0/Exercise 4.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/bin/Debug/net6.0/Exercise 4.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/bin/Debug/net6.0/Exercise 4.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/bin/Debug/net6.0/Exercise 4.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/bin/Debug/net6.0/Exercise 4.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/obj/Debug/net6.0/Exercise 4.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/obj/Debug/net6.0/Exercise 4.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/obj/Debug/net6.0/Exercise 4.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/obj/Debug/net6.0/Exercise 4.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/obj/Debug/net6.0/Exercise 4.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/obj/Debug/net6.0/Exercise 4.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/obj/Debug/net6.0/Exercise 4.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/obj/Debug/net6.0/Exercise 4.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/obj/Debug/net6.0/Exercise 4.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/obj/Debug/net6.0/Exercise 4.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/obj/Debug/net6.0/Exercise 4.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/obj/Debug/net6.0/Exercise 4.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/obj/Debug/net6.0/Exercise 4.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/obj/Debug/net6.0/Exercise 4.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/obj/Debug/net6.0/Exercise 4.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/obj/Debug/net6.0/Exercise 4.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/obj/Debug/net6.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/obj/Debug/net6.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/obj/Debug/net6.0/ref/Exercise 4.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/obj/Debug/net6.0/ref/Exercise 4.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/obj/Debug/net6.0/refint/Exercise 4.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/obj/Debug/net6.0/refint/Exercise 4.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/obj/Exercise 4.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/obj/Exercise 4.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise4/Exercise 4/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise5/.vs/Exercise5/FileContentIndex/0e442dfe-663b-49d1-b7a3-187374f8c79c.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise5/.vs/Exercise5/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise5/.vs/Exercise5/v17/.futdcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise5/.vs/Exercise5/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise5/.vs/Exercise5/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise5/.vs/ProjectEvaluation/exercise5.metadata.v6.1" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise5/.vs/ProjectEvaluation/exercise5.metadata.v6.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise5/.vs/ProjectEvaluation/exercise5.projects.v6.1" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise5/.vs/ProjectEvaluation/exercise5.projects.v6.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise5/Exercise5/bin/Debug/net6.0/Exercise5.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise5/Exercise5/bin/Debug/net6.0/Exercise5.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise5/Exercise5/bin/Debug/net6.0/Exercise5.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise5/Exercise5/bin/Debug/net6.0/Exercise5.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise5/Exercise5/bin/Debug/net6.0/Exercise5.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise5/Exercise5/bin/Debug/net6.0/Exercise5.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise5/Exercise5/obj/Debug/net6.0/Exercise5.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise5/Exercise5/obj/Debug/net6.0/Exercise5.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise5/Exercise5/obj/Debug/net6.0/Exercise5.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise5/Exercise5/obj/Debug/net6.0/Exercise5.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise5/Exercise5/obj/Debug/net6.0/Exercise5.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise5/Exercise5/obj/Debug/net6.0/Exercise5.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise5/Exercise5/obj/Debug/net6.0/Exercise5.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise5/Exercise5/obj/Debug/net6.0/Exercise5.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise5/Exercise5/obj/Debug/net6.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise5/Exercise5/obj/Debug/net6.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise5/Exercise5/obj/Exercise5.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise5/Exercise5/obj/Exercise5.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise5/Exercise5/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise5/Exercise5/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 1/Exercise5/Exercise5/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 1/Exercise5/Exercise5/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise1/.vs/Exercise1/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 2/Exercise1/.vs/Exercise1/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise1/.vs/Exercise1/FileContentIndex/6ec12609-7d6a-41b4-b8a5-b35e9eed82ac.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise1/.vs/Exercise1/FileContentIndex/731294cb-46d2-45ad-b35b-84ca32a209a7.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise1/.vs/Exercise1/FileContentIndex/c2c2621c-72b7-43bc-8030-e6c0def5c290.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise1/.vs/Exercise1/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 2/Exercise1/.vs/Exercise1/v17/.futdcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise1/.vs/Exercise1/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 2/Exercise1/.vs/Exercise1/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise1/.vs/ProjectEvaluation/exercise1.metadata.v6.1" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 2/Exercise1/.vs/ProjectEvaluation/exercise1.metadata.v6.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise1/.vs/ProjectEvaluation/exercise1.projects.v6.1" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 2/Exercise1/.vs/ProjectEvaluation/exercise1.projects.v6.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise1/Exercise1/bin/Debug/net6.0-windows/Exercise1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 2/Exercise1/Exercise1/bin/Debug/net6.0-windows/Exercise1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise1/Exercise1/bin/Debug/net6.0-windows/Exercise1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 2/Exercise1/Exercise1/bin/Debug/net6.0-windows/Exercise1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise1/Exercise1/obj/Debug/net6.0-windows/Exercise1.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 2/Exercise1/Exercise1/obj/Debug/net6.0-windows/Exercise1.csproj.GenerateResource.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise1/Exercise1/obj/Debug/net6.0-windows/Exercise1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 2/Exercise1/Exercise1/obj/Debug/net6.0-windows/Exercise1.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise1/Exercise1/obj/Debug/net6.0-windows/Exercise1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 2/Exercise1/Exercise1/obj/Debug/net6.0-windows/Exercise1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise2/.vs/Exercise2/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 2/Exercise2/.vs/Exercise2/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise2/.vs/Exercise2/FileContentIndex/198c63f0-feba-4f53-80f7-7c389eb3b7e4.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise2/.vs/Exercise2/FileContentIndex/2906fdda-b6d7-418b-8653-3193579d745d.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise2/.vs/Exercise2/FileContentIndex/8cac67af-6109-46b8-8997-bc430b295e4f.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise2/.vs/Exercise2/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 2/Exercise2/.vs/Exercise2/v17/.futdcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise2/.vs/Exercise2/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 2/Exercise2/.vs/Exercise2/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise2/.vs/ProjectEvaluation/exercise2.metadata.v6.1" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 2/Exercise2/.vs/ProjectEvaluation/exercise2.metadata.v6.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise2/.vs/ProjectEvaluation/exercise2.projects.v6.1" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 2/Exercise2/.vs/ProjectEvaluation/exercise2.projects.v6.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise3/.vs/Exercise3/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 2/Exercise3/.vs/Exercise3/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise3/.vs/Exercise3/FileContentIndex/23a7715f-39b2-45bb-941c-15916f1c4245.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise3/.vs/Exercise3/FileContentIndex/a9a8863e-1e7f-49f3-9ecc-0d0221ab674f.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise3/.vs/Exercise3/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 2/Exercise3/.vs/Exercise3/v17/.futdcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise3/.vs/Exercise3/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 2/Exercise3/.vs/Exercise3/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise3/.vs/ProjectEvaluation/exercise3.metadata.v6.1" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 2/Exercise3/.vs/ProjectEvaluation/exercise3.metadata.v6.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise3/.vs/ProjectEvaluation/exercise3.projects.v6.1" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 2/Exercise3/.vs/ProjectEvaluation/exercise3.projects.v6.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise4/.vs/Exercise4/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 2/Exercise4/.vs/Exercise4/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise4/.vs/Exercise4/FileContentIndex/4ecae6d0-4af4-4aeb-8eff-5320001f7277.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise4/.vs/Exercise4/FileContentIndex/e0144c76-4ada-4fb1-ac6c-7fbc4a27c35b.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise4/.vs/Exercise4/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 2/Exercise4/.vs/Exercise4/v17/.futdcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise4/.vs/Exercise4/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 2/Exercise4/.vs/Exercise4/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise4/.vs/ProjectEvaluation/exercise4.metadata.v6.1" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 2/Exercise4/.vs/ProjectEvaluation/exercise4.metadata.v6.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 2/Exercise4/.vs/ProjectEvaluation/exercise4.projects.v6.1" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 2/Exercise4/.vs/ProjectEvaluation/exercise4.projects.v6.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 3/Example/.vs/Example/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 3/Example/.vs/Example/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 3/Example/.vs/Example/FileContentIndex/6044664d-24ac-4b90-87ef-a31da8a9c1d5.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 3/Example/.vs/Example/FileContentIndex/74636095-9392-4981-a1bc-40aaa96b244c.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 3/Example/.vs/Example/FileContentIndex/e8b2926f-7c52-4413-a1ad-528b408bfead.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 3/Example/.vs/Example/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 3/Example/.vs/Example/v17/.futdcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 3/Example/.vs/Example/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 3/Example/.vs/Example/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 3/Example/.vs/ProjectEvaluation/example.metadata.v6.1" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 3/Example/.vs/ProjectEvaluation/example.metadata.v6.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 3/Example/.vs/ProjectEvaluation/example.projects.v6.1" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 3/Example/.vs/ProjectEvaluation/example.projects.v6.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 3/Example/Example/Database1.mdf" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 3/Example/Example/Database1.mdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 3/Example/Example/Database1_log.ldf" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 3/Example/Example/Database1_log.ldf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 3/Example/Example/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 3/Example/Example/Form1.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 3/Example/Example/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 3/Example/Example/Form1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 3/Example/Example/bin/Debug/net6.0-windows/Database1.mdf" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 3/Example/Example/bin/Debug/net6.0-windows/Database1.mdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 3/Example/Example/bin/Debug/net6.0-windows/Database1_log.ldf" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 3/Example/Example/bin/Debug/net6.0-windows/Database1_log.ldf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 3/Example/Example/bin/Debug/net6.0-windows/Example.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 3/Example/Example/bin/Debug/net6.0-windows/Example.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 3/Example/Example/bin/Debug/net6.0-windows/Example.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 3/Example/Example/bin/Debug/net6.0-windows/Example.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 3/Example/Example/obj/Debug/net6.0-windows/Example.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 3/Example/Example/obj/Debug/net6.0-windows/Example.csproj.GenerateResource.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 3/Example/Example/obj/Debug/net6.0-windows/Example.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 3/Example/Example/obj/Debug/net6.0-windows/Example.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Lab 3/Example/Example/obj/Debug/net6.0-windows/Example.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Lab 3/Example/Example/obj/Debug/net6.0-windows/Example.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Tema1/.vs/Tema1/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Tema1/.vs/Tema1/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../II/Tema1/Tema1/Tema1.csproj.user" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Tema1/Tema1/Tema1.csproj.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,14 +180,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/y3AIA/Sem 2/RTS&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Exercise2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Lab1.Exercise2" />
@@ -120,8 +274,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1677486021535</updated>
+      <workItem from="1679346021392" duration="40000" />
+      <workItem from="1679822230045" duration="14000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -133,6 +292,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

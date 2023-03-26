@@ -434,14 +434,14 @@
 											"left": 74,
 											"top": 105,
 											"width": 1,
-											"height": 34
+											"height": 36
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 24,
 									"top": 40,
 									"width": 99.58447265625,
-									"height": 99,
+									"height": 101,
 									"stereotypeDisplay": "icon",
 									"nameCompartment": {
 										"$ref": "AAAAAAGG11/seHFb9KI="
@@ -1257,7 +1257,8 @@
 					"_parent": {
 						"$ref": "AAAAAAGG11o34XCoqWI="
 					},
-					"name": "Role1"
+					"name": "Role1",
+					"type": ""
 				},
 				{
 					"_type": "UMLAttribute",
@@ -1265,7 +1266,8 @@
 					"_parent": {
 						"$ref": "AAAAAAGG11o34XCoqWI="
 					},
-					"name": "Role2"
+					"name": "Role2",
+					"type": ""
 				},
 				{
 					"_type": "UMLAttribute",
@@ -1293,7 +1295,8 @@
 					"_parent": {
 						"$ref": "AAAAAAGG11o34XCoqWI="
 					},
-					"name": "Role5"
+					"name": "Role5",
+					"type": ""
 				}
 			]
 		}
