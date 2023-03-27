@@ -37,24 +37,28 @@ namespace Example
             textBox_City.Clear();
 
             int code = 0;
-            String UnivSelected = listBox_Univ.SelectedItem.ToString();
 
-            foreach (DataRow dr in dsUniv.Tables["Universitati"].Rows)
+            if (listBox_Univ.SelectedItem != null)
             {
-                if (UnivSelected == dr.ItemArray.GetValue(1).ToString())
+                String UnivSelected = listBox_Univ.SelectedItem.ToString();
+
+                foreach (DataRow dr in dsUniv.Tables["Universitati"].Rows)
                 {
-                    textBox_City.Text = dr.ItemArray.GetValue(2).ToString();
-                    code = Convert.ToInt16(dr.ItemArray.GetValue(3));
-                    textBox_CodeUniv.Text = code.ToString();
+                    if (UnivSelected == dr.ItemArray.GetValue(1).ToString())
+                    {
+                        textBox_City.Text = dr.ItemArray.GetValue(2).ToString();
+                        code = Convert.ToInt16(dr.ItemArray.GetValue(3));
+                        textBox_CodeUniv.Text = code.ToString();
+                    }
                 }
-            }
 
-            foreach (DataRow dr in dsFac.Tables["Facultati"].Rows)
-            {
-                if (code == Convert.ToInt16(dr.ItemArray.GetValue(1)))
+                foreach (DataRow dr in dsFac.Tables["Facultati"].Rows)
                 {
-                    String nameFac = dr.ItemArray.GetValue(2).ToString();
-                    listBox_Fac.Items.Add(nameFac);
+                    if (code == Convert.ToInt16(dr.ItemArray.GetValue(1)))
+                    {
+                        String nameFac = dr.ItemArray.GetValue(2).ToString();
+                        listBox_Fac.Items.Add(nameFac);
+                    }
                 }
             }
         }
@@ -67,6 +71,13 @@ namespace Example
             string id = textBox_id.Text;
             string code = textBox_cod.Text;
             string city = textBox_oras.Text;
+
+            if (name == "" || id == "" || code == "" || city == "")
+            {
+                MessageBox.Show("Fill in all the data!");
+                return;
+            }
+
             string insertQuery = "INSERT INTO Universitati (Id, NameUniv, City, Code) VALUES (@id, @name, @city, @code)";
 
             SqlCommand cmd = new SqlCommand(insertQuery, myCon);
@@ -93,7 +104,33 @@ namespace Example
         {
             if (listBox_Univ.SelectedIndex != -1)
             {
-                String UnivSelected = listBox_Univ.SelectedItem.ToString();
+                myCon.Open();
+
+                string name = textBox_Nume.Text;
+
+                if (name == "")
+                {
+                    MessageBox.Show("Fill in all the data!");
+                    return;
+                }
+
+                string updateQuery = "UPDATE Universitati (Id, NameUniv, City, Code) SET NameUniv = NameUniv = '" + @name + "' WHERE NameUniv = '" + @name + "'";
+
+                SqlCommand cmd = new SqlCommand(updateQuery, myCon);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    ex.GetBaseException();
+                }
+
+                myCon.Close();
+
+                dsUniv.Clear();
+                SqlDataAdapter daUniv = new SqlDataAdapter("SELECT * FROM Universitati", myCon);
+                daUniv.Fill(dsUniv, "Universitati");
             }
         }
 
@@ -104,7 +141,7 @@ namespace Example
                 myCon.Open();
 
                 string name = textBox_Nume.Text;
-                string deleteQuery = "DELETE FROM Universitati (Id, NameUniv, City, Code) WHERE ID = '" + @id + "'";
+                string deleteQuery = "DELETE FROM Universitati (Id, NameUniv, City, Code) WHERE NameUniv = '" + @name + "'";
 
                 SqlCommand cmd = new SqlCommand(deleteQuery, myCon);
                 try
