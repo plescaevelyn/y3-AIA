@@ -32,6 +32,8 @@ namespace Example
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            textBox_Nume = new TextBox();
+            label5 = new Label();
             button1 = new Button();
             button3 = new Button();
             button2 = new Button();
@@ -43,14 +45,24 @@ namespace Example
             label1 = new Label();
             listBox_Fac = new ListBox();
             listBox_Univ = new ListBox();
-            label5 = new Label();
-            textBox1 = new TextBox();
+            label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            textBox_cod = new TextBox();
+            textBox_id = new TextBox();
+            textBox_oras = new TextBox();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(textBox_oras);
+            groupBox1.Controls.Add(textBox_id);
+            groupBox1.Controls.Add(textBox_cod);
+            groupBox1.Controls.Add(label8);
+            groupBox1.Controls.Add(label7);
+            groupBox1.Controls.Add(label6);
+            groupBox1.Controls.Add(textBox_Nume);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(button3);
@@ -63,20 +75,36 @@ namespace Example
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(listBox_Fac);
             groupBox1.Controls.Add(listBox_Univ);
-            groupBox1.Location = new Point(44, 29);
-            groupBox1.Margin = new Padding(3, 2, 3, 2);
+            groupBox1.Location = new Point(50, 39);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(3, 2, 3, 2);
-            groupBox1.Size = new Size(834, 422);
+            groupBox1.Size = new Size(953, 578);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Exemplu DB";
             // 
+            // textBox_Nume
+            // 
+            textBox_Nume.Location = new Point(418, 381);
+            textBox_Nume.Margin = new Padding(3, 4, 3, 4);
+            textBox_Nume.Name = "textBox_Nume";
+            textBox_Nume.Size = new Size(195, 27);
+            textBox_Nume.TabIndex = 12;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(418, 357);
+            label5.Name = "label5";
+            label5.Size = new Size(132, 20);
+            label5.TabIndex = 11;
+            label5.Text = "Nume universitate:";
+            // 
             // button1
             // 
-            button1.Location = new Point(366, 346);
+            button1.Location = new Point(418, 487);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(118, 58);
+            button1.Size = new Size(135, 77);
             button1.TabIndex = 8;
             button1.Text = "Inserare universitate";
             button1.UseVisualStyleBackColor = true;
@@ -84,9 +112,10 @@ namespace Example
             // 
             // button3
             // 
-            button3.Location = new Point(649, 346);
+            button3.Location = new Point(751, 487);
+            button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
-            button3.Size = new Size(118, 58);
+            button3.Size = new Size(135, 77);
             button3.TabIndex = 10;
             button3.Text = "Stergere universitate";
             button3.UseVisualStyleBackColor = true;
@@ -94,9 +123,10 @@ namespace Example
             // 
             // button2
             // 
-            button2.Location = new Point(508, 346);
+            button2.Location = new Point(585, 487);
+            button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
-            button2.Size = new Size(118, 58);
+            button2.Size = new Size(135, 77);
             button2.TabIndex = 9;
             button2.Text = "Update universitate";
             button2.UseVisualStyleBackColor = true;
@@ -104,100 +134,127 @@ namespace Example
             // 
             // textBox_City
             // 
-            textBox_City.Location = new Point(369, 175);
-            textBox_City.Margin = new Padding(3, 2, 3, 2);
+            textBox_City.Location = new Point(422, 233);
             textBox_City.Name = "textBox_City";
-            textBox_City.Size = new Size(168, 23);
+            textBox_City.Size = new Size(191, 27);
             textBox_City.TabIndex = 6;
             // 
             // textBox_CodeUniv
             // 
-            textBox_CodeUniv.Location = new Point(369, 227);
-            textBox_CodeUniv.Margin = new Padding(3, 2, 3, 2);
+            textBox_CodeUniv.Location = new Point(422, 303);
             textBox_CodeUniv.Name = "textBox_CodeUniv";
-            textBox_CodeUniv.Size = new Size(168, 23);
+            textBox_CodeUniv.Size = new Size(191, 27);
             textBox_CodeUniv.TabIndex = 7;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(366, 210);
+            label4.Location = new Point(418, 280);
             label4.Name = "label4";
-            label4.Size = new Size(58, 15);
+            label4.Size = new Size(70, 20);
             label4.TabIndex = 5;
             label4.Text = "Cod univ:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(369, 158);
+            label3.Location = new Point(422, 211);
             label3.Name = "label3";
-            label3.Size = new Size(31, 15);
+            label3.Size = new Size(39, 20);
             label3.TabIndex = 4;
             label3.Text = "Oras";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(369, 22);
+            label2.Location = new Point(422, 29);
             label2.Name = "label2";
-            label2.Size = new Size(55, 15);
+            label2.Size = new Size(68, 20);
             label2.TabIndex = 3;
             label2.Text = "Facultate";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(64, 22);
+            label1.Location = new Point(73, 29);
             label1.Name = "label1";
-            label1.Size = new Size(66, 15);
+            label1.Size = new Size(83, 20);
             label1.TabIndex = 2;
             label1.Text = "Universitati";
             // 
             // listBox_Fac
             // 
             listBox_Fac.FormattingEnabled = true;
-            listBox_Fac.ItemHeight = 15;
-            listBox_Fac.Location = new Point(369, 40);
-            listBox_Fac.Margin = new Padding(3, 2, 3, 2);
+            listBox_Fac.ItemHeight = 20;
+            listBox_Fac.Location = new Point(422, 53);
             listBox_Fac.Name = "listBox_Fac";
-            listBox_Fac.Size = new Size(331, 109);
+            listBox_Fac.Size = new Size(378, 144);
             listBox_Fac.TabIndex = 1;
             // 
             // listBox_Univ
             // 
             listBox_Univ.FormattingEnabled = true;
-            listBox_Univ.ItemHeight = 15;
-            listBox_Univ.Location = new Point(60, 40);
-            listBox_Univ.Margin = new Padding(3, 2, 3, 2);
+            listBox_Univ.ItemHeight = 20;
+            listBox_Univ.Location = new Point(69, 53);
             listBox_Univ.Name = "listBox_Univ";
-            listBox_Univ.Size = new Size(256, 364);
+            listBox_Univ.Size = new Size(292, 504);
             listBox_Univ.TabIndex = 0;
             listBox_Univ.SelectedIndexChanged += listBox_Univ_SelectedIndexChanged;
             // 
-            // label5
+            // label6
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(368, 278);
-            label5.Name = "label5";
-            label5.Size = new Size(107, 15);
-            label5.TabIndex = 11;
-            label5.Text = "Nume universitate:";
+            label6.AutoSize = true;
+            label6.Location = new Point(674, 357);
+            label6.Name = "label6";
+            label6.Size = new Size(107, 20);
+            label6.TabIndex = 13;
+            label6.Text = "ID universitate:";
             // 
-            // textBox1
+            // label7
             // 
-            textBox1.Location = new Point(366, 306);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(171, 23);
-            textBox1.TabIndex = 12;
+            label7.AutoSize = true;
+            label7.Location = new Point(418, 412);
+            label7.Name = "label7";
+            label7.Size = new Size(119, 20);
+            label7.TabIndex = 14;
+            label7.Text = "Cod universitate:";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(674, 412);
+            label8.Name = "label8";
+            label8.Size = new Size(122, 20);
+            label8.TabIndex = 15;
+            label8.Text = "Oras universitate:";
+            // 
+            // textBox_cod
+            // 
+            textBox_cod.Location = new Point(418, 435);
+            textBox_cod.Name = "textBox_cod";
+            textBox_cod.Size = new Size(195, 27);
+            textBox_cod.TabIndex = 16;
+            // 
+            // textBox_id
+            // 
+            textBox_id.Location = new Point(674, 380);
+            textBox_id.Name = "textBox_id";
+            textBox_id.Size = new Size(195, 27);
+            textBox_id.TabIndex = 17;
+            // 
+            // textBox_oras
+            // 
+            textBox_oras.Location = new Point(674, 435);
+            textBox_oras.Name = "textBox_oras";
+            textBox_oras.Size = new Size(195, 27);
+            textBox_oras.TabIndex = 18;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(906, 462);
+            ClientSize = new Size(1035, 616);
             Controls.Add(groupBox1);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Form1";
             groupBox1.ResumeLayout(false);
@@ -219,7 +276,13 @@ namespace Example
         private Button button1;
         private Button button3;
         private Button button2;
-        private TextBox textBox1;
+        private TextBox textBox_Nume;
         private Label label5;
+        private TextBox textBox_oras;
+        private TextBox textBox_id;
+        private TextBox textBox_cod;
+        private Label label8;
+        private Label label7;
+        private Label label6;
     }
 }

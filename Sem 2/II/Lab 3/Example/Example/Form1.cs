@@ -61,11 +61,33 @@ namespace Example
 
         private void button1_Click(object sender, EventArgs e)
         {
-            listBox_Univ.Items.Add(textBox1.Text);
-            textBox1.Text = "";
-            textBox1.Focus();
-            //this.dsUniv.
+            myCon.Open();
+
+            string name = textBox_Nume.Text;
+            string id = textBox_id.Text;
+            string code = textBox_cod.Text;
+            string city = textBox_oras.Text;
+            string insertQuery = "INSERT INTO Universitati (Id, NameUniv, City, Code) VALUES (@id, @name, @city, @code)";
+
+            SqlCommand cmd = new SqlCommand(insertQuery, myCon);
+            try
+            {
+                cmd.ExecuteNonQuery();
+            } catch (Exception ex)
+            {
+                ex.GetBaseException();
+            }
+
+            myCon.Close();
+
+            dsUniv.Clear();
+            SqlDataAdapter daUniv = new SqlDataAdapter("SELECT * FROM Universitati", myCon);
+            daUniv.Fill(dsUniv, "Universitati");
+
+            string numeUniv = textBox_Nume.Text;
+            listBox_Univ.Items.Add(numeUniv);
         }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -78,7 +100,28 @@ namespace Example
         private void button3_Click(object sender, EventArgs e)
         {
             if (listBox_Univ.SelectedIndex != -1)
-            {
+            { 
+                myCon.Open();
+
+                string name = textBox_Nume.Text;
+                string deleteQuery = "DELETE FROM Universitati (Id, NameUniv, City, Code) WHERE ID = '" + @id + "'";
+
+                SqlCommand cmd = new SqlCommand(deleteQuery, myCon);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    ex.GetBaseException();
+                }
+
+                myCon.Close();
+
+                dsUniv.Clear();
+                SqlDataAdapter daUniv = new SqlDataAdapter("SELECT * FROM Universitati", myCon);
+                daUniv.Fill(dsUniv, "Universitati");
+
                 listBox_Univ.Items.RemoveAt(listBox_Univ.SelectedIndex);
             }
         }
