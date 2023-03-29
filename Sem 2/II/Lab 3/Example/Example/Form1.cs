@@ -1,3 +1,4 @@
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -6,6 +7,7 @@ namespace Example
     public partial class Form1 : Form
     {
         SqlConnection myCon = new SqlConnection();
+        DataTable dataTable = new DataTable();
         DataSet dsUniv;
         DataSet dsFac;
         public Form1()
@@ -21,6 +23,8 @@ namespace Example
             daUniv.Fill(dsUniv, "Universitati");
             SqlDataAdapter daFac = new SqlDataAdapter("SELECT * FROM Facultati", myCon);
             daFac.Fill(dsFac, "Facultati");
+
+            dataGridView1.DataSource = dsFac.Tables["Facultati"].DefaultView;
 
             foreach (DataRow dr in dsUniv.Tables["Universitati"].Rows)
             {
@@ -84,7 +88,8 @@ namespace Example
             try
             {
                 cmd.ExecuteNonQuery();
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 ex.GetBaseException();
             }
@@ -97,6 +102,8 @@ namespace Example
 
             string numeUniv = textBox_Nume.Text;
             listBox_Univ.Items.Add(numeUniv);
+
+            MessageBox.Show("New university added succesfully!");
         }
 
 
@@ -106,6 +113,7 @@ namespace Example
             {
                 myCon.Open();
 
+                string id = textBox_id.Text;
                 string name = textBox_Nume.Text;
 
                 if (name == "")
@@ -114,7 +122,7 @@ namespace Example
                     return;
                 }
 
-                string updateQuery = "UPDATE Universitati (Id, NameUniv, City, Code) SET NameUniv = NameUniv = '" + @name + "' WHERE NameUniv = '" + @name + "'";
+                string updateQuery = "UPDATE Universitati (Id, NameUniv, City, Code) SET NameUniv = @name WHERE Id = '" + @id + "'";
 
                 SqlCommand cmd = new SqlCommand(updateQuery, myCon);
                 try
@@ -131,13 +139,15 @@ namespace Example
                 dsUniv.Clear();
                 SqlDataAdapter daUniv = new SqlDataAdapter("SELECT * FROM Universitati", myCon);
                 daUniv.Fill(dsUniv, "Universitati");
+
+                MessageBox.Show("University updated succesfully!");
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             if (listBox_Univ.SelectedIndex != -1)
-            { 
+            {
                 myCon.Open();
 
                 string name = textBox_Nume.Text;
@@ -160,6 +170,45 @@ namespace Example
                 daUniv.Fill(dsUniv, "Universitati");
 
                 listBox_Univ.Items.RemoveAt(listBox_Univ.SelectedIndex);
+
+                MessageBox.Show("University deleted succesfully!");
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (textBoxNumeFac.Text != "" && textBoxIdFac.Text != "" && textBoxCodFac.Text != "")
+            {
+                dsFac.Tables.Add(dataTable);
+
+                if (dataTable.Columns.Count == 0)
+                {
+                    dataTable.Columns.Add("Cod", typeof(string));
+                    dataTable.Columns.Add("Id", typeof(string));
+                    dataTable.Columns.Add("NumeFac", typeof(string));
+                }
+
+                DataRow NewRow = dataTable.NewRow();
+                NewRow[0] = textBoxCodFac.Text;
+                NewRow[1] = textBoxIdFac.Text;
+                NewRow[2] = textBoxNumeFac.Text;
+
+                dataTable.Rows.Add(NewRow);
+
+                textBoxNumeFac.Clear();
+                textBoxIdFac.Clear();
+                textBoxCodFac.Clear();
+                
+                dataGridView1.DataSource = dataTable;
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                int rowIndex = dataGridView1.SelectedRows[0].Index;
+                dataGridView1.Rows.RemoveAt(rowIndex);
             }
         }
     }
