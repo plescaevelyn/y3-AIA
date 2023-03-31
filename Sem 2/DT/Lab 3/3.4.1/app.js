@@ -1,0 +1,73 @@
+var app = new Vue({
+    el: '#hamming-encoder',
+    data: {
+        dataBits: [],
+        status: '',
+        numberOfDataBits: 4
+    },
+    created: function () {
+        this.initDataBits(4);
+    },
+    methods: {
+        initDataBits: function(){
+            this.dataBits=[];
+
+            for(var i=0;i<this.numberOfDataBits;i++){
+                var bit = { data: null };
+                this.dataBits.push(bit);
+            }
+        },
+        send: function () {
+            if (this.validate(this.dataBits) === true){
+                var encodedMessage = this.encode(this.dataBits);
+
+                return axios.put("http://localhost:3000/message", {bits: encodedMessage}).then(
+                    response => (this.status = response.data)
+                );
+            } else {
+                this.status = 'Input is not valid. Please use 0 or 1 as data bit values';
+            }
+        },
+        encode: function(bits) {
+            var n = bits.length;
+            var k = Math.ceil(Math.log2(n + 1));
+            var encodedMessage = Array(n + k).fill(0);
+
+            // Place data bits in the correct positions
+            var dataBitIndex = 0;
+            for (var i = 0; i < encodedMessage.length; i++) {
+                if ((i & (i - 1)) != 0) { // not a power of 2
+                    encodedMessage[i] = parseInt(bits[dataBitIndex].data);
+                    dataBitIndex++;
+                }
+            }
+
+            // Calculate parity bits
+            for (var i = 0; i < k; i++) {
+                var parityBitPosition = Math.pow(2, i);
+                var xorBits = [];
+                for (var j = parityBitPosition - 1; j < encodedMessage.length; j += 2 * parityBitPosition) {
+                    xorBits = xorBits.concat(encodedMessage.slice(j, j + parityBitPosition));
+                }
+                encodedMessage[parityBitPosition - 1] = xorBits.reduce((a, b) => a ^ b);
+            }
+
+            return encodedMessage;
+        },
+        parity: function(number){
+            return number % 2;
+        },
+        validate: function(bits){
+            for(var i=0; i<bits.length;i++){
+                if (this.validateBit(bits[i].data) === false)
+                return false;
+            }
+            return true;
+        },
+        validateBit: function(character){
+            if (character === null) return false;
+            return (parseInt(character) === 0 ||
+            parseInt(character) === 1);
+        }
+    }
+});
