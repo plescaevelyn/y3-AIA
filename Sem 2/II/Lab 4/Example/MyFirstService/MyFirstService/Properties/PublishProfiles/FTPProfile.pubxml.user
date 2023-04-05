@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword />
+    <_PublishTargetUrl>https://localhost:44383/WebService1.asmx/https://localhost:44383/WebService1.asmx</_PublishTargetUrl>
+    <History>False|2023-04-05T16:49:43.3437773Z;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,15 @@
+F:\y3-AIA\Sem 2\II\Lab 4\MyFirstClient\MyFirstClient\bin\Debug\net6.0\MyFirstClient.exe
+F:\y3-AIA\Sem 2\II\Lab 4\MyFirstClient\MyFirstClient\bin\Debug\net6.0\MyFirstClient.deps.json
+F:\y3-AIA\Sem 2\II\Lab 4\MyFirstClient\MyFirstClient\bin\Debug\net6.0\MyFirstClient.runtimeconfig.json
+F:\y3-AIA\Sem 2\II\Lab 4\MyFirstClient\MyFirstClient\bin\Debug\net6.0\MyFirstClient.dll
+F:\y3-AIA\Sem 2\II\Lab 4\MyFirstClient\MyFirstClient\bin\Debug\net6.0\MyFirstClient.pdb
+F:\y3-AIA\Sem 2\II\Lab 4\MyFirstClient\MyFirstClient\obj\Debug\net6.0\MyFirstClient.csproj.AssemblyReference.cache
+F:\y3-AIA\Sem 2\II\Lab 4\MyFirstClient\MyFirstClient\obj\Debug\net6.0\MyFirstClient.GeneratedMSBuildEditorConfig.editorconfig
+F:\y3-AIA\Sem 2\II\Lab 4\MyFirstClient\MyFirstClient\obj\Debug\net6.0\MyFirstClient.AssemblyInfoInputs.cache
+F:\y3-AIA\Sem 2\II\Lab 4\MyFirstClient\MyFirstClient\obj\Debug\net6.0\MyFirstClient.AssemblyInfo.cs
+F:\y3-AIA\Sem 2\II\Lab 4\MyFirstClient\MyFirstClient\obj\Debug\net6.0\MyFirstClient.csproj.CoreCompileInputs.cache
+F:\y3-AIA\Sem 2\II\Lab 4\MyFirstClient\MyFirstClient\obj\Debug\net6.0\MyFirstClient.dll
+F:\y3-AIA\Sem 2\II\Lab 4\MyFirstClient\MyFirstClient\obj\Debug\net6.0\refint\MyFirstClient.dll
+F:\y3-AIA\Sem 2\II\Lab 4\MyFirstClient\MyFirstClient\obj\Debug\net6.0\MyFirstClient.pdb
+F:\y3-AIA\Sem 2\II\Lab 4\MyFirstClient\MyFirstClient\obj\Debug\net6.0\MyFirstClient.genruntimeconfig.cache
+F:\y3-AIA\Sem 2\II\Lab 4\MyFirstClient\MyFirstClient\obj\Debug\net6.0\ref\MyFirstClient.dll
