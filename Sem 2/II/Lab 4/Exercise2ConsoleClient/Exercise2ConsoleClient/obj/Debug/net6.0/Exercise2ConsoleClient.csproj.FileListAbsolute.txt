@@ -1,0 +1,5 @@
+F:\y3-AIA\Sem 2\II\Lab 4\Exercise2ConsoleClient\Exercise2ConsoleClient\obj\Debug\net6.0\Exercise2ConsoleClient.csproj.AssemblyReference.cache
+F:\y3-AIA\Sem 2\II\Lab 4\Exercise2ConsoleClient\Exercise2ConsoleClient\obj\Debug\net6.0\Exercise2ConsoleClient.GeneratedMSBuildEditorConfig.editorconfig
+F:\y3-AIA\Sem 2\II\Lab 4\Exercise2ConsoleClient\Exercise2ConsoleClient\obj\Debug\net6.0\Exercise2ConsoleClient.AssemblyInfoInputs.cache
+F:\y3-AIA\Sem 2\II\Lab 4\Exercise2ConsoleClient\Exercise2ConsoleClient\obj\Debug\net6.0\Exercise2ConsoleClient.AssemblyInfo.cs
+F:\y3-AIA\Sem 2\II\Lab 4\Exercise2ConsoleClient\Exercise2ConsoleClient\obj\Debug\net6.0\Exercise2ConsoleClient.csproj.CoreCompileInputs.cache

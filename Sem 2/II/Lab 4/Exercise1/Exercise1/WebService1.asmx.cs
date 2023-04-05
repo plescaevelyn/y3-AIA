@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Services;
 
-namespace Exercise1
+namespace Exercise1_Service
 {
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
@@ -22,10 +22,8 @@ namespace Exercise1
             {
                 case 'C':
                     return initialTemperature * 9 / 5 + 32;
-                    break;
                 case 'F':
                     return (initialTemperature - 32) * 5 / 9;
-                    break;
             }
 
             return -40;
