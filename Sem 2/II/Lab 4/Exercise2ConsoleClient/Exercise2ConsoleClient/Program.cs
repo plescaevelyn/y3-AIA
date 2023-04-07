@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            MyFirstClient.ServiceReference1.WebService1SoapClient service = new MyFirstClient.ServiceReference1.WebService1SoapClient();
+            Exercise2ConsoleClient.ServiceReference1.WebService1SoapClient service = new Exercise2ConsoleClient.ServiceReference1.WebService1SoapClient();
 
             int temperatureInF = service.ConvertTemperature(13, 'C');
             Console.WriteLine("{0} Celsius in Fahrenheit is {1}",13, temperatureInF);
