@@ -19,7 +19,9 @@ public class ExecutionThread extends Thread {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
         System.out.println(this.getName() + " - STATE 2");
+
         synchronized (monitor) {
             System.out.println(this.getName() + " - STATE 3");
             int k = (int) Math.round(Math.random()*(activity_max
@@ -28,6 +30,7 @@ public class ExecutionThread extends Thread {
                 i++; i--;
             }
         }
+
         System.out.println(this.getName() + " - STATE 4");
     }
 }
