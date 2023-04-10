@@ -14,7 +14,6 @@ public class ExecutionThread extends Thread {
         System.out.println(this.getName() + " - STATE 1");
 
         System.out.println(this.getName() + " - STATE 2");
-
         synchronized (monitor) {
             System.out.println(this.getName() + " - STATE 3");
             int k = (int) Math.round(Math.random()*(activity_max
@@ -22,13 +21,14 @@ public class ExecutionThread extends Thread {
             for (int i = 0; i < k * 100000; i++) {
                 i++; i--;
             }
+
+            try {
+                Thread.sleep(Math.round(sleep) * 500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
 
         System.out.println(this.getName() + " - STATE 4");
-        try {
-            Thread.sleep(Math.round(sleep) * 500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 }
