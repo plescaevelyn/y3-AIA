@@ -18,6 +18,8 @@ namespace Tema2
     // [System.Web.Script.Services.ScriptService]
     public class WebService1 : System.Web.Services.WebService
     {
+        string connectionData = @"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=F:\\Facultate\\y3-AIA\\Sem 2\\II\\Tema2\\Tema2Client\\Tema2Client\\Database1.mdf;Integrated Security=True";
+    
         [WebMethod(Description = "A function that retrieves data from the database.")]
         public string Get()
         {
@@ -29,7 +31,7 @@ namespace Tema2
         {
             int rowsAffected = 0;
 
-            using (SqlConnection connection = new SqlConnection(@""))
+            using (SqlConnection connection = new SqlConnection(connectionData))
             {
                 SqlCommand command = new SqlCommand("INSERT INTO Songs VALUES (@id, @song_name, @song_type, @artist, @album)");
 
@@ -51,9 +53,7 @@ namespace Tema2
         [WebMethod(Description = "A function that updates data.")]
         public void Put(int id, string song_name, string song_type, string artist, string album)
         {
-            string connectionString = @"";
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(connectionData))
             {
                 string query = "UPDATE Songs SET song_name = @song_name, song_type = @song_type, "
                     + "artist = @artist, album = @album WHERE id = @id";
@@ -84,9 +84,7 @@ namespace Tema2
         [WebMethod]
         public void Delete(int id)
         {
-            string connectionString = @"";
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(connectionData))
             {
                 string query = "DELETE FROM Songs WHERE ID = @id";
                 SqlCommand command = new SqlCommand(query, connection);
