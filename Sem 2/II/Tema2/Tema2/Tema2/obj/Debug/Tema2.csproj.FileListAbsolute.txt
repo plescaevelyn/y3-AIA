@@ -1,0 +1,2 @@
+F:\Facultate\y3-AIA\Sem 2\II\Tema2\Tema2\obj\Debug\Tema2.csproj.AssemblyReference.cache
+F:\Facultate\y3-AIA\Sem 2\II\Tema2\Tema2\obj\Debug\Tema2.csproj.CoreCompileInputs.cache
