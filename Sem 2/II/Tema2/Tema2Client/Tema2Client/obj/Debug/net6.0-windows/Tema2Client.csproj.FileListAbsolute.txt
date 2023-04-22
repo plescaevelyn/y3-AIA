@@ -1,0 +1,8 @@
+F:\Facultate\y3-AIA\Sem 2\II\Tema2\Tema2Client\Tema2Client\obj\Debug\net6.0-windows\Tema2Client.csproj.AssemblyReference.cache
+F:\Facultate\y3-AIA\Sem 2\II\Tema2\Tema2Client\Tema2Client\obj\Debug\net6.0-windows\Tema2Client.Form1.resources
+F:\Facultate\y3-AIA\Sem 2\II\Tema2\Tema2Client\Tema2Client\obj\Debug\net6.0-windows\Tema2Client.Properties.Resources.resources
+F:\Facultate\y3-AIA\Sem 2\II\Tema2\Tema2Client\Tema2Client\obj\Debug\net6.0-windows\Tema2Client.csproj.GenerateResource.cache
+F:\Facultate\y3-AIA\Sem 2\II\Tema2\Tema2Client\Tema2Client\obj\Debug\net6.0-windows\Tema2Client.GeneratedMSBuildEditorConfig.editorconfig
+F:\Facultate\y3-AIA\Sem 2\II\Tema2\Tema2Client\Tema2Client\obj\Debug\net6.0-windows\Tema2Client.AssemblyInfoInputs.cache
+F:\Facultate\y3-AIA\Sem 2\II\Tema2\Tema2Client\Tema2Client\obj\Debug\net6.0-windows\Tema2Client.AssemblyInfo.cs
+F:\Facultate\y3-AIA\Sem 2\II\Tema2\Tema2Client\Tema2Client\obj\Debug\net6.0-windows\Tema2Client.csproj.CoreCompileInputs.cache
