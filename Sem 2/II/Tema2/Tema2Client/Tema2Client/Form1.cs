@@ -1,7 +1,4 @@
 using System.Data;
-using System.Drawing;
-using System.Security.Cryptography;
-using System.Windows.Forms;
 using System.Data.SqlClient;
 
 namespace Tema2Client
