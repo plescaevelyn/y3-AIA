@@ -53,6 +53,7 @@
             dbData.Name = "dbData";
             dbData.Size = new Size(361, 404);
             dbData.TabIndex = 0;
+            dbData.SelectedIndexChanged += dbData_SelectedIndexChanged;
             // 
             // currentSongs
             // 
