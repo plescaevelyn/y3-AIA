@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Data;
-using System.Linq;
-using System.Web;
 using System.Web.Services;
 
 namespace Tema2
@@ -18,7 +14,7 @@ namespace Tema2
     // [System.Web.Script.Services.ScriptService]
     public class WebService1 : System.Web.Services.WebService
     {
-        string connectionData = @"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=F:\\Facultate\\y3-AIA\\Sem 2\\II\\Tema2\\Tema2Client\\Tema2Client\\Database1.mdf;Integrated Security=True";
+        string connectionData = @"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=F:\\Facultate\\y3-AIA\\Sem 2\\II\\Tema2\\Tema2Client\\Tema2Client\\Database.mdf;Integrated Security=True";
     
         [WebMethod(Description = "A function that retrieves data from the database.")]
         public string Get()
@@ -91,19 +87,11 @@ namespace Tema2
 
                 command.Parameters.AddWithValue("@id", id);
 
-                try
-                {
-                    connection.Open();
-                    command.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    throw new Exception("Following error occured:\t", ex);
-                }
-                finally
-                {
-                    connection.Close();
-                }
+                connection.Open();
+                command.ExecuteNonQuery();
+                
+
+                connection.Close();
             }
         }
     }
