@@ -15,7 +15,7 @@ public class Fir extends Thread {
     }
 
     public void run() {
-        while(true) {
+        while (true) {
             try {
                 System.out.println(this.getName() + " - STATE 1");
 
@@ -25,7 +25,8 @@ public class Fir extends Thread {
 
                 int k = (int) Math.round(Math.random() * (activity_max - activity_min) + activity_min);
                 for (int i = 0; i < k * 10000; i++) {
-                    i++; i--;
+                    i++;
+                    i--;
                 }
                 this.semaphore.release(this.permit);
 

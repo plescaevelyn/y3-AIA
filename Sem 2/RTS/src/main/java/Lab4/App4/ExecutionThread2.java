@@ -4,6 +4,7 @@ public class ExecutionThread2 extends Thread {
     Integer monitor;
     int sleep, activity_min, activity_max;
     Thread th;
+
     public ExecutionThread2(Thread th, Integer monitor, int sleep, int activity_min, int activity_max) {
         this.th = th;
         this.monitor = monitor;

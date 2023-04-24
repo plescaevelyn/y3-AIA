@@ -16,7 +16,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.Random;
 
-public class Exercise3 extends JFrame{
+public class Exercise3 extends JFrame {
     private final int WINDOW_WIDTH = 500;
     private final int WINDOW_HEIGHT = 500;
 

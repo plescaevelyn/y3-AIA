@@ -5,9 +5,11 @@ import java.util.concurrent.CyclicBarrier;
 
 class Fir extends Thread {
     CyclicBarrier bariera;
+
     public Fir(CyclicBarrier bariera) {
         this.bariera = bariera;
     }
+
     public void run() {
         while (true) {
             activitate();
@@ -21,6 +23,7 @@ class Fir extends Thread {
             activitate();
         }
     }
+
     public void activitate() {
         System.out.println(this.getName() + "> activitate");
         try {

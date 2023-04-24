@@ -12,12 +12,12 @@ class JoinTestThread extends Thread {
     }
 
     public void run() {
-        System.out.println("Thread "+ getName() +" has entered the run() method");
+        System.out.println("Thread " + getName() + " has entered the run() method");
         try {
             if (t != null)
                 t.join();
 
-            System.out.println("Thread "+ getName() +" calculating divisors.");
+            System.out.println("Thread " + getName() + " calculating divisors.");
 
             int sum = 0;
             for (int i = 1; i <= num; i++) {
@@ -28,9 +28,9 @@ class JoinTestThread extends Thread {
 
             Main.sumOfDivisors += sum;
 
-            System.out.println("Thread "+ getName() +" has determined sum of divisors.");
+            System.out.println("Thread " + getName() + " has determined sum of divisors.");
 
-        } catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

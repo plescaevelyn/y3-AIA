@@ -3,6 +3,7 @@ package Lab4.App4;
 public class ExecutionThread1 extends Thread {
     Integer monitor1, monitor2;
     int sleep, activity_min, activity_max;
+
     public ExecutionThread1(Integer monitor1, Integer monitor2, int sleep, int activity_min, int activity_max) {
         this.monitor1 = monitor1;
         this.monitor2 = monitor2;

@@ -8,7 +8,7 @@ public class FileService {
     BufferedReader in;
     PrintWriter out;
 
-    public FileService(String fname){
+    public FileService(String fname) {
         this.fileName = fname;
 
         try {

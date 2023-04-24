@@ -37,7 +37,8 @@ public class FileService {
             String iterator, last = "no message to read";
             while ((iterator = in.readLine()) != null) {
                 last = new Date(System.currentTimeMillis()) + " - " + iterator;
-            } return last;
+            }
+            return last;
         }
     }
 }

@@ -2,22 +2,22 @@ package Lab3.Example2;
 
 import java.util.ArrayList;
 
-class Buffer{
+class Buffer {
     ArrayList<Double> content = new ArrayList<Double>();
 
-    synchronized void put(double d){
+    synchronized void put(double d) {
         content.add(d);
         notify();
     }
 
-    synchronized double get(){
+    synchronized double get() {
         double d = -1;
 
         try {
-            if(content.size()==0) wait();
+            if (content.size() == 0) wait();
             d = (content.get(0)).doubleValue();
             content.remove(0);
-        } catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
