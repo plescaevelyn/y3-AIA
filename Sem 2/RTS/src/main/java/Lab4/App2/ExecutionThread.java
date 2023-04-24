@@ -17,6 +17,7 @@ public class ExecutionThread extends Thread {
 
     public void run() {
         System.out.println(this.getName() + " - STATE 1");
+
         try {
             Thread.sleep(Math.round(Math.random() * (sleep_max
                     - sleep_min)+ sleep_min) * 500);

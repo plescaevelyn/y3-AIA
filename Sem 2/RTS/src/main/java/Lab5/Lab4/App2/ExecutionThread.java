@@ -18,11 +18,6 @@ public class ExecutionThread extends Thread {
 
     public void run() {
         System.out.println(this.getName() + " - STATE 1");
-        try {
-            Thread.sleep(Math.round(Math.random() * (sleep_max - sleep_min) + sleep_min) * 500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
 
         if (lock1.tryLock()) {
             System.out.println(this.getName() + " - STATE 2");
@@ -43,7 +38,6 @@ public class ExecutionThread extends Thread {
             } else {
                 lock1.unlock();
             }
-            lock1.unlock();
         }
 
         System.out.println(this.getName() + " - STATE 4");

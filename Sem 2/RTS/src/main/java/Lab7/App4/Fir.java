@@ -17,20 +17,20 @@ public class Fir extends Thread {
     public void run() {
         while(true) {
             try {
-                this.semaphore.acquire(this.permit);
-                System.out.println(this.getName() + " took a token from the semaphore");
                 System.out.println(this.getName() + " - STATE 1");
+
+                this.semaphore.acquire(this.permit);
+
+                System.out.println(this.getName() + " - STATE 2");
+
                 int k = (int) Math.round(Math.random() * (activity_max - activity_min) + activity_min);
                 for (int i = 0; i < k * 10000; i++) {
                     i++; i--;
                 }
-                this.semaphore.release();
-                System.out.println(this.getName() + " release a token from the semaphore");
-                System.out.println(this.getName() + " - STATE 2");
-                Thread.sleep(this.delay * 500);
-                System.out.println(this.getName() + " - STATE 3");
-                System.out.println(this.getName() + " - STATE 4");
+                this.semaphore.release(this.permit);
 
+                System.out.println(this.getName() + " - STATE 3");
+                Thread.sleep(this.delay * 500);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
