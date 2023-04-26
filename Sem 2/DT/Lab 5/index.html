@@ -8,14 +8,18 @@
     <div id="baseband-encoder">
         <ul v-for="(bit, index) in bits">
             <li>
-                <input 
-                    v-on:change="encode()" 
+                <input
+                    v-on:change="encode()"
                     maxlength="1" :placeholder="'B'+index" v-model="bit.value"
                     v-bind:class="[validateBit(bit.value) ? 'valid-input' : 'invalid-input']" />
             </li>
         </ul>
         <p>Bitstream data model: <code>{{bits}}</code></p>
         <p>Baseband code representation: <code class="encoded">{{encodedBits.join('')}}</code></p>
+    </div>
+
+    <div id="nrzl-encoder">
+        <p>Non return to zero level code representation: <code class="encoded">{{encodedBits.join('')}}</code></p>
     </div>
 
     <script type="text/javascript" src="libs/vue.js"></script>

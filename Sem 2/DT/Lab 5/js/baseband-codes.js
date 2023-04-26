@@ -18,10 +18,10 @@ function getNRZLLevelEncoding(bits) {
     var result = [];
     for (var i = 0; i < bits.length; i++) {
         let symbol = '⚋⚋';
-        if (parseInt(bits[i].value) == 1) symbol = '∣▔▔';
-        if (parseInt(bits[i].value) == 1 && i > 0 && parseInt(bits[i - 1].value) == 1) symbol = '∣▁∣▔';
-        if (parseInt(bits[i].value) == 0) symbol = '▔▔∣';
-        if (parseInt(bits[i].value) == 0 && i > 0 && parseInt(bits[i - 1].value) == 0) symbol = '∣▔∣▁';
+        if (parseInt(bits[i].value) == 1) symbol = '▔▔';
+        if (parseInt(bits[i].value) == 1 && i > 0 && parseInt(bits[i - 1].value) == 0) symbol = '|▁▁';
+        if (parseInt(bits[i].value) == 0) symbol = '▁▁';
+        if (parseInt(bits[i].value) == 0 && i > 0 && parseInt(bits[i - 1].value) == 1) symbol = '|▔▔';
         result.push(symbol);
     }
     return result;
@@ -108,8 +108,8 @@ function getBiphaseMarkEncoding(bits) {
     var result = []; check = 0;
     for (var i = 0; i < bits.length; i++) {
         let symbol = '⚋⚋';
-        if (parseInt(bits[i].value) == 1 && check = 0) symbol = '|▔|_';
-        if (parseInt(bits[i].value) == 1 && check = 1) symbol = '|▁∣▔';
+        if (parseInt(bits[i].value) == 1 && check == 0) symbol = '|▔|_';
+        if (parseInt(bits[i].value) == 1 && check == 1) symbol = '|▁∣▔';
         if (parseInt(bits[i].value) == 0 && i > 0 && check == 0) {
           symbol = '∣▔▔';
           check = 1;
@@ -139,7 +139,7 @@ function getBiphaseSpaceEncoding(bits) {
           check = 0;
         }
         if (parseInt(bits[i].value) == 0 && i > 0 && check == 1) symbol = '∣▁∣▔';
-        if (parseInt(bits[i].value) == 0 && i > 0 && check == 0 symbol = '∣▔∣▁';
+        if (parseInt(bits[i].value) == 0 && i > 0 && check == 0) symbol = '∣▔∣▁';
         result.push(symbol);
       }
    return result;
@@ -161,7 +161,7 @@ function getBiphaseLevelDifferentialEncoding(bits) {
           check = 1;
         }
         if (parseInt(bits[i].value) == 0 && i > 0 && check == 1) symbol = '∣▁∣▔';
-        if (parseInt(bits[i].value) == 0 && i > 0 && check == 0 symbol = '∣▔∣▁';
+        if (parseInt(bits[i].value) == 0 && i > 0 && check == 0) symbol = '∣▔∣▁';
         result.push(symbol);
       }
    return result;
