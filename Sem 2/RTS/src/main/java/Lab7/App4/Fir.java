@@ -28,10 +28,14 @@ public class Fir extends Thread {
                     i++;
                     i--;
                 }
+
                 this.semaphore.release(this.permit);
 
                 System.out.println(this.getName() + " - STATE 3");
+
                 Thread.sleep(this.delay * 500);
+
+                System.out.println(this.getName() + "- STATE 4");
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }

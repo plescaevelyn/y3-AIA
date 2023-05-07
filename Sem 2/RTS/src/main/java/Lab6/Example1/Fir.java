@@ -13,6 +13,7 @@ class Fir extends Thread {
     public void run() {
         while (true) {
             activitate();
+
             try {
                 bariera.await();
             } catch (InterruptedException e) {
@@ -20,6 +21,7 @@ class Fir extends Thread {
             } catch (BrokenBarrierException e) {
                 e.printStackTrace();
             }
+
             activitate();
         }
     }
