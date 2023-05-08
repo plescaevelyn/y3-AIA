@@ -1,13 +1,17 @@
 package Lab7.App3;
 
+import java.util.concurrent.CountDownLatch;
+
 public class ExecutionThread1 extends Thread {
     private final Object monitor1;
     private final Object monitor2;
     private final int sleep;
     private final int activity_min;
     private final int activity_max;
+    private CountDownLatch countDownLatch;
 
-    public ExecutionThread1(Object monitor1, Object monitor2, int sleep, int activity_min, int activity_max) {
+    public ExecutionThread1(Object monitor1, Object monitor2, int sleep, int activity_min, int activity_max,
+                            CountDownLatch countDownLatch) {
         this.monitor1 = monitor1;
         this.monitor2 = monitor2;
         this.sleep = sleep;
@@ -41,5 +45,13 @@ public class ExecutionThread1 extends Thread {
         }
 
         System.out.println(this.getName() + " - STATE 4");
+
+        countDownLatch.countDown();
+
+        try {
+            countDownLatch.await();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

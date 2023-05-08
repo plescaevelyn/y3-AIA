@@ -1,34 +1,32 @@
-package Lab7.App2.SemaphoreSolution;
+package Lab7.App2.ReentrantLockSolution;
 
 import java.util.concurrent.BrokenBarrierException;
-import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.CyclicBarrier;
-import java.util.concurrent.Semaphore;
+import java.util.concurrent.locks.ReentrantLock;
 
-public class ExecutionThread extends Thread {
-    private final Semaphore semaphore;
+public class ExecutionThread2 extends Thread {
+    private final ReentrantLock lock1;
+    private final ReentrantLock lock2;
     private final int sleep;
     private final int activity_min;
     private final int activity_max;
-    private final CountDownLatch countDownLatch;
+    private final CyclicBarrier cyclicBarrier;
 
-    public ExecutionThread(Semaphore semaphore, int sleep, int activity_min, int activity_max,
-                           CountDownLatch countDownLatch) {
-        this.semaphore = semaphore;
+    public ExecutionThread2(ReentrantLock lock1, ReentrantLock lock2, int sleep, int activity_min, int activity_max,
+                            CyclicBarrier cyclicBarrier) {
+        this.lock1 = lock1;
+        this.lock2 = lock2;
         this.sleep = sleep;
         this.activity_min = activity_min;
         this.activity_max = activity_max;
-        this.countDownLatch = countDownLatch;
+        this.cyclicBarrier = cyclicBarrier;
     }
 
     public void run() {
         System.out.println(this.getName() + " - STATE 1");
 
-        try {
-            semaphore.acquire(1);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        lock1.lock();
+        lock2.lock();
 
         System.out.println(this.getName() + " - STATE 2");
         int k = (int) Math.round(Math.random() * (activity_max - activity_min) + activity_min);
@@ -43,16 +41,15 @@ public class ExecutionThread extends Thread {
             e.printStackTrace();
         }
 
-        semaphore.release(1);
+        lock1.unlock();
+        lock2.unlock();
 
         System.out.println(this.getName() + " - STATE 3");
 
-        countDownLatch.countDown();
-
         try {
-            countDownLatch.await();
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            cyclicBarrier.await(); // Wait for other threads to reach the barrier
+        } catch (InterruptedException | BrokenBarrierException e) {
+            e.printStackTrace();
         }
     }
 }
