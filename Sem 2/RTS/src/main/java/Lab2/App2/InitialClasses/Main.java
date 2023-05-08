@@ -1,4 +1,4 @@
-package Lab2.Exercise2.InitialClasses;
+package Lab2.App2.InitialClasses;
 
 public class Main {
     private static final int noOfThreads = 6;

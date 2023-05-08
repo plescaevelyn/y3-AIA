@@ -1,6 +1,4 @@
-package Lab2.Exercise2.MVCClasses;
-
-import Lab2.Exercise2.InitialClasses.Window;
+package Lab2.App2.MVCClasses;
 
 import java.util.Observable;
 

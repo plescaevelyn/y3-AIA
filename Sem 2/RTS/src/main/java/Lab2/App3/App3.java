@@ -1,4 +1,4 @@
-package Lab2;
+package Lab2.App3;
 
 /*
 Implement an application that has three threads of execution.
@@ -16,7 +16,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.Random;
 
-public class Exercise3 extends JFrame {
+public class App3 extends JFrame {
     private final int WINDOW_WIDTH = 500;
     private final int WINDOW_HEIGHT = 500;
 
@@ -26,8 +26,8 @@ public class Exercise3 extends JFrame {
 
     private boolean running;
 
-    public Exercise3() {
-        setTitle("Exercise 2");
+    public App3() {
+        setTitle("App 3");
         setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBackground(Color.BLACK);
@@ -67,42 +67,5 @@ public class Exercise3 extends JFrame {
 
     private void stopThreads() {
         running = false;
-    }
-
-    public static void main(String[] args) {
-        Exercise3 app = new Exercise3();
-        app.setVisible(true);
-    }
-
-    private static class Square extends JPanel {
-        private int x;
-        private int y;
-        private int width;
-        private int height;
-        private Color color;
-
-        public Square(int x, int y, Color color) {
-            this.x = x;
-            this.y = y;
-            this.width = 50;
-            this.height = 50;
-            this.color = color;
-        }
-
-        public void moveDown(int distance) {
-            y += distance;
-            setLocation(x, y);
-        }
-
-        public int getY() {
-            return y;
-        }
-
-        @Override
-        public void paintComponent(Graphics g) {
-            super.paintComponent(g);
-            g.setColor(color);
-            g.fillRect(x, y, width, height);
-        }
     }
 }

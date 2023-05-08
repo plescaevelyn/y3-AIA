@@ -1,11 +1,18 @@
-package Lab2.Exercise2.InitialClasses;
+package Lab2.App2.MVCClasses;
 
+import javax.swing.*;
 import java.util.ArrayList;
-import javax.swing.JFrame;
-import javax.swing.JProgressBar;
 
-public class Window extends JFrame{
+public class Window extends JFrame {
     ArrayList<JProgressBar> bars = new ArrayList<JProgressBar>();
+
+    public Window() {
+        setLayout(null);
+        setSize(450,400);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        init(1);
+        this.setVisible(true);
+    }
 
     public Window(int nrThreads) {
         setLayout(null);
@@ -17,7 +24,7 @@ public class Window extends JFrame{
 
     private void init(int n){
         for(int i = 0 ;i < n; i++){
-            JProgressBar pb=new JProgressBar();
+            JProgressBar pb = new JProgressBar();
             pb.setMaximum(1000);
             pb.setBounds(50,(i+1)*30,350,20);
             this.add(pb);
@@ -27,5 +34,9 @@ public class Window extends JFrame{
 
     public void setProgressValue(int id,int val){
         bars.get(id).setValue(val);
+    }
+
+    public void setProgressValue(ThreadUpdateNotification arg) {
+        bars.get(arg.getId()).setValue(arg.getProgress());
     }
 }

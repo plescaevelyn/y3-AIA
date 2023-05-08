@@ -24,7 +24,7 @@ public class ExecutionThread extends Thread {
         System.out.println(this.getName() + " - STATE 1");
 
         try {
-            semaphore.acquire();
+            semaphore.acquire(1);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -42,7 +42,7 @@ public class ExecutionThread extends Thread {
             e.printStackTrace();
         }
 
-        semaphore.release();
+        semaphore.release(1);
 
         System.out.println(this.getName() + " - STATE 3");
 

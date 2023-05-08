@@ -1,4 +1,4 @@
-package Lab2.Exercise2.MVCClasses;
+package Lab2.App2.MVCClasses;
 
 import java.util.Observable;
 import java.util.Observer;

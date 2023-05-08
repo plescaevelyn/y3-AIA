@@ -1,4 +1,4 @@
-package Lab2.Exercise2.MVCClasses;
+package Lab2.App2.MVCClasses;
 
 public class ThreadUpdateNotification {
     public int id;
