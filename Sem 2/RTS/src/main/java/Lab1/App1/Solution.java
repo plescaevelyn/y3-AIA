@@ -3,7 +3,7 @@ There are two complex numbers: 2+5i and 4-i. To create an application that calcu
 the two numbers, to verify the results.
  */
 
-package Lab1.Exercise1;
+package Lab1.App1;
 
 import java.util.Scanner;
 

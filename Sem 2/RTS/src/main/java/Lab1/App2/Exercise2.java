@@ -1,4 +1,4 @@
-package Lab1;
+package Lab1.App2;
 
 /*
 Two 3x3 array are given,

@@ -4,7 +4,7 @@ the two numbers, to verify the results.
  */
 
 
-package Lab1.Exercise1;
+package Lab1.App1;
 
 public class ComplexNumber {
     int real;
