@@ -36,40 +36,42 @@ public class ExecutionThread extends Thread {
                 e.printStackTrace();
             }
 
-            lock1.lock();
-            try {
-                System.out.println(this.getName() + " - STATE 2");
-                int k = (int) Math.round(Math.random() * (activity_max - activity_min) + activity_min);
-                for (int i = 0; i < k * 100000; i++) {
-                    i++;
-                    i--;
-                }
-
+            if (lock1.tryLock()) {
                 try {
-                    cyclicBarrier.await(); // Wait for other threads to reach the barrier
-                } catch (InterruptedException | BrokenBarrierException e) {
-                    e.printStackTrace();
-                }
+                    System.out.println(this.getName() + " - STATE 2");
+                    int k = (int) Math.round(Math.random() * (activity_max - activity_min) + activity_min);
+                    for (int i = 0; i < k * 100000; i++) {
+                        i++;
+                        i--;
+                    }
 
-                lock2.lock();
-                try {
-                    System.out.println(this.getName() + " - STATE 3");
                     try {
-                        Thread.sleep(Math.round(sleep) * 500);
-                    } catch (InterruptedException e) {
+                        cyclicBarrier.await(); // Wait for other threads to reach the barrier
+                    } catch (InterruptedException | BrokenBarrierException e) {
                         e.printStackTrace();
                     }
+
+                    if (lock2.tryLock()) {
+                        try {
+                            System.out.println(this.getName() + " - STATE 3");
+                            try {
+                                Thread.sleep(Math.round(sleep) * 500);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                        } finally {
+                            lock2.unlock();
+                        }
+                    }
                 } finally {
-                    lock2.unlock();
+                    lock1.unlock();
                 }
-            } finally {
-                lock1.unlock();
             }
 
             System.out.println(this.getName() + " - STATE 4");
 
             try {
-                cyclicBarrier.await(); // Wait for other threads to reach the barrier
+                cyclicBarrier.await();
             } catch (InterruptedException | BrokenBarrierException e) {
                 e.printStackTrace();
             }

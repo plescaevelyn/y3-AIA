@@ -23,22 +23,23 @@ public class ExecutionThread extends Thread {
     public void run() {
         System.out.println(this.getName() + " - STATE 1");
 
-        lock.lock();
-        try {
-            System.out.println(this.getName() + " - STATE 2");
-            int k = (int) Math.round(Math.random() * (activity_max - activity_min) + activity_min);
-            for (int i = 0; i < k * 100000; i++) {
-                i++;
-                i--;
-            }
-
+        if (lock.tryLock()) {
             try {
-                Thread.sleep(Math.round(sleep) * 500);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+                System.out.println(this.getName() + " - STATE 2");
+                int k = (int) Math.round(Math.random() * (activity_max - activity_min) + activity_min);
+                for (int i = 0; i < k * 100000; i++) {
+                    i++;
+                    i--;
+                }
+
+                try {
+                    Thread.sleep(Math.round(sleep) * 500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            } finally {
+                lock.unlock();
             }
-        } finally {
-            lock.unlock();
         }
 
         System.out.println(this.getName() + " - STATE 3");
