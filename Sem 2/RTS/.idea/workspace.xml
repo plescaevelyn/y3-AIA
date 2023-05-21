@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4299285-174a-4411-bda3-24d8e6984395" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lab3/App2/Lines.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lab3/App2/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lab3/App2/SquareMover.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lab3/App2/SquarePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../II/Tema2/Tema2Client/Tema2Client/Database.mdf" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Tema2/Tema2Client/Tema2Client/Database.mdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../II/Tema2/Tema2Client/Tema2Client/Database_log.ldf" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Tema2/Tema2Client/Tema2Client/Database_log.ldf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/RTS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RTS.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab3/App1/RThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lab3/App1/RThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab4/App1/ExecutionThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lab4/App1/ExecutionThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab4/App3/ExecutionThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lab4/App3/ExecutionThread.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,6 +156,7 @@
       <workItem from="1684685831576" duration="748000" />
       <workItem from="1684687684715" duration="748000" />
       <workItem from="1684688736478" duration="392000" />
+      <workItem from="1684689146234" duration="443000" />
     </task>
     <servers />
   </component>
