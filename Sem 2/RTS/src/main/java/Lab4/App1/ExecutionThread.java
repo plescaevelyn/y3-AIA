@@ -16,7 +16,6 @@ public class ExecutionThread extends Thread {
         System.out.println(this.getName() + " - STATE 1");
 
         synchronized (monitor) {
-//            synchronized (monitor) {}
             System.out.println(this.getName() + " - STATE 2");
             int k = (int) Math.round(Math.random() * (activity_max
                     - activity_min) + activity_min);

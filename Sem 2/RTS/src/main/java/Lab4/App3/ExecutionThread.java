@@ -14,6 +14,7 @@ public class ExecutionThread extends Thread {
     public void run() {
         while (true) {
             System.out.println(this.getName() + " - STATE 1");
+
             synchronized (monitor) {
                 System.out.println(this.getName() + " - STATE 2");
                 int k = (int) Math.round(Math.random() * (activity_max

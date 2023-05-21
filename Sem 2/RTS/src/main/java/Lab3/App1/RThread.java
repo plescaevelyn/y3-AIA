@@ -2,7 +2,6 @@ package Lab3.App1;
 
 public class RThread extends Thread {
     FileService service;
-
     public RThread(FileService service) {
         this.service = service;
     }
