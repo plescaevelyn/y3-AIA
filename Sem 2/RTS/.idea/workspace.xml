@@ -7,9 +7,7 @@
     <list default="true" id="e4299285-174a-4411-bda3-24d8e6984395" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../II/Tema2/Tema2Client/Tema2Client/Database.mdf" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Tema2/Tema2Client/Tema2Client/Database.mdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../II/Tema2/Tema2Client/Tema2Client/Database_log.ldf" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Tema2/Tema2Client/Tema2Client/Database_log.ldf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/RTS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RTS.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab8/Exercise1/Interfaces/TransitionTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lab8/Exercise1/Interfaces/TransitionTemplate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,10 +51,12 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Facultate\y3-AIA\Sem 2\RTS\src\main\java\Lab3\App2" />
+      <recent name="F:\Facultate\y3-AIA\Sem 2\RTS\src\main\java\Lab3\App1\App2" />
       <recent name="F:\Facultate\y3-AIA\Sem 2\RTS\src\main\java\Lab3\App22" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Lab3.App2.Main">
+  <component name="RunManager" selected="Application.Lab8.Example.Main">
     <configuration name="Lab2.App2.InitialClasses.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Lab2.App2.InitialClasses.Main" />
       <module name="RTS" />
@@ -96,12 +96,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lab2.Exercise2.InitialClasses.Main" />
+    <configuration name="Lab8.Example.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lab8.Example.Main" />
       <module name="RTS" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Lab2.Exercise2.InitialClasses.*" />
+          <option name="PATTERN" value="Lab8.Example.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -125,19 +125,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Lab8.Example.Main" />
       <item itemvalue="Application.Lab3.App1.App2.Main" />
       <item itemvalue="Application.Lab2.App2.InitialClasses.Main" />
       <item itemvalue="Application.Lab3.App2.Main" />
-      <item itemvalue="Application.Main" />
       <item itemvalue="Application.java" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Lab8.Example.Main" />
         <item itemvalue="Application.Lab3.App2.Main" />
         <item itemvalue="Application.Lab3.App1.App2.Main" />
         <item itemvalue="Application.Lab2.App2.InitialClasses.Main" />
         <item itemvalue="Application.java" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -164,7 +164,8 @@
       <workItem from="1684697213191" duration="615000" />
       <workItem from="1684739281004" duration="71000" />
       <workItem from="1684739374516" duration="47000" />
-      <workItem from="1684739437548" duration="45000" />
+      <workItem from="1684739437548" duration="428000" />
+      <workItem from="1684739917179" duration="54000" />
     </task>
     <servers />
   </component>
