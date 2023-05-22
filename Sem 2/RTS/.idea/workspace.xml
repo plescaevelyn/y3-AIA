@@ -7,6 +7,9 @@
     <list default="true" id="e4299285-174a-4411-bda3-24d8e6984395" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../II/Tema2/Tema2Client/Tema2Client/Database.mdf" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Tema2/Tema2Client/Tema2Client/Database.mdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../II/Tema2/Tema2Client/Tema2Client/Database_log.ldf" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Tema2/Tema2Client/Tema2Client/Database_log.ldf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/RTS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RTS.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Lab8/Exercise1/Interfaces/TransitionTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lab8/Exercise1/Interfaces/TransitionTemplate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,12 +57,12 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Lab3.App2.Main">
-    <configuration name="Exercise3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lab2.Exercise3" />
+    <configuration name="Lab2.App2.InitialClasses.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lab2.App2.InitialClasses.Main" />
       <module name="RTS" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Lab2.*" />
+          <option name="PATTERN" value="Lab2.App2.InitialClasses.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -67,12 +70,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Lab2.App2.InitialClasses.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lab2.App2.InitialClasses.Main" />
+    <configuration name="Lab3.App1.App2.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lab3.App1.App2.Main" />
       <module name="RTS" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Lab2.App2.InitialClasses.*" />
+          <option name="PATTERN" value="Lab3.App1.App2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -122,19 +125,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Lab3.App1.App2.Main" />
       <item itemvalue="Application.Lab2.App2.InitialClasses.Main" />
       <item itemvalue="Application.Lab3.App2.Main" />
-      <item itemvalue="Application.Exercise3" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.java" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Lab3.App2.Main" />
+        <item itemvalue="Application.Lab3.App1.App2.Main" />
         <item itemvalue="Application.Lab2.App2.InitialClasses.Main" />
         <item itemvalue="Application.java" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Exercise3" />
       </list>
     </recent_temporary>
   </component>
@@ -157,6 +160,11 @@
       <workItem from="1684687684715" duration="748000" />
       <workItem from="1684688736478" duration="392000" />
       <workItem from="1684689146234" duration="443000" />
+      <workItem from="1684696897597" duration="295000" />
+      <workItem from="1684697213191" duration="615000" />
+      <workItem from="1684739281004" duration="71000" />
+      <workItem from="1684739374516" duration="47000" />
+      <workItem from="1684739437548" duration="45000" />
     </task>
     <servers />
   </component>

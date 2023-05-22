@@ -1,4 +1,4 @@
-package Lab3.App22;
+package Lab3.App2;
 
 import javax.swing.*;
 import java.awt.*;
