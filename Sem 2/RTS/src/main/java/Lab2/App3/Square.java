@@ -16,11 +16,15 @@ public class Square extends JPanel {
         this.width = 50;
         this.height = 50;
         this.color = color;
+
+        repaint();
+        this.setVisible(true);
     }
 
     public void moveDown(int distance) {
         y += distance;
         setLocation(x, y);
+        repaint();
     }
 
     public int getY() {

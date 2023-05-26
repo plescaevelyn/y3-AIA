@@ -14,16 +14,17 @@ public class Square extends JPanel {
 
     public Square(int x, int y, Color color) {
         this.x = x;
-        this
-                .y = y;
+        this.y = y;
         this.width = 50;
         this.height = 50;
         this.color = color;
+        repaint();
     }
 
     public void moveDown(int distance) {
         y += distance;
         setLocation(x, y);
+        repaint();
     }
 
     public int getY() {
@@ -33,6 +34,7 @@ public class Square extends JPanel {
     public void resetPosition() {
         y = INITIAL_Y;
         setLocation(x, y);
+        repaint();
     }
 
     @Override

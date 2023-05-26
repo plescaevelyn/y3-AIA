@@ -7,6 +7,7 @@ import java.awt.event.KeyListener;
 import java.util.Random;
 
 public class App4 extends JFrame implements KeyListener {
+    // TODO: repaint the components so that they will be shown after modifying their position
     private final int WINDOW_WIDTH = 500;
     private final int WINDOW_HEIGHT = 500;
 
@@ -63,6 +64,9 @@ public class App4 extends JFrame implements KeyListener {
                 e.printStackTrace();
             }
         }
+
+        square.paintComponent(getGraphics());
+        square.repaint();
     }
 
     private void supervisorThread() {
@@ -104,6 +108,9 @@ public class App4 extends JFrame implements KeyListener {
         } else if (key == KeyEvent.VK_RIGHT) {
             circle.moveRight();
         }
+
+        circle.paintComponent(getGraphics());
+        circle.repaint();
     }
 
     @Override

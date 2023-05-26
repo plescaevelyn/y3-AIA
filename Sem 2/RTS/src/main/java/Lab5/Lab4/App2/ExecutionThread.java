@@ -7,7 +7,8 @@ public class ExecutionThread extends Thread {
     ReentrantLock lock1, lock2;
     int sleep_min, sleep_max, sleep, activity_min, activity_max;
 
-    public ExecutionThread(ReentrantLock lock1, ReentrantLock lock2, int sleep_min, int sleep_max, int sleep, int activity_min, int activity_max) {
+    public ExecutionThread(ReentrantLock lock1, ReentrantLock lock2, int sleep_min, int sleep_max, int sleep,
+                           int activity_min, int activity_max) {
         this.lock1 = lock1;
         this.lock2 = lock2;
         this.sleep_min = sleep_min;

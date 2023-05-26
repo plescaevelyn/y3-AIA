@@ -17,16 +17,19 @@ public class Circle extends JPanel {
         this.x = x;
         this.y = y;
         this.color = color;
+        repaint();
     }
 
     public void moveLeft() {
         x -= SPEED;
         setLocation(x, y);
+        repaint();
     }
 
     public void moveRight() {
         x += SPEED;
         setLocation(x, y);
+        repaint();
     }
 
     public boolean collidesWith(Square square) {
@@ -46,6 +49,7 @@ public class Circle extends JPanel {
         x = INITIAL_X;
         y = INITIAL_Y;
         setLocation(x, y);
+        repaint();
     }
 
     @Override

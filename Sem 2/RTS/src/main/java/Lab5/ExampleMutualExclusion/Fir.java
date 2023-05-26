@@ -14,7 +14,9 @@ class Fir extends Thread {
     public void run() {
         this.l.lock();
         System.out.println("The thread " + name + " acquired the lock");
+
         criticalRegion();
+
         this.l.unlock();
         System.out.println("The thread " + name + " released the lock");
     }
