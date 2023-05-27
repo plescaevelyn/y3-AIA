@@ -35,7 +35,6 @@ public class SquareMover extends Thread {
                     panel.moveSquare(id, dx, dy);
                 }
 
-
                 try {
                     Thread.sleep(50);
                     if (oneTouchedTheLine && !oneStopped) {

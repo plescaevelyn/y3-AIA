@@ -5,40 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4299285-174a-4411-bda3-24d8e6984395" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../II/Tema2/Tema2Client/Tema2Client/Database.mdf" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Tema2/Tema2Client/Tema2Client/Database.mdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../II/Tema2/Tema2Client/Tema2Client/Database_log.ldf" beforeDir="false" afterPath="$PROJECT_DIR$/../II/Tema2/Tema2Client/Tema2Client/Database_log.ldf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab2/App3/App3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lab2/App3/App3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab2/App3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lab2/App3/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab2/App3/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lab2/App3/Square.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab2/App4/App4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lab2/App4/App4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab2/App4/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lab2/App4/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab2/App4/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lab2/App4/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab2/App4/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lab2/App4/Square.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab3/App1/App2/production/RTS/Lab2/App3/App3.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lab3/App1/App2/production/RTS/Lab2/App3/App3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab3/App1/App2/production/RTS/Lab2/App3/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lab3/App1/App2/production/RTS/Lab2/App3/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab3/App1/App2/production/RTS/Lab2/App3/Square.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lab3/App1/App2/production/RTS/Lab2/App3/Square.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab3/App1/App2/production/RTS/Lab2/App4/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lab3/App1/App2/production/RTS/Lab2/App4/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab3/App1/App2/production/RTS/Lab2/App4/Square.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lab3/App1/App2/production/RTS/Lab2/App4/Square.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab3/App1/App2/production/RTS/Lab3/App2/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lab3/App1/App2/production/RTS/Lab3/App2/Main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab3/App1/App2/production/RTS/Lab3/App2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lab3/App1/App2/production/RTS/Lab3/App2/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab3/App2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lab3/App2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab5/ExampleMutualExclusion/Fir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lab5/ExampleMutualExclusion/Fir.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab5/Lab4/App2/ExecutionThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lab5/Lab4/App2/ExecutionThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab8/Example/Controller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab8/Example/Controller_Transition_t_1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab8/Example/Controller_Transition_t_2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab8/Example/Controller_Transition_t_o2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab8/Example/IntPlace.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab8/Example/Interfaces/PlaceHandlerTemplate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab8/Example/Interfaces/PlaceTemplate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab8/Example/Interfaces/TransitionTemplate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab8/Example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab8/Example/PlaceHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab8/Example/Robot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab8/Example/Robot_Transition_t_1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab8/Example/Robot_Transition_t_2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Lab3/App2/SquareMover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lab3/App2/SquareMover.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +171,8 @@
       <workItem from="1684741180058" duration="3710000" />
       <workItem from="1684746395041" duration="2018000" />
       <workItem from="1684752855438" duration="14000" />
-      <workItem from="1685083451348" duration="801000" />
+      <workItem from="1685083451348" duration="3672000" />
+      <workItem from="1685183789335" duration="1319000" />
     </task>
     <servers />
   </component>
