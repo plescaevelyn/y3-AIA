@@ -1,0 +1,7 @@
+C:\Users\Ioana\Desktop\Pregatire\People\People\bin\Debug\People.exe.config
+C:\Users\Ioana\Desktop\Pregatire\People\People\bin\Debug\People.exe
+C:\Users\Ioana\Desktop\Pregatire\People\People\bin\Debug\People.pdb
+C:\Users\Ioana\Desktop\Pregatire\People\People\obj\Debug\People.csprojAssemblyReference.cache
+C:\Users\Ioana\Desktop\Pregatire\People\People\obj\Debug\People.csproj.CoreCompileInputs.cache
+C:\Users\Ioana\Desktop\Pregatire\People\People\obj\Debug\People.exe
+C:\Users\Ioana\Desktop\Pregatire\People\People\obj\Debug\People.pdb

@@ -1,0 +1,4 @@
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Serviciul\Serviciul\bin\Serviciul.dll
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Serviciul\Serviciul\bin\Serviciul.pdb
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Serviciul\Serviciul\obj\Debug\Serviciul.dll
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Serviciul\Serviciul\obj\Debug\Serviciul.pdb

@@ -1,0 +1,4 @@
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Ex2\Ex2\bin\Ex2.dll
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Ex2\Ex2\bin\Ex2.pdb
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Ex2\Ex2\obj\Debug\Ex2.dll
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Ex2\Ex2\obj\Debug\Ex2.pdb

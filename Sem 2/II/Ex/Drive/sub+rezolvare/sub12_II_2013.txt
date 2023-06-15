@@ -1,0 +1,8 @@
+- o interfata grafica (tab control sau menu)
+- La clic pe "Structuri" din interfata grafica, genereaza un listBox, unde vezi elementele stivei/cozii si poti sa adaugi/stergi (textbox pentru valoare, buton - push pop)
+- de implementat Stiva, Coada
+- sa faci mecanismul de inserare stergere din interfata
+- un serviciu web cu metodele:
+		public Stiva SortareStiva(Stiva myStack)
+		public Coada SortareCoada(Coada myQueue)
+	

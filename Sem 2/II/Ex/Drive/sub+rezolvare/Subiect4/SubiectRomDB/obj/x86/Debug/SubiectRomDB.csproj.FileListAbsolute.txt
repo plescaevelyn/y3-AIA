@@ -1,0 +1,9 @@
+c:\users\sam\documents\visual studio 2010\Projects\SubiectRomDB\SubiectRomDB\bin\Debug\SubiectRomDB.exe
+c:\users\sam\documents\visual studio 2010\Projects\SubiectRomDB\SubiectRomDB\bin\Debug\SubiectRomDB.pdb
+c:\users\sam\documents\visual studio 2010\Projects\SubiectRomDB\SubiectRomDB\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\sam\documents\visual studio 2010\Projects\SubiectRomDB\SubiectRomDB\obj\x86\Debug\SubiectRomDB.exe
+c:\users\sam\documents\visual studio 2010\Projects\SubiectRomDB\SubiectRomDB\obj\x86\Debug\SubiectRomDB.pdb
+C:\Users\IoanMarcel\Desktop\SubiectRomDB\SubiectRomDB\obj\x86\Debug\SubiectRomDB.exe
+C:\Users\IoanMarcel\Desktop\SubiectRomDB\SubiectRomDB\obj\x86\Debug\SubiectRomDB.pdb
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Subiect4\SubiectRomDB\obj\x86\Debug\SubiectRomDB.exe
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Subiect4\SubiectRomDB\obj\x86\Debug\SubiectRomDB.pdb

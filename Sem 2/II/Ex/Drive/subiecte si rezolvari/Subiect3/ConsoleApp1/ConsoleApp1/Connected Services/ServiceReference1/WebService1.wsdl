@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="SortingService" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="SortingService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="SortingService">
+      <s:element name="Sort">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="s" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SortResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SortResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="createDB">
+        <s:complexType />
+      </s:element>
+      <s:element name="createDBResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="insertInDB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="s" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertInDBResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SortSoapIn">
+    <wsdl:part name="parameters" element="tns:Sort" />
+  </wsdl:message>
+  <wsdl:message name="SortSoapOut">
+    <wsdl:part name="parameters" element="tns:SortResponse" />
+  </wsdl:message>
+  <wsdl:message name="createDBSoapIn">
+    <wsdl:part name="parameters" element="tns:createDB" />
+  </wsdl:message>
+  <wsdl:message name="createDBSoapOut">
+    <wsdl:part name="parameters" element="tns:createDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertInDBSoapIn">
+    <wsdl:part name="parameters" element="tns:insertInDB" />
+  </wsdl:message>
+  <wsdl:message name="insertInDBSoapOut">
+    <wsdl:part name="parameters" element="tns:insertInDBResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SortingServiceSoap">
+    <wsdl:operation name="Sort">
+      <wsdl:input message="tns:SortSoapIn" />
+      <wsdl:output message="tns:SortSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="createDB">
+      <wsdl:input message="tns:createDBSoapIn" />
+      <wsdl:output message="tns:createDBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertInDB">
+      <wsdl:input message="tns:insertInDBSoapIn" />
+      <wsdl:output message="tns:insertInDBSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SortingServiceSoap" type="tns:SortingServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Sort">
+      <soap:operation soapAction="SortingService/Sort" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createDB">
+      <soap:operation soapAction="SortingService/createDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertInDB">
+      <soap:operation soapAction="SortingService/insertInDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SortingServiceSoap12" type="tns:SortingServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Sort">
+      <soap12:operation soapAction="SortingService/Sort" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createDB">
+      <soap12:operation soapAction="SortingService/createDB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertInDB">
+      <soap12:operation soapAction="SortingService/insertInDB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SortingService">
+    <wsdl:port name="SortingServiceSoap" binding="tns:SortingServiceSoap">
+      <soap:address location="http://localhost:58730/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SortingServiceSoap12" binding="tns:SortingServiceSoap12">
+      <soap12:address location="http://localhost:58730/WebService1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,16 @@
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Ex2\Client\bin\Debug\Client.exe.config
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Ex2\Client\bin\Debug\Client.exe
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Ex2\Client\bin\Debug\Client.pdb
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Ex2\Client\obj\x86\Debug\Client.Form1.resources
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Ex2\Client\obj\x86\Debug\Client.Properties.Resources.resources
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Ex2\Client\obj\x86\Debug\Client.csproj.GenerateResource.Cache
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Ex2\Client\obj\x86\Debug\Client.exe
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Ex2\Client\obj\x86\Debug\Client.pdb
+D:\Facultate\Industrial Info - ii\pregatire examen\sub+rezolvare\Ex2\Client\bin\Debug\Client.exe.config
+D:\Facultate\Industrial Info - ii\pregatire examen\sub+rezolvare\Ex2\Client\obj\x86\Debug\Client.exe
+D:\Facultate\Industrial Info - ii\pregatire examen\sub+rezolvare\Ex2\Client\obj\x86\Debug\Client.pdb
+D:\Facultate\Industrial Info - ii\pregatire examen\sub+rezolvare\Ex2\Client\bin\Debug\Client.exe
+D:\Facultate\Industrial Info - ii\pregatire examen\sub+rezolvare\Ex2\Client\bin\Debug\Client.pdb
+D:\Facultate\Industrial Info - ii\pregatire examen\sub+rezolvare\Ex2\Client\obj\x86\Debug\Client.Form1.resources
+D:\Facultate\Industrial Info - ii\pregatire examen\sub+rezolvare\Ex2\Client\obj\x86\Debug\Client.Properties.Resources.resources
+D:\Facultate\Industrial Info - ii\pregatire examen\sub+rezolvare\Ex2\Client\obj\x86\Debug\Client.csproj.GenerateResource.Cache

@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertCoada">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="i" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertCoadaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertCoadaResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertStiva">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="i" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertStivaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertStivaResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFromStiva">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteFromStivaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteFromStivaResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFromCoada">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteFromCoadaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteFromCoadaResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ShowCoada">
+        <s:complexType />
+      </s:element>
+      <s:element name="ShowCoadaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ShowCoadaResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ShowStiva">
+        <s:complexType />
+      </s:element>
+      <s:element name="ShowStivaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ShowStivaResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sortCoada">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vec" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sortCoadaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sortCoadaResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sortStiva">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vec" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sortStivaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sortStivaResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertCoadaSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertCoada" />
+  </wsdl:message>
+  <wsdl:message name="InsertCoadaSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertCoadaResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertStivaSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertStiva" />
+  </wsdl:message>
+  <wsdl:message name="InsertStivaSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertStivaResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFromStivaSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteFromStiva" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFromStivaSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteFromStivaResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFromCoadaSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteFromCoada" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFromCoadaSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteFromCoadaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ShowCoadaSoapIn">
+    <wsdl:part name="parameters" element="tns:ShowCoada" />
+  </wsdl:message>
+  <wsdl:message name="ShowCoadaSoapOut">
+    <wsdl:part name="parameters" element="tns:ShowCoadaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ShowStivaSoapIn">
+    <wsdl:part name="parameters" element="tns:ShowStiva" />
+  </wsdl:message>
+  <wsdl:message name="ShowStivaSoapOut">
+    <wsdl:part name="parameters" element="tns:ShowStivaResponse" />
+  </wsdl:message>
+  <wsdl:message name="sortCoadaSoapIn">
+    <wsdl:part name="parameters" element="tns:sortCoada" />
+  </wsdl:message>
+  <wsdl:message name="sortCoadaSoapOut">
+    <wsdl:part name="parameters" element="tns:sortCoadaResponse" />
+  </wsdl:message>
+  <wsdl:message name="sortStivaSoapIn">
+    <wsdl:part name="parameters" element="tns:sortStiva" />
+  </wsdl:message>
+  <wsdl:message name="sortStivaSoapOut">
+    <wsdl:part name="parameters" element="tns:sortStivaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCoada">
+      <wsdl:input message="tns:InsertCoadaSoapIn" />
+      <wsdl:output message="tns:InsertCoadaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertStiva">
+      <wsdl:input message="tns:InsertStivaSoapIn" />
+      <wsdl:output message="tns:InsertStivaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFromStiva">
+      <wsdl:input message="tns:DeleteFromStivaSoapIn" />
+      <wsdl:output message="tns:DeleteFromStivaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFromCoada">
+      <wsdl:input message="tns:DeleteFromCoadaSoapIn" />
+      <wsdl:output message="tns:DeleteFromCoadaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowCoada">
+      <wsdl:input message="tns:ShowCoadaSoapIn" />
+      <wsdl:output message="tns:ShowCoadaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowStiva">
+      <wsdl:input message="tns:ShowStivaSoapIn" />
+      <wsdl:output message="tns:ShowStivaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="sortCoada">
+      <wsdl:input message="tns:sortCoadaSoapIn" />
+      <wsdl:output message="tns:sortCoadaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="sortStiva">
+      <wsdl:input message="tns:sortStivaSoapIn" />
+      <wsdl:output message="tns:sortStivaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCoada">
+      <soap:operation soapAction="http://tempuri.org/InsertCoada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertStiva">
+      <soap:operation soapAction="http://tempuri.org/InsertStiva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFromStiva">
+      <soap:operation soapAction="http://tempuri.org/DeleteFromStiva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFromCoada">
+      <soap:operation soapAction="http://tempuri.org/DeleteFromCoada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowCoada">
+      <soap:operation soapAction="http://tempuri.org/ShowCoada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowStiva">
+      <soap:operation soapAction="http://tempuri.org/ShowStiva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sortCoada">
+      <soap:operation soapAction="http://tempuri.org/sortCoada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sortStiva">
+      <soap:operation soapAction="http://tempuri.org/sortStiva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCoada">
+      <soap12:operation soapAction="http://tempuri.org/InsertCoada" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertStiva">
+      <soap12:operation soapAction="http://tempuri.org/InsertStiva" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFromStiva">
+      <soap12:operation soapAction="http://tempuri.org/DeleteFromStiva" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFromCoada">
+      <soap12:operation soapAction="http://tempuri.org/DeleteFromCoada" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowCoada">
+      <soap12:operation soapAction="http://tempuri.org/ShowCoada" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowStiva">
+      <soap12:operation soapAction="http://tempuri.org/ShowStiva" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sortCoada">
+      <soap12:operation soapAction="http://tempuri.org/sortCoada" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sortStiva">
+      <soap12:operation soapAction="http://tempuri.org/sortStiva" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://localhost:56213/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://localhost:56213/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

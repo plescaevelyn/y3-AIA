@@ -1,0 +1,169 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+
+namespace Subiect2bun
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            {
+                string ds = "Data Source=DESKTOP-LAR6UOC\\TEW_SQLEXPRESS";
+                string db = "Initial Catalog=Subiect2";
+                string ins = "Integrated Security=True";
+                string nume = "Companie2";
+
+                SqlConnection cursCon = new SqlConnection(@ds + ";" + db + ";" + ins);
+                SqlCommand cursCom1 = cursCon.CreateCommand();
+                String command = "CREATE DATABASE " + nume;
+                try
+                {
+                    cursCon.Open();
+                    cursCom1.CommandText = command;
+                    cursCom1.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                try
+                {
+                    cursCon.ChangeDatabase(nume);
+                    command = "CREATE TABLE [dbo].[Proiect]([ProiectID] [int] PRIMARY KEY,[NumeProiect] [text] NOT NULL,[Buget] [int] NOT NULL)";
+                    cursCom1.CommandText = command;
+                    cursCom1.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                try
+                {
+                    command = "CREATE TABLE [dbo].[Echipa]([EchipaID] [int] PRIMARY KEY,[ProiectID] [int] NOT NULL)";
+                    cursCom1.CommandText = command;
+                    cursCom1.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                try
+                {
+                    command = "ALTER TABLE [dbo].[Proiect] ADD CONSTRAINT [FK_ProiectID_ProiectID] FOREIGN KEY([ProiectID]) REFERENCES [dbo].[Echipa]([ProiectID])";
+                    cursCom1.CommandText = command;
+                    cursCom1.ExecuteNonQuery();
+                    cursCon.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    MessageBox.Show("Created!");
+                }
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            SqlConnection sqlCon = new SqlConnection("Data Source=localhost;Server=localhost;Database=Companie2;Integrated Security=True");
+            try
+            {
+                sqlCon.Open();
+
+                DataSet dsAfisare = new DataSet();
+
+                SqlDataAdapter daAfisare = new SqlDataAdapter("Select Proiect.NumeProiect, Proiect.Buget from Proiect,Echipa WHERE Echipa.ProiectID=Proiect.ProiectID and Echipa.EchipaID IN (1,2)", sqlCon);
+                daAfisare.Fill(dsAfisare, "tabel");
+
+                foreach (DataRow row in dsAfisare.Tables[0].Rows)
+                {
+                    DataTable dat = new DataTable();
+                    SqlDataAdapter daAfisare1 = new SqlDataAdapter("Select Proiect.NumeProiect, Proiect.Buget from Proiect,Echipa WHERE Echipa.ProiectID=Proiect.ProiectID and Echipa.EchipaID IN (1,2)", sqlCon);
+                    daAfisare1.Fill(dat);
+                    dataGridView1.DataSource = dat;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                sqlCon.Close();
+            }
+        }
+
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            
+            {
+                SqlConnection sqlCon = new SqlConnection("Data Source=localhost;Server=localhost;Database=Companie2;Integrated Security=True");
+                try
+                {
+                    sqlCon.Open();
+
+                    DataSet dsAfisare = new DataSet();
+
+                    SqlDataAdapter daAfisare = new SqlDataAdapter("Select * FROM Proiect", sqlCon);
+                    daAfisare.Fill(dsAfisare, "tabel");
+                    int id = 0;
+                    int contor = 0;
+                    int signal = 0;
+                    foreach (DataRow row in dsAfisare.Tables[0].Rows)
+                    {
+                        id++;
+                        contor++;
+                        int buget = int.Parse(row.ItemArray.GetValue(2).ToString());
+                        if (buget == 1000)
+                            signal++;
+                        if (buget < 1000)
+                            buget += 100;
+
+                        if (contor == signal)
+                        {
+                            label1.Text = "GATA!";
+                        }
+
+                        SqlCommand update = new SqlCommand("UPDATE Proiect SET Buget=" + buget + " WHERE ProiectID=" + id, sqlCon);
+                        update.ExecuteNonQuery();
+
+                        DataTable dat = new DataTable();
+                        SqlDataAdapter daAfisare1 = new SqlDataAdapter("Select * FROM Proiect", sqlCon);
+                        daAfisare1.Fill(dat);
+                        dataGridView2.DataSource = dat;
+
+                    }
+
+                    
+
+
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+                finally
+                {
+                    sqlCon.Close();
+                }
+            }
+        }
+    }
+}

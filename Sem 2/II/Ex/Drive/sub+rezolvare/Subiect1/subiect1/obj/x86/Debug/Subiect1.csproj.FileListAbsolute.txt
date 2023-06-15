@@ -1,0 +1,15 @@
+c:\Users\IoanMarcel\Documents\Visual Studio 2010\Projects\Subiect1\Subiect1\bin\Debug\Subiect1.exe
+c:\Users\IoanMarcel\Documents\Visual Studio 2010\Projects\Subiect1\Subiect1\bin\Debug\Subiect1.pdb
+c:\Users\IoanMarcel\Documents\Visual Studio 2010\Projects\Subiect1\Subiect1\obj\x86\Debug\Subiect1.exe
+c:\Users\IoanMarcel\Documents\Visual Studio 2010\Projects\Subiect1\Subiect1\obj\x86\Debug\Subiect1.pdb
+D:\UTCN\anIII\sem II\II\pregatire examen\examen\sub+rezolvare\Subiect1\Subiect1\obj\x86\Debug\Subiect1.exe
+D:\UTCN\anIII\sem II\II\pregatire examen\examen\sub+rezolvare\Subiect1\Subiect1\obj\x86\Debug\Subiect1.pdb
+D:\UTCN\anIII\sem II\II\pregatire examen\examen\sub+rezolvare\Subiect1\Subiect1\bin\Debug\Subiect1.exe
+D:\UTCN\anIII\sem II\II\pregatire examen\examen\sub+rezolvare\Subiect1\Subiect1\bin\Debug\Subiect1.pdb
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Subiect1\Subiect1\obj\x86\Debug\Subiect1.exe
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Subiect1\Subiect1\obj\x86\Debug\Subiect1.pdb
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Subiect1\Subiect1\obj\x86\Debug\Subiect1.csprojResolveAssemblyReference.cache
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Subiect1\Subiect1\bin\Debug\Subiect1.exe
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Subiect1\Subiect1\bin\Debug\Subiect1.pdb
+D:\Facultate\Industrial Info - ii\pregatire examen\sub+rezolvare\Subiect1\Subiect1\obj\x86\Debug\Subiect1.exe
+D:\Facultate\Industrial Info - ii\pregatire examen\sub+rezolvare\Subiect1\Subiect1\obj\x86\Debug\Subiect1.pdb

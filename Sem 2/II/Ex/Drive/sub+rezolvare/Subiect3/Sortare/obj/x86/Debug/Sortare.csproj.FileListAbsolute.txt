@@ -1,0 +1,11 @@
+c:\users\sam\documents\visual studio 2010\Projects\WebService2\Sortare\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\sam\documents\visual studio 2010\Projects\WebService2\Sortare\bin\Debug\Sortare.exe.config
+c:\users\sam\documents\visual studio 2010\Projects\WebService2\Sortare\bin\Debug\Sortare.exe
+c:\users\sam\documents\visual studio 2010\Projects\WebService2\Sortare\bin\Debug\Sortare.pdb
+c:\users\sam\documents\visual studio 2010\Projects\WebService2\Sortare\obj\x86\Debug\Sortare.exe
+c:\users\sam\documents\visual studio 2010\Projects\WebService2\Sortare\obj\x86\Debug\Sortare.pdb
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Subiect3\Sortare\bin\Debug\Sortare.exe.config
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Subiect3\Sortare\obj\x86\Debug\Sortare.exe
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Subiect3\Sortare\obj\x86\Debug\Sortare.pdb
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Subiect3\Sortare\bin\Debug\Sortare.exe
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Subiect3\Sortare\bin\Debug\Sortare.pdb

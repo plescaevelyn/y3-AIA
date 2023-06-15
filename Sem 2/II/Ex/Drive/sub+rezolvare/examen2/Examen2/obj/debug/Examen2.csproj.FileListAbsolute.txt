@@ -1,0 +1,18 @@
+c:\users\csongor\documents\visual studio 2012\Projects\Examen2\Examen2\bin\Debug\Examen2.exe.config
+c:\users\csongor\documents\visual studio 2012\Projects\Examen2\Examen2\bin\Debug\Examen2.exe
+c:\users\csongor\documents\visual studio 2012\Projects\Examen2\Examen2\bin\Debug\Examen2.pdb
+c:\users\csongor\documents\visual studio 2012\Projects\Examen2\Examen2\obj\Debug\Examen2.csprojResolveAssemblyReference.cache
+c:\users\csongor\documents\visual studio 2012\Projects\Examen2\Examen2\obj\Debug\Examen2.Form1.resources
+c:\users\csongor\documents\visual studio 2012\Projects\Examen2\Examen2\obj\Debug\Examen2.Properties.Resources.resources
+c:\users\csongor\documents\visual studio 2012\Projects\Examen2\Examen2\obj\Debug\Examen2.csproj.GenerateResource.Cache
+c:\users\csongor\documents\visual studio 2012\Projects\Examen2\Examen2\obj\Debug\Examen2.exe
+c:\users\csongor\documents\visual studio 2012\Projects\Examen2\Examen2\obj\Debug\Examen2.pdb
+D:\Facultate\Industrial Info - ii\pregatire examen\sub+rezolvare\examen2\Examen2\bin\Debug\Examen2.exe.config
+D:\Facultate\Industrial Info - ii\pregatire examen\sub+rezolvare\examen2\Examen2\obj\Debug\Examen2.exe
+D:\Facultate\Industrial Info - ii\pregatire examen\sub+rezolvare\examen2\Examen2\obj\Debug\Examen2.pdb
+D:\Facultate\Industrial Info - ii\pregatire examen\sub+rezolvare\examen2\Examen2\bin\Debug\Examen2.exe
+D:\Facultate\Industrial Info - ii\pregatire examen\sub+rezolvare\examen2\Examen2\bin\Debug\Examen2.pdb
+D:\Facultate\Industrial Info - ii\pregatire examen\sub+rezolvare\examen2\Examen2\obj\Debug\Examen2.csprojResolveAssemblyReference.cache
+D:\Facultate\Industrial Info - ii\pregatire examen\sub+rezolvare\examen2\Examen2\obj\Debug\Examen2.Form1.resources
+D:\Facultate\Industrial Info - ii\pregatire examen\sub+rezolvare\examen2\Examen2\obj\Debug\Examen2.Properties.Resources.resources
+D:\Facultate\Industrial Info - ii\pregatire examen\sub+rezolvare\examen2\Examen2\obj\Debug\Examen2.csproj.GenerateResource.Cache

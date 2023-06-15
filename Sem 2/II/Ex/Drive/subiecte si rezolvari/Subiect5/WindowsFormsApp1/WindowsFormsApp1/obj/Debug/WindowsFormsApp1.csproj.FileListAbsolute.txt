@@ -1,0 +1,21 @@
+C:\Users\Ioana\Desktop\Pregatire\Subiect5\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Ioana\Desktop\Pregatire\Subiect5\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Ioana\Desktop\Pregatire\Subiect5\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\Ioana\Desktop\Pregatire\Subiect5\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\Ioana\Desktop\Pregatire\Subiect5\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\Ioana\Desktop\Pregatire\Subiect5\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Ioana\Desktop\Pregatire\Subiect5\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\Ioana\Desktop\Pregatire\Subiect5\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\Ioana\Desktop\Pregatire\Subiect5\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Ioana\Desktop\Pregatire\Subiect5\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+F:\Facultate\Cursuri + Laburi\II\Drive\subiecte si rezolvari\Subiect5\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+F:\Facultate\Cursuri + Laburi\II\Drive\subiecte si rezolvari\Subiect5\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+F:\Facultate\Cursuri + Laburi\II\Drive\subiecte si rezolvari\Subiect5\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+F:\Facultate\Cursuri + Laburi\II\Drive\subiecte si rezolvari\Subiect5\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+F:\Facultate\Cursuri + Laburi\II\Drive\subiecte si rezolvari\Subiect5\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
+F:\Facultate\Cursuri + Laburi\II\Drive\subiecte si rezolvari\Subiect5\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+F:\Facultate\Cursuri + Laburi\II\Drive\subiecte si rezolvari\Subiect5\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+F:\Facultate\Cursuri + Laburi\II\Drive\subiecte si rezolvari\Subiect5\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+F:\Facultate\Cursuri + Laburi\II\Drive\subiecte si rezolvari\Subiect5\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+F:\Facultate\Cursuri + Laburi\II\Drive\subiecte si rezolvari\Subiect5\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+F:\Facultate\Cursuri + Laburi\II\Drive\subiecte si rezolvari\Subiect5\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

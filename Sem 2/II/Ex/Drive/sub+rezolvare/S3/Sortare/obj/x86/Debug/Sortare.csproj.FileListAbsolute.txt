@@ -1,0 +1,5 @@
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\S3\Sortare\bin\Debug\Sortare.exe.config
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\S3\Sortare\bin\Debug\Sortare.exe
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\S3\Sortare\bin\Debug\Sortare.pdb
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\S3\Sortare\obj\x86\Debug\Sortare.exe
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\S3\Sortare\obj\x86\Debug\Sortare.pdb

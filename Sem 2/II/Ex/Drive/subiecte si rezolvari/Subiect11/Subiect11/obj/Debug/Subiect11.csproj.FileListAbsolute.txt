@@ -1,0 +1,14 @@
+c:\users\acasa\source\repos\Subiect11\Subiect11\obj\Debug\Subiect11.csprojResolveAssemblyReference.cache
+c:\users\acasa\source\repos\Subiect11\Subiect11\obj\Debug\Subiect11.csproj.CoreCompileInputs.cache
+c:\users\acasa\source\repos\Subiect11\Subiect11\bin\Debug\Subiect11.exe.config
+c:\users\acasa\source\repos\Subiect11\Subiect11\bin\Debug\Subiect11.exe
+c:\users\acasa\source\repos\Subiect11\Subiect11\bin\Debug\Subiect11.pdb
+c:\users\acasa\source\repos\Subiect11\Subiect11\obj\Debug\Subiect11.exe
+c:\users\acasa\source\repos\Subiect11\Subiect11\obj\Debug\Subiect11.pdb
+C:\Users\hp f2v65ea\Desktop\Subiecte_rezolvate\Subiect11\Subiect11\bin\Debug\Subiect11.exe.config
+C:\Users\hp f2v65ea\Desktop\Subiecte_rezolvate\Subiect11\Subiect11\bin\Debug\Subiect11.exe
+C:\Users\hp f2v65ea\Desktop\Subiecte_rezolvate\Subiect11\Subiect11\bin\Debug\Subiect11.pdb
+C:\Users\hp f2v65ea\Desktop\Subiecte_rezolvate\Subiect11\Subiect11\obj\Debug\Subiect11.csprojAssemblyReference.cache
+C:\Users\hp f2v65ea\Desktop\Subiecte_rezolvate\Subiect11\Subiect11\obj\Debug\Subiect11.csproj.CoreCompileInputs.cache
+C:\Users\hp f2v65ea\Desktop\Subiecte_rezolvate\Subiect11\Subiect11\obj\Debug\Subiect11.exe
+C:\Users\hp f2v65ea\Desktop\Subiecte_rezolvate\Subiect11\Subiect11\obj\Debug\Subiect11.pdb

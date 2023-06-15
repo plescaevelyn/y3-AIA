@@ -1,0 +1,6 @@
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\S1\S1\bin\Debug\S1.exe
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\S1\S1\bin\Debug\S1.pdb
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\S1\S1\obj\x86\Debug\S1.exe
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\S1\S1\obj\x86\Debug\S1.pdb
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\S1\S1\bin\Debug\S1.exe.config
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\S1\S1\obj\x86\Debug\S1.csprojResolveAssemblyReference.cache

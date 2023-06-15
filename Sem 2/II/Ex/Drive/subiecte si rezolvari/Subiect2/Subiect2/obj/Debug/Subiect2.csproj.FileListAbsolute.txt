@@ -1,0 +1,10 @@
+C:\Users\Ioana\Desktop\Pregatire\Subiect2\Subiect2\bin\Debug\Subiect2.exe.config
+C:\Users\Ioana\Desktop\Pregatire\Subiect2\Subiect2\bin\Debug\Subiect2.exe
+C:\Users\Ioana\Desktop\Pregatire\Subiect2\Subiect2\bin\Debug\Subiect2.pdb
+C:\Users\Ioana\Desktop\Pregatire\Subiect2\Subiect2\obj\Debug\Subiect2.csprojAssemblyReference.cache
+C:\Users\Ioana\Desktop\Pregatire\Subiect2\Subiect2\obj\Debug\Subiect2.Form1.resources
+C:\Users\Ioana\Desktop\Pregatire\Subiect2\Subiect2\obj\Debug\Subiect2.Properties.Resources.resources
+C:\Users\Ioana\Desktop\Pregatire\Subiect2\Subiect2\obj\Debug\Subiect2.csproj.GenerateResource.cache
+C:\Users\Ioana\Desktop\Pregatire\Subiect2\Subiect2\obj\Debug\Subiect2.csproj.CoreCompileInputs.cache
+C:\Users\Ioana\Desktop\Pregatire\Subiect2\Subiect2\obj\Debug\Subiect2.exe
+C:\Users\Ioana\Desktop\Pregatire\Subiect2\Subiect2\obj\Debug\Subiect2.pdb

@@ -1,0 +1,34 @@
+c:\users\ioanmarcel\documents\visual studio 2010\Projects\Subiect2bun\Subiect2bun\bin\Debug\Subiect2bun.exe
+c:\users\ioanmarcel\documents\visual studio 2010\Projects\Subiect2bun\Subiect2bun\bin\Debug\Subiect2bun.pdb
+c:\users\ioanmarcel\documents\visual studio 2010\Projects\Subiect2bun\Subiect2bun\obj\x86\Debug\Subiect2bun.Form1.resources
+c:\users\ioanmarcel\documents\visual studio 2010\Projects\Subiect2bun\Subiect2bun\obj\x86\Debug\Subiect2bun.Properties.Resources.resources
+c:\users\ioanmarcel\documents\visual studio 2010\Projects\Subiect2bun\Subiect2bun\obj\x86\Debug\Subiect2bun.csproj.GenerateResource.Cache
+c:\users\ioanmarcel\documents\visual studio 2010\Projects\Subiect2bun\Subiect2bun\obj\x86\Debug\Subiect2bun.exe
+c:\users\ioanmarcel\documents\visual studio 2010\Projects\Subiect2bun\Subiect2bun\obj\x86\Debug\Subiect2bun.pdb
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Subiect2\Subiect2bun\obj\x86\Debug\Subiect2bun.exe
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Subiect2\Subiect2bun\obj\x86\Debug\Subiect2bun.pdb
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Subiect2\Subiect2bun\bin\Debug\Subiect2bun.exe
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Subiect2\Subiect2bun\bin\Debug\Subiect2bun.pdb
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Subiect2\Subiect2bun\obj\x86\Debug\Subiect2bun.csprojResolveAssemblyReference.cache
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Subiect2\Subiect2bun\obj\x86\Debug\Subiect2bun.Form1.resources
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Subiect2\Subiect2bun\obj\x86\Debug\Subiect2bun.Properties.Resources.resources
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\Subiect2\Subiect2bun\obj\x86\Debug\Subiect2bun.csproj.GenerateResource.Cache
+D:\Facultate\Industrial Info - ii\pregatire examen\sub+rezolvare\Subiect2\Subiect2bun\obj\x86\Debug\Subiect2bun.exe
+D:\Facultate\Industrial Info - ii\pregatire examen\sub+rezolvare\Subiect2\Subiect2bun\obj\x86\Debug\Subiect2bun.pdb
+D:\Facultate\Industrial Info - ii\pregatire examen\sub+rezolvare\Subiect2\Subiect2bun\obj\x86\Debug\Subiect2bun.csprojResolveAssemblyReference.cache
+D:\Facultate\Industrial Info - ii\pregatire examen\sub+rezolvare\Subiect2\Subiect2bun\obj\x86\Debug\Subiect2bun.Form1.resources
+D:\Facultate\Industrial Info - ii\pregatire examen\sub+rezolvare\Subiect2\Subiect2bun\obj\x86\Debug\Subiect2bun.Properties.Resources.resources
+D:\Facultate\Industrial Info - ii\pregatire examen\sub+rezolvare\Subiect2\Subiect2bun\obj\x86\Debug\Subiect2bun.csproj.GenerateResource.Cache
+D:\Facultate\Industrial Info - ii\pregatire examen\sub+rezolvare\Subiect2\Subiect2bun\bin\Debug\Subiect2bun.exe
+D:\Facultate\Industrial Info - ii\pregatire examen\sub+rezolvare\Subiect2\Subiect2bun\bin\Debug\Subiect2bun.pdb
+F:\Facultate\Cursuri + Laburi\II\sub+rezolvare\Subiect2\Subiect2bun\bin\Debug\Subiect2bun.exe.config
+F:\Facultate\Cursuri + Laburi\II\sub+rezolvare\Subiect2\Subiect2bun\bin\Debug\Subiect2bun.exe
+F:\Facultate\Cursuri + Laburi\II\sub+rezolvare\Subiect2\Subiect2bun\bin\Debug\Subiect2bun.pdb
+F:\Facultate\Cursuri + Laburi\II\sub+rezolvare\Subiect2\Subiect2bun\obj\x86\Debug\Subiect2bun.csproj.AssemblyReference.cache
+F:\Facultate\Cursuri + Laburi\II\sub+rezolvare\Subiect2\Subiect2bun\obj\x86\Debug\Subiect2bun.csproj.SuggestedBindingRedirects.cache
+F:\Facultate\Cursuri + Laburi\II\sub+rezolvare\Subiect2\Subiect2bun\obj\x86\Debug\Subiect2bun.Form1.resources
+F:\Facultate\Cursuri + Laburi\II\sub+rezolvare\Subiect2\Subiect2bun\obj\x86\Debug\Subiect2bun.Properties.Resources.resources
+F:\Facultate\Cursuri + Laburi\II\sub+rezolvare\Subiect2\Subiect2bun\obj\x86\Debug\Subiect2bun.csproj.GenerateResource.cache
+F:\Facultate\Cursuri + Laburi\II\sub+rezolvare\Subiect2\Subiect2bun\obj\x86\Debug\Subiect2bun.csproj.CoreCompileInputs.cache
+F:\Facultate\Cursuri + Laburi\II\sub+rezolvare\Subiect2\Subiect2bun\obj\x86\Debug\Subiect2bun.exe
+F:\Facultate\Cursuri + Laburi\II\sub+rezolvare\Subiect2\Subiect2bun\obj\x86\Debug\Subiect2bun.pdb

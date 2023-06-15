@@ -1,0 +1,4 @@
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\S4\S4\bin\Debug\S4.exe
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\S4\S4\bin\Debug\S4.pdb
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\S4\S4\obj\x86\Debug\S4.exe
+D:\UTCN\anIII\sem II\II\pregatire examen\sub+rezolvare\S4\S4\obj\x86\Debug\S4.pdb
