@@ -1,7 +1,7 @@
 var counter = 0;
 
 function printValue(divId, value) {
-  document.getElementById(divId).innerHTML = value;
+  document.getElementById(divId).textContent = value;
 }
 printValue("counter", 0);
 

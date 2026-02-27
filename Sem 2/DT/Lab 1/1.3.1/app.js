@@ -1,5 +1,5 @@
 console.log("Welcome  to data  transmission");
-document.getElementById("message").innerHTML = "Message from  JavaScript";
+document.getElementById("message").textContent = "Message from  JavaScript";
 
 var sum = 10;
 var  name = "Alexandru";
@@ -32,7 +32,7 @@ console.log(user.name);
 console.log(user.address.geo.lat);
 console.log(user.company.name);
 console.dir(user.company.cities);
-consoler.log(user.company.cities[0]);
+console.log(user.company.cities[0]);
 
 function print(message) {
   console.log(message);
@@ -40,10 +40,13 @@ function print(message) {
 
 print("hello")
 
-var password = "123456";
-consoler.log(password=="123456"?"ALLOW":"DENY");
+// NOTE: Never hardcode passwords in client-side code
+// This is for demonstration purposes only
+// In production, use proper authentication mechanisms
+var password = prompt("Enter password:");
+console.log(password === "123456" ? "ALLOW" : "DENY");
 
-if (password == "123456") {
+if (password === "123456") {
   console.log("permission accepted");
 } else {
   console.log("permission denied");
